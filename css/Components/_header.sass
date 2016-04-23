@@ -1,0 +1,164 @@
+header
+	width: 100%
+	height: 100%
+	min-height: 100px
+	padding-top: 1em
+	border-bottom: 1px solid #E5E5E5
+	margin-bottom: 40px
+	+media($small)
+		margin-bottom: 10px
+	+media($xsSmall)	
+		height: 150px
+	.logo
+		font-size: 2em
+		width: 32%
+		float: left
+		text-align: left
+		color: black
+		padding-top: 10px
+		+media($small)
+			font-size: 2em
+			width: 33%
+		+media($xsSmall)
+			width: 80%
+			font-size: 1.8em
+			margin-top: -10px
+			margin-bottom: 5px	
+			float: none
+		a
+			color: black	
+		.site-name
+				position: relative
+				text-decoration: none
+				margin: 0
+				letter-spacing: -1px;
+				font-family: Arial
+				font-weight: bold
+				&:after
+					content: "beta"
+					display: block
+					font-size: .3em
+					position: absolute
+					right: -17px
+					top: 5px
+					
+		.slogan
+			display: block
+			font-size: 0.4em
+			font-family: Arial
+			font-weight: bold
+	.search
+		width: 40%
+		float: left
+		padding-top: 1em
+		text-align: center
+		margin-bottom: 20px
+		+media($small)
+			width: 50%
+		+media($xsSmall)
+			width: 90%
+			float: none
+			margin-right: auto
+			margin-left: auto
+		.search-form--fieldset
+			width: 100%	
+		.search-form__input
+			width: 60%
+			height: 30px
+			border-radius: 0px
+		.btn-all--search-btn
+			outline: none
+			border: none
+			width: 38%
+			height: 30px
+			color: $linkColor
+			border-radius: 0px
+			+media($small)
+				width: 33%
+	nav		
+		width: 10%
+		height: 100px
+		min-height: 100px
+		float: right
+		margin-top: 15px
+		text-align: right
+		+media($xsSmall)
+			float: none	
+		.menu-triger
+			height: 35%
+			text-align: center
+			cursor: pointer
+			+media($xsSmall)
+				position: absolute
+				height: auto
+				top: 25px
+				right: 30px
+				z-index: 100502
+			span 
+				display: block
+				height: 2px !important
+				width: 30px
+				background-color: black
+				margin-bottom: 10px
+				transition: 0.3s
+		.menu
+			display: none
+			position: absolute
+			width: 100%
+			top: 80px
+			left: 0
+			right: 0
+			padding: 0
+			margin-right: auto
+			margin-left: auto
+			text-align: center
+			border-bottom: 1px solid #E5E5E5
+			z-index: 100501
+			background-color: white
+			+media($xsSmall)
+				position: absolute
+				width: 100%
+				height: 100%
+				top: -20px
+				padding-top: 50px
+				border: none
+				box-shadow: 0 0 10px #000				
+			li
+				width: 24%
+				height: 100px
+				float: left
+				padding-top: 3%
+				text-align: center
+				background-color: white
+				+media($small)
+					width: 20%
+					margin-right: 5%
+				+media($xsmall)
+					font-size: 0.9em	
+				+media($xsSmall)
+					width: 100%	
+				&:hover
+					background-color: $hoverColor
+				a
+					color: black	
+				.fa
+					font-size: 1.3em
+					margin: 10px
+					+media($small)
+						float: left	
+						margin: 0px
+					+media($xsmall)
+						font-size: 1em	
+
+	//Анимации для кнопки меню			
+	.menu-triger span
+		transition: 0.3s
+	.menu-triger.active span:nth-child(2n)
+		background-color: red
+		display: none
+	.menu-triger.active span:first-child
+		transform: rotate(45deg)
+		margin: 10px 0px 0px 0px
+	.menu-triger.active span:last-child	
+		transform: rotate(-45deg)
+		margin: -2px 0px 0px 0px

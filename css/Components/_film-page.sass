@@ -1,0 +1,104 @@
+.film-card-section
+	+media($xsmall)
+		position: relative
+	.film-name
+		+media($xsmall)
+			color: white
+			position: absolute
+			font-weight: bold
+			font-size: 3em
+			text-shadow: 0 0 3px black
+		+media($xsSmall)
+			top: 30px
+			font-size: 2em	
+	.film-eng-name
+		color: gray	
+		margin-top: -15px		
+		+media($xsmall)
+			color: white
+			position: absolute
+			font-weight: bold
+			font-size: 1em
+			text-shadow: 0 0 3px black
+			top: 140px
+		+media($xsSmall)
+			top: 25px
+			//visibility: hidden
+	.film-top
+		width: 100%
+		margin: 20px 0px 0px 0px
+		.film-poster
+			width: 50%
+			float: left
+			margin-bottom: 20px
+			overflow: hidden
+			max-height: 320px
+			+media($small)
+				width: 50%
+			+media($xsmall)
+				width: 100%	
+				height: 200px	
+			img
+				width: 100%
+				min-height: 300px
+		.film-info
+			width: 50%
+			float: left
+			margin-bottom: 20px
+			+media($small)
+				width: 50%
+			+media($xsmall)
+				width: 100%	
+			table
+				width: 100%	
+				margin-left: 30px
+				+media($xsSmall)
+					margin-left: 0px
+				tr
+					padding: 10px
+					td
+						padding: 10px
+						border-bottom: 1px solid #E5E5E5
+						&:first-child
+							font-weight: bold		
+	.film-description
+		p 
+			line-height: 21px
+			font-size: 15px
+	.btn-all--watch-trailer 
+		display: none
+		width: 30%
+		height: 30px
+		+media($small)
+			width: 50%
+		+media($xsSmall)
+			width: 80%
+.rating-film
+	margin-top: 20px
+//Форма предложить фильм
+.film-offer-form
+	width: 50%
+	margin-top: 50px
+	margin-left: 10px
+	+media($small)
+		width: 95%
+.film-offer-form__film-name
+	display: block
+	width: 100%
+	height: 30px
+	margin-top: 10px
+	margin-bottom: 20px
+	padding-left: 10px
+.film-offer-form__descr
+	display: block
+	width: 100%
+	height: 150px
+	margin-top: 10px
+	margin-bottom: 20px
+	padding: 10px
+.btn-all--offer-form
+	display: block
+	width: 50%
+	padding: 10px 20px 10px 20px
+	+media($xsmall)
+		margin: 0 auto

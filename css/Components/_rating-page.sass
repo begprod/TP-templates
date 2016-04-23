@@ -1,0 +1,69 @@
+.film-rating-page
+	position: relative
+	padding: 10px
+	margin: 10px 0px 50px 0px
+	min-height: 200px
+	.rp__img
+		width: 30%
+		float: left
+		max-height: 200px
+		+media($small)
+			float: left
+			width: 50%
+		+media($xsSmall)
+			width: 100%
+			max-height: 100%
+	.rp__info
+		display: inline-block
+		width: 50%
+		margin-left: 30px
+		+media($small)
+			width: 30%
+		+media($xsmall)
+			width: 30%
+		+media($xsSmall)
+			width: 100%
+			margin: 0
+			padding: 0
+		h3, h5, h6
+			+media($xsmall)
+				margin: 0px 0px 10px 0px 
+		.btn-more-unit
+			display: block
+			background-color: $mainColor
+			width: 50%
+			text-align: center
+			text-decoration: none
+			min-height: 30px
+			color: white
+			margin: 10px
+			line-height: 30px
+			&:hover
+				box-shadow: 0 0 3px #000	
+			+media($small)
+				width: 70%
+			+media($xsmall)	
+				margin: 10px 0px 0px 0px
+		.rp__year
+			margin: 10px
+			+media($xsmall)
+				margin: 0px		
+//Пагинация
+.sticky-pagination	
+	height: 100% !important
+ul.pagination
+	padding: 0
+	li
+		display: inline-block
+		margin-right: 10px
+	li
+		&:first-child
+			display: none
+		&:last-child	
+			display: none
+	.active
+		a
+			color: $mainColor
+		a
+			&:hover
+				color: $mainColor

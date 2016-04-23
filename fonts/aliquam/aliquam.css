@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam UltraLight'), local('Aliquam-UltraLight'), url('aliquamultralight.woff2') format('woff2'), url('aliquamultralight.woff') format('woff'), url('aliquamultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam Ultralight Italic'), local('Aliquam-UltralightItalic'), url('aliquamultralightitalic.woff2') format('woff2'), url('aliquamultralightitalic.woff') format('woff'), url('aliquamultralightitalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam'), url('aliquam.woff2') format('woff2'), url('aliquam.woff') format('woff'), url('aliquam.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam Italic'), local('Aliquam-Italic'), url('aliquamitalic.woff2') format('woff2'), url('aliquamitalic.woff') format('woff'), url('aliquamitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}

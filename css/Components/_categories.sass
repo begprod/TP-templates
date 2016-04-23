@@ -1,0 +1,114 @@
+.category-items
+	width: 100%
+	height: 100%
+	position: relative
+	.category-header
+		width: 100%
+		margin-bottom: 5px
+		h2
+			width: 30%
+			display: inline-block
+			+media($small)
+				width: 37%
+			+media($xsmall)
+				width: 40%
+			+media($xsSmall)
+				width: 100%
+		.btn-more
+			display: inline-block
+			background-color: $mainColor
+			width: 10%
+			text-align: center
+			text-decoration: none
+			min-height: 30px
+			color: white
+			line-height: 30px
+			&:hover
+				box-shadow: 0 0 3px #000
+			+media($small)
+				width: 30%
+			+media($xsSmall)
+				width: 100%
+	.category-unit
+		position: relative
+		width: 33%
+		height: 235px
+		float: left
+		margin-right: 3%
+		margin-bottom: 3%
+		//background-color: lightgrey
+		+media($small)
+			width: 30%
+			height: 100%
+			min-height: 200px
+		+media($xsmall)
+			min-height: 200px
+			height: 100%
+		+media($xsSmall)
+			width: 100%
+			height: 100%
+			min-height: 200px
+			margin: 10px 0px 10px 0px
+	h3
+		color: white
+		text-shadow: 0 0 5px #000
+	h5
+		color: white
+		text-shadow: 0 0 5px #000
+		margin-top: -15px
+	.desc-cat-unit
+		display: none
+		position: absolute
+		padding: 0px 10px 0px 10px
+		bottom: 0px
+		background-color: rgba(0,0,0,0.7)
+		height: 30%
+		overflow: hidden
+		width: 100%
+		z-index: 100500
+		+media($small)
+
+		.desc-unit__text
+			max-height: 55px
+			overflow: hidden
+			position: absolute
+			bottom: 70px
+			color: white
+		.btn-more-unit
+			position: absolute
+			bottom: 15px
+			right: 30px
+			background-color: $mainColor
+			width: 30%
+			text-align: center
+			text-decoration: none
+			min-height: 30px
+			color: white
+			line-height: 30px
+			&:hover
+				box-shadow: 0 0 3px #000
+			+media($small)
+				width: 95%
+				margin: 0 auto
+				right: 0
+				left: 0
+			+media($xsSmall)
+				width: 80%
+
+
+
+.category-items .category-unit:nth-child(2)
+	width: 60%
+	height: 500px
+	float: left
+	margin-right: 3%
+	+media($small)
+		width: 30%
+		height: 100%
+	+media($xsmall)
+		min-height: 200px
+		height: 100%
+	+media($xsSmall)
+		width: 100%
+		height: 100%
+		margin: 10px 0px 10px 0px
