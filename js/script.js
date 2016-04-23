@@ -9,6 +9,7 @@ $(document).ready(function() {
 	stopPlayVideo();
 	randomPhrases();
 	scrollUp();
+	spoilerOpenClose();
 });
 
 //Две функции для анимации меню
@@ -112,7 +113,7 @@ function stopPlayVideo() {
 
 //Рандомные фразы
 function randomPhrases() {
-	var phrases = new Array('Всеж мы люди', 
+	var phrases = new Array('Всеж мы люди',
 							'Моча какая-то',
 							'Найди Свое Говно',
 							'Чего только не придумают',
@@ -133,13 +134,13 @@ function randomPhrases() {
 function scrollUp() {
 	var scrollBtn = $('.scroll-up');
 	var bodyHtml = $("html, body");
-	
-scrollBtn.click(function (event) { 
+
+scrollBtn.click(function (event) {
 	bodyHtml.animate({ scrollTop: 0 }, 400);
 	return false;
 });
 
-$(window).scroll(function () { 
+$(window).scroll(function () {
 	if ($(document).scrollTop() > 700) {
 		scrollBtn.fadeIn(300);
 	} else {
@@ -152,3 +153,12 @@ $(document).ready(function () {
 	var preloader = $('.preloader-block');
 	preloader.delay(1000).fadeOut(400);
 });
+
+//Spoiler
+function spoilerOpenClose() {
+	var spoilerLink = $('.spoiler-link');
+	var spoilerBlock = $('.spoiler');
+	spoilerLink.click(function() {
+		spoilerBlock.slideToggle(500);
+});
+}
