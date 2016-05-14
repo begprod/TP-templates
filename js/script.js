@@ -1,11 +1,9 @@
-/* global $ */
 $(document).ready(function() {
 	//call functions here bitch
 	showMainMenu();
 	animatMenu();
 	animateDescMainPage();
 	modalWindow();
-	btnTrailer();
 	stopPlayVideo();
 	randomPhrases();
 	scrollUp();
@@ -54,11 +52,16 @@ function animateDescMainPage() {
 function modalWindow() {
 
 	var trailerBtn = $('.btn-all--watch-trailer');
+	var filmBtn = $('.btn-all--watch-film');
 	var modalCloseBtn = $('.modal-body__close-btn');
 	var modalBg = $('.modal-bg-layer');
 	var modalBody = $('.modal-body');
 
 	trailerBtn.click(function(event) {
+		modalBg.fadeIn(200);
+		modalBody.fadeIn(200);
+	});
+	filmBtn.click(function(event) {
 		modalBg.fadeIn(200);
 		modalBody.fadeIn(200);
 	});
@@ -74,30 +77,52 @@ function modalWindow() {
 
 //Показывает кнопку "Смотреть трейлер", если есть iframe
 function btnTrailer() {
+	var showBtnTrailer = $('.btn-all--watch-trailer');
+	var checkTrailer =  showBtnTrailer.attr('data-trailer');
+	var showBtnFilm = $('.btn-all--watch-film');
+	var checkFilm =  showBtnFilm.attr('data-film');
 
-	var checkEl =  $('div.modal-body iframe');
-	var showEl = $('.btn-all--watch-trailer');
-
-	if(checkEl.length > 0){
-		showEl.css('display', 'block');
+	if(checkTrailer.length){
+		showBtnTrailer.css('display', 'inline-block');
+	} else {
+		showBtnTrailer.css('display', 'none');
+	}
+	if(checkFilm.length){
+		showBtnFilm.css('display', 'inline-block');
+	} else {
+		showBtnFilm.css('display', 'none');
 	}
 }
 
 //Функция для видео
 function stopPlayVideo() {
-
+	//добавилась кнопка смотреть бесплатно
 	var trailerBtn = $('.btn-all--watch-trailer');
+	var filmBtn = $('.btn-all--watch-film');
 	var modalCloseBtn = $('.modal-body__close-btn');
 	var modalBg = $('.modal-bg-layer');
-	//var modalBody = $('.modal-body');
+	var modalBody = $('.modal-body');
+	var trailerData = trailerBtn.attr('data-trailer');
+	var filmData = filmBtn.attr('data-film');
 
+	//новый алгоритм просмотра видео
+	trailerBtn.click(function(){
+		modalBody.append(trailerData);
+	});
+	filmBtn.click(function(){
+		modalBody.append(filmData);
+	});
+	modalCloseBtn.click(function(){
+		modalBody.find('iframe').remove();
+	});
+	modalBg.click(function(){
+		modalBody.find('iframe').remove();
+	});
 	//Получаем фрейм с видео
-	var trailerIframe = $('.modal-body > iframe');
+	//var trailerIframe = $('.modal-body > iframe');
 	//Получаем атрибут
-	var src = trailerIframe.attr('src');
-
-
-	trailerBtn.click(function(event) {
+	//var src = trailerIframe.attr('src');
+	/*trailerBtn.click(function(event) {
 		//Поклику автовоспроизведение видео
 		trailerIframe.attr('src', src + '?rel=0&autoplay=1&controls=2');
 	});
@@ -108,7 +133,7 @@ function stopPlayVideo() {
 	modalBg.click(function(event) {
 		//Останавливаем воспроизведение
 		trailerIframe.attr('src', src - '?rel=0&autoplay=1&controls=2');
-	});
+	});*/
 }
 
 //Рандомные фразы
