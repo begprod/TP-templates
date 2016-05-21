@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//call functions here bitch
 	showMainMenu();
 	animatMenu();
-	animateDescMainPage();
+	//animateDescMainPage();
 	modalWindow();
 	stopPlayVideo();
 	randomPhrases();
@@ -30,7 +30,7 @@ function animatMenu() {
 	});
 }
 
-//Здеся анимации для всплывающего очка на превью фильма только для десктопа
+//УБРАНОО Здеся анимации для всплывающего очка на превью фильма только для десктопа
 function animateDescMainPage() {
 
 	var descrUnit = $('.desc-cat-unit');

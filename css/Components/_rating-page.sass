@@ -13,6 +13,7 @@
 		+media($xsSmall)
 			width: 100%
 			max-height: 100%
+			margin-bottom: 10px
 	.rp__info
 		display: inline-block
 		width: 50%
@@ -30,24 +31,30 @@
 				margin: 0px 0px 10px 0px
 		.btn-more-unit
 			display: block
-			background-color: $mainColor
-			width: 50%
+			width: 35%
+			min-height: 30px
+			margin: 10px
+			background-color: white
+			color: black
+			border: 1px solid rgba(0,0,0,.2)
+			border-radius: 3px
 			text-align: center
 			text-decoration: none
-			min-height: 30px
-			color: white
-			margin: 10px
 			line-height: 30px
 			&:hover
 				box-shadow: 0 0 3px #000
+			.fa-chevron-right
+				margin-right: 10px
+				font-size: 14px
 			+media($small)
 				width: 70%
 			+media($xsmall)
 				margin: 10px 0px 0px 0px
 		.rp__year
+			font-size: 12px
 			margin: 10px
 			+media($xsmall)
-				margin: 0px
+				margin: 0px 0px 10px 0px
 //Пагинация
 .sticky-pagination
 	height: 100% !important
@@ -70,3 +77,5 @@ ul.pagination
 .rating-page__head
 	margin-left: 10px
 	font-size: 1.5em
+.film-rating-page__link
+	text-decoration: none
