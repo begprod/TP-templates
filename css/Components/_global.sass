@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6
 	font-weight: normal
 	margin: 10px
 p
-	margin: 10px	
+	margin: 10px
 .wrapper
 	width: 1000px
 	margin-right: auto
@@ -17,11 +17,11 @@ p
 		width: 90%
 	+media($xsSmall)
 		width: 95%
-					
+
 .cf
-	+clearfix	
+	+clearfix
 ul
-	padding: 0	
+	padding: 0
 ul li
 	list-style: none
 	transition: 0.3s
@@ -46,7 +46,7 @@ p
 button
 	background-color: $mainColor
 	color: $linkColor
-	border: none	
+	border: none
 	transition: 0.3s
 	a
 		text-decoration: none
@@ -56,7 +56,7 @@ button
 	&:focus
 		outline: none
 	&:hover
-		box-shadow: 0 0 3px #000		
+		box-shadow: 0 0 3px #000
 input
 	transition: 0.3s
 	&:focus
@@ -72,7 +72,10 @@ fieldset
 	padding: 0 !important
 	margin: 0 !important
 	outline: none
-//Хлебные крошки		
+.no-lr-margin
+	margin-right: 0px
+	margin-left: 0px
+//Хлебные крошки
 .breadcrumbs
 	margin-top: 10px
 	margin-bottom: 10px
@@ -80,7 +83,7 @@ fieldset
 		font-size: 0.5em
 .breadcrumbs a
 	padding: 3px
-	margin: 0px 10px 0px 10px	
+	margin: 0px 10px 0px 10px
 	text-decoration: none
 	&:hover
 		text-decoration: underline
@@ -89,7 +92,7 @@ fieldset
 	color: $mainColor
 	display: inline-block
 	padding: 3px
-	margin: 0px 0px 0px 10px	
+	margin: 0px 0px 0px 10px
 //Общий класс для кнопок
 .btn-all
 	padding: 5px 10px 5px 10px
@@ -101,10 +104,11 @@ fieldset
 	transition: .3s
 	border: none
 	outline: none
+	border-radius: 3px
 	&:hover
-		box-shadow: 0 0 3px #000	
+		box-shadow: 0 0 3px #000
 //Модально окно для всего
-.modal-bg-layer 
+.modal-bg-layer
 	display: none
 	position: fixed
 	left: 0
@@ -139,7 +143,7 @@ fieldset
 		width: 100%
 		height: 100%
 	.modal-body__close-btn
-		position: fixed	
+		position: fixed
 		font-size: 2em
 		color: $mainColor
 		top: 20px
@@ -149,7 +153,7 @@ fieldset
 		&:hover
 			text-shadow: 0 0 3px #000
 		+media($xsmall)
-			right: 5px		
+			right: 5px
 .film-rating-page--search-result
 	position: relative
 	padding: 10px
@@ -189,7 +193,7 @@ fieldset
 	cursor: pointer
 	opacity: .7
 	transition: .5s
-	&:hover 
+	&:hover
 		opacity: 1
 //Прелоадер
 .preloader-block
@@ -211,3 +215,48 @@ fieldset
 	width: 100px
 	height: 100px
 	margin: 0 auto
+
+//Сетка для фильмов
+.grid-film
+	width: 100%
+	height: 100%
+	//background-color: red
+	margin: 50px 0
+.grid-film__unit
+	display: inline-block
+	vertical-align: top
+	border-radius: 3px
+	margin-bottom: 20px
+	&:hover
+		transition: .5s
+		box-shadow: 0px 0px 4px black
+	&:hover .grid-film__info-name-link a
+		color: $orangeColor
+.grid-film__img
+	position: relative
+	display: block
+	height: 150px
+	overflow: hidden
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	+media($small)
+		height: 100px
+	+media($xsmall)
+		height: 200px
+	+media($xsSmall)
+		height: 250px
+.grid-film__unit--25
+	background-color: white
+	width: 22%
+	margin-right: 2%
+	&:last-child
+		margin-right: 0%
+	+media($xsmall)
+		width: 45%
+	+media($xsSmall)
+		width: 100%
+.grid-film__info
+	padding: 10px
+	a
+		text-decoration: none

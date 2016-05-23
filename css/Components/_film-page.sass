@@ -24,7 +24,6 @@
 			top: 140px
 		+media($xsSmall)
 			top: 25px
-			//visibility: hidden
 	.film-top
 		width: 100%
 		margin: 20px 0px 0px 0px
@@ -39,6 +38,8 @@
 			+media($xsmall)
 				width: 100%
 				height: 250px
+			+media($xsSmall)
+				height: 200px
 			img
 				width: 100%
 				min-height: 300px
@@ -47,6 +48,13 @@
 					max-width: 100%
 					max-height: 100%
 					min-height: 100%
+				+media($xsmall)
+					min-width: initial
+					max-width: initial
+					max-height: initial
+					min-height: initial
+					width: 100%
+					height: auto
 		.film-info
 			width: 50%
 			float: left
@@ -71,13 +79,17 @@
 		p
 			line-height: 21px
 			font-size: 15px
+			margin-left: 0
+		h2
+			margin-left: 0
 	.btn-all--watch-trailer
 		display: none
+		vertical-align: top
 		width: 24%
 		height: 30px
 		margin-right: 15px
 		+media($small)
-			width: 35%
+			width: 45%
 		+media($xsSmall)
 			width: 80%
 .rating-film
@@ -111,7 +123,7 @@
 		margin: 0 auto
 //Spoiler
 .spoiler-link
-	margin: 10px
+	margin: 10px 0px 10px 0px
 	text-decoration: underline
 	cursor: pointer
 .spoiler
@@ -122,11 +134,13 @@
 	margin: 5px
 .btn-all--watch-film
 	display: none
+	vertical-align: top
 	height: 30px
 	width: 24%
 	background-color: $orangeColor
+	border-radius: 3px
 	+media($small)
-		width: 35%
+		width: 45%
 	+media($xsSmall)
 		width: 80%
 		margin-top: 20px
