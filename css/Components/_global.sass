@@ -220,8 +220,9 @@ fieldset
 .grid-film
 	width: 100%
 	height: 100%
-	//background-color: red
 	margin: 50px 0
+	+media($xsSmall)
+		text-align: center
 .grid-film__unit
 	display: inline-block
 	vertical-align: top
@@ -248,15 +249,29 @@ fieldset
 		height: 250px
 .grid-film__unit--25
 	background-color: white
-	width: 22%
-	margin-right: 2%
+	width: 23.9%
+	margin-right: 1%
 	&:last-child
 		margin-right: 0%
+	+media($small)
+		width: 23.6%
 	+media($xsmall)
 		width: 45%
+		margin-right: 3%
 	+media($xsSmall)
-		width: 100%
+		width: 95%
+		margin: 0 auto 10% auto
+		text-align: left
 .grid-film__info
 	padding: 10px
 	a
 		text-decoration: none
+	+media($small)
+		font-size: 11px
+	+media($xsmall)
+		font-size: 14px
+.grid-film__head
+	margin-left: 0px
+	+media($xsSmall)
+		text-align: left
+		margin-left: 2.5%
