@@ -220,14 +220,13 @@ fieldset
 .grid-film
 	width: 100%
 	height: 100%
-	margin: 50px 0
-	+media($xsSmall)
-		text-align: center
+	margin: 0 0
+	+media($small)
+		margin: 0 0
 .grid-film__unit
 	display: inline-block
 	vertical-align: top
 	border-radius: 3px
-	margin-bottom: 20px
 	&:hover
 		transition: .5s
 		box-shadow: 0px 0px 4px black
@@ -244,24 +243,23 @@ fieldset
 	+media($small)
 		height: 100px
 	+media($xsmall)
-		height: 200px
+		height: 100px
 	+media($xsSmall)
 		height: 250px
 .grid-film__unit--25
 	background-color: white
-	width: 23.9%
+	width: 23%
 	margin-right: 1%
 	&:last-child
-		margin-right: 0%
+		margin-right: 0
 	+media($small)
-		width: 23.6%
+		width: 23%
 	+media($xsmall)
-		width: 45%
+		width: 21%
 		margin-right: 3%
 	+media($xsSmall)
-		width: 95%
-		margin: 0 auto 10% auto
-		text-align: left
+		width: 100%
+		margin: 10px 0 10px 0
 .grid-film__info
 	padding: 10px
 	a
@@ -272,6 +270,9 @@ fieldset
 		font-size: 14px
 .grid-film__head
 	margin-left: 0px
+	margin-bottom: 20px
+	font-size: 27px
+	+media($xsmall)
+		font-size: 22px
 	+media($xsSmall)
 		text-align: left
-		margin-left: 2.5%

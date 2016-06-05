@@ -10,6 +10,14 @@ $(document).ready(function() {
 	spoilerOpenClose();
 });
 
+
+//Прелоадер
+$(document).ready(function () {
+	var preloader = $('.preloader-block');
+	preloader.delay(1000).fadeOut(400);
+});
+
+
 //Две функции для анимации меню
 function showMainMenu() {
 
@@ -60,18 +68,22 @@ function modalWindow() {
 	trailerBtn.click(function(event) {
 		modalBg.fadeIn(200);
 		modalBody.fadeIn(200);
+		$('body').css('overflow','hidden');
 	});
 	filmBtn.click(function(event) {
 		modalBg.fadeIn(200);
 		modalBody.fadeIn(200);
+		$('body').css('overflow','hidden');
 	});
 		modalCloseBtn.click(function(event) {
 		modalBg.fadeOut(200);
 		modalBody.fadeOut(200);
+		$('body').css('overflow','auto');
 	});
 	modalBg.click(function(event) {
 		$(this).fadeOut(200);
 		modalBody.fadeOut(200);
+		$('body').css('overflow','auto');
 	});
 }
 
@@ -173,11 +185,6 @@ $(window).scroll(function () {
 	}
 });
 }
-//Прелоадер
-$(document).ready(function () {
-	var preloader = $('.preloader-block');
-	preloader.delay(1000).fadeOut(400);
-});
 
 //Spoiler
 function spoilerOpenClose() {
