@@ -2,12 +2,12 @@ $(document).ready(function() {
 	//call functions here bitch
 	showMainMenu();
 	animatMenu();
-	//animateDescMainPage();
 	modalWindow();
 	stopPlayVideo();
 	randomPhrases();
 	scrollUp();
 	spoilerOpenClose();
+	checkSearch();
 });
 
 
@@ -36,24 +36,6 @@ function animatMenu() {
 	menuTrigger.click(function(event) {
 		$(this).toggleClass('active');
 	});
-}
-
-//УБРАНОО Здеся анимации для всплывающего очка на превью фильма только для десктопа
-function animateDescMainPage() {
-
-	var descrUnit = $('.desc-cat-unit');
-	var catUnit = $('.category-unit');
-
-       if($(window).width() > 1024) {
-       		descrUnit.css('display', 'none');
-       		catUnit.hover(function() {
-				$(this).find('.desc-cat-unit').fadeIn(200);
-			}, function() {
-				descrUnit.fadeOut(200);
-			});
-        } else {
-       		descrUnit.css('display', 'block');
-       	}
 }
 
 //Функция для модального окна
@@ -130,22 +112,6 @@ function stopPlayVideo() {
 	modalBg.click(function(){
 		modalBody.find('iframe').remove();
 	});
-	//Получаем фрейм с видео
-	//var trailerIframe = $('.modal-body > iframe');
-	//Получаем атрибут
-	//var src = trailerIframe.attr('src');
-	/*trailerBtn.click(function(event) {
-		//Поклику автовоспроизведение видео
-		trailerIframe.attr('src', src + '?rel=0&autoplay=1&controls=2');
-	});
-		modalCloseBtn.click(function(event) {
-		//Останавливаем воспроизведение
-		trailerIframe.attr('src', src - '?rel=0&autoplay=1&controls=2');
-	});
-	modalBg.click(function(event) {
-		//Останавливаем воспроизведение
-		trailerIframe.attr('src', src - '?rel=0&autoplay=1&controls=2');
-	});*/
 }
 
 //Рандомные фразы
@@ -189,8 +155,22 @@ $(window).scroll(function () {
 //Spoiler
 function spoilerOpenClose() {
 	var spoilerLink = $('.spoiler-link');
-	var spoilerBlock = $('.spoiler');
+	var spoilerBlock = $('.spoiler-content');
 	spoilerLink.click(function() {
 		spoilerBlock.slideToggle(500);
-});
+	});
+}
+
+//Если поиск пустой, то ничего не делаем
+function checkSearch() { 
+	var searchInput = $('.search-form__input');
+	var searchBtn = $('.btn-all--search-btn');
+	searchBtn.attr('disabled', 'disabled');
+	searchInput.keyup(function() {
+		if($(this).val().length != 0) {
+			searchBtn.removeAttr('disabled');
+		} else {
+			searchBtn.attr('disabled', 'disabled');
+		}
+	});
 }
