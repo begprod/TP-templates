@@ -74,8 +74,11 @@ header
 			padding-left: 10px
 			border-radius: 3px
 			outline: none
-			box-shadow: 0px 0px 0px black
 			border: 1px solid $lightGray
+			outline: none
+			border-right: 0px
+			// remove shadow on web-kit safari
+			-webkit-appearance: none;
 			+media($small)
 				width: 50%
 			+media($xsSmall)
@@ -84,7 +87,6 @@ header
 			display: inline-block
 			vertical-align: top
 			outline: none
-			border: none
 			width: 25%
 			height: 35px
 			margin-left: -10px
@@ -92,6 +94,7 @@ header
 			color: black
 			border: 1px solid $lightGray
 			border-radius: 3px
+			opacity: 1
 			+media($small)
 				width: 33%
 	nav
