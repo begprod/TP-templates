@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	//call functions here bitch
+	//глобальные функции вызываем здесь
+	//остальные вызываем на нужных страницах, просто в теге <script>
 	showMainMenu();
 	animatMenu();
 	modalWindow();
@@ -172,5 +173,36 @@ function checkSearch() {
 		} else {
 			searchBtn.attr('disabled', 'disabled');
 		}
+	});
+}
+
+//Report film form
+function showReportForm() {
+	var reportFormlink = $('.film-report-form-link');
+	var reportForm = $('.report-film-form');
+	var reportFormInput = $('.report-film-form__input');
+	var reportFormClose = $('.report-film-form__close');
+	var getFilmName = $('.film-name').text();
+
+	var showBtnTrailer = $('.btn-all--watch-trailer');
+	var showBtnFilm = $('.btn-all--watch-film');
+	
+	showBtnTrailer.click(function() {
+		reportFormlink.text('Трейлер не работает');
+	});
+
+	showBtnFilm.click(function() {
+		reportFormlink.text('Фильм не работает');
+	});
+
+	reportFormlink.click(function() {
+		reportForm.fadeIn(300);
+		reportFormInput.val(getFilmName);
+	});
+	$('.modal-body__close-btn').click(function() {
+		reportForm.fadeOut(100);
+	});
+	reportFormClose.click(function() {
+		$(this).parent().fadeOut(300);
 	});
 }
