@@ -1,1 +1,1 @@
-TrashoПоиск
+TrashoПоиск - templates
