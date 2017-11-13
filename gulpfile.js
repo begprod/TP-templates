@@ -11,15 +11,18 @@ const reload = browserSync.reload;
 const paths = {
 	build: {
 		html: './build',
-		css: './build/css'
+		css: './build/css',
+		js: './build/js'
 	},
 	src: {
 		html: './html/*.html',
-		css: './css/style.sass'
+		css: './css/style.sass',
+		js: './js/script.js'
 	},
 	watch: {
 		html: './html/**/*.html',
-		css: './css/**/*.sass'
+		css: './css/**/*.sass',
+		js: './js/**/.js'
 	}
 }
 
@@ -59,25 +62,37 @@ gulp.task('sass', () => {
 
 //JS
 gulp.task('js', () => {
-	gulp.src()
-		.pipe()
+	gulp.src(paths.src.js)
+		.pipe(uglify())
+		.pipe(gulp.dest(paths.build.js))
+		.pipe(reload({
+			stream: true
+		}));
 });
 
 //COMMON TASK
 gulp.task('common', [
 	'html',
-	'css',
+	'sass',
 	'js'
 ]);
 
 //WATCH OR DIE
 gulp.task('watch', () => {
-
+	watch([paths.watch.html], (event, cb) => {
+		gulp.start('html');
+	});
+	watch([paths.watch.css], (event, cb) => {
+		gulp.start('sass');
+	});
+	watch([paths.watch.js], (event, cb) => {
+		gulp.start('js');
+	});
 });
 
 //DEV LOCAL SERVER
 gulp.task('server', () => {
-
+	browserSync(serverConfig);
 });
 
 //DEFAULT TASK
