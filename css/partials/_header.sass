@@ -1,67 +1,54 @@
 .header
-	width: 100%
-	height: 100%
+	min-width: 100%
 	min-height: 100px
-	padding-top: 1em
-	border-bottom: 1px solid #E5E5E5
 	margin-bottom: 40px
+	border-bottom: 1px solid #E5E5E5
 	+media($small)
 		margin-bottom: 10px
 	+media($xsSmall)
 		height: 150px
-	.logo
-		font-size: 2em
-		width: 32%
-		float: left
-		text-align: left
+	&__inner
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		align-content: center
+		min-height: 100px
+		+media($xsSmall)
+			flex-wrap: wrap
+			padding: 15px 15px 0 15px
+	&__logo
+		font-size: 32px
 		color: $orangeColor
-		padding-top: 10px
 		+media($small)
-			font-size: 2em
-			width: 33%
+			font-size: 28px
+			margin-right: 25px
 		+media($xsSmall)
-			float: none
-			width: 80%
-			font-size: 1.8em
-			margin-top: -10px
-			margin-bottom: 5px
-			padding-left: 6%
-		a
-			color: black
-		.site-name
-				position: relative
-				text-decoration: none
-				margin: 0
-				letter-spacing: -1px;
-				font-family: Arial
-				font-weight: bold
-				color: $orangeColor
-				// &:after
-				// 	content: "beta"
-				// 	display: block
-				// 	font-size: .3em
-				// 	position: absolute
-				// 	right: -17px
-				// 	top: 5px
-
-		.slogan
-			display: block
-			font-size: 0.4em
-			font-family: Arial
-			font-weight: bold
-			margin-left: 2px
-			cursor: default
-	.search
-		width: 40%
-		float: left
-		padding-top: 1em
-		text-align: center
-		margin-bottom: 20px
+			order: 1
+	&__site-name
+		position: relative
+		display: block
+		margin: 0
+		text-decoration: none
+		font-family: $mainFont
+		font-weight: bold
+		letter-spacing: -1px
+		color: $orangeColor
+	&__slogan
+		display: block
+		margin-left: 2px
+		font-size: 12px
+		font-family: $mainFont
+		font-weight: bold
+		cursor: default
+	&__search
+		flex-basis: 50%
 		+media($small)
-			width: 50%
+			flex-basis: 65%
 		+media($xsSmall)
-			width: 90%
-			float: none
+			order: 3
+			flex-basis: 100%
+			margin-top: 25px
 			margin-right: auto
 			margin-left: auto
 		.search-form--fieldset
@@ -73,12 +60,9 @@
 			height: 35px
 			padding-left: 10px
 			border-radius: 3px
-			outline: none
 			border: 1px solid $lightGray
 			outline: none
-			border-right: 0px
-			// remove shadow on web-kit safari
-			-webkit-appearance: none;
+			-webkit-appearance: none // remove shadow on web-kit safari
 			+media($small)
 				width: 50%
 			+media($xsSmall)
@@ -86,103 +70,90 @@
 		.btn-all--search-btn
 			display: inline-block
 			vertical-align: top
-			outline: none
 			width: 25%
 			height: 35px
 			margin-left: -10px
-			background-color: white
 			color: black
+			background-color: white
 			border: 1px solid $lightGray
 			border-radius: 3px
+			outline: none
 			opacity: 1
 			+media($small)
 				width: 33%
-	nav
-		width: 10%
-		height: 100px
-		min-height: 100px
-		float: right
-		margin-top: 15px
-		text-align: right
+	&__menu-triger
+		width: 35px
+		height: 35px
+		cursor: pointer
 		+media($xsSmall)
-			float: none
-		.menu-triger
-			height: 35%
-			text-align: center
-			cursor: pointer
-			+media($xsSmall)
-				position: absolute
-				height: auto
-				top: 25px
-				right: 9%
-				z-index: 100502
-			span
-				display: block
-				height: 2px !important
-				width: 30px
-				background-color: black
-				margin-bottom: 10px
-				transition: 0.3s
-		.menu
-			display: none
-			position: absolute
+			order: 2
+		span
+			display: block
+			height: 2px
+			width: 30px
+			margin-bottom: 10px
+			background-color: black
+			transition: 0.3s
+.main-navigation
+.menu
+	display: none
+	position: absolute
+	top: 80px
+	left: 0
+	right: 0
+	padding: 0
+	width: 100%
+	margin-right: auto
+	margin-left: auto
+	text-align: center
+	border-bottom: 1px solid #E5E5E5
+	z-index: 15
+	background-color: white
+	+media($xsSmall)
+		position: absolute
+		top: -20px
+		width: 100%
+		height: 100%
+		padding-top: 50px
+		border: none
+		box-shadow: 0 0 10px #000
+	&__item
+		float: left
+		width: 24%
+		height: 100px
+		padding-top: 3%
+		text-align: center
+		background-color: white
+		+media($small)
+			width: 20%
+			margin-right: 5%
+		+media($xsmall)
+			font-size: 15px
+		+media($xsSmall)
 			width: 100%
-			top: 80px
-			left: 0
-			right: 0
-			padding: 0
-			margin-right: auto
-			margin-left: auto
-			text-align: center
-			border-bottom: 1px solid #E5E5E5
-			z-index: 100501
-			background-color: white
-			+media($xsSmall)
-				position: absolute
-				width: 100%
-				height: 100%
-				top: -20px
-				padding-top: 50px
-				border: none
-				box-shadow: 0 0 10px #000
-			li
-				width: 24%
-				height: 100px
-				float: left
-				padding-top: 3%
-				text-align: center
-				background-color: white
-				+media($small)
-					width: 20%
-					margin-right: 5%
-				+media($xsmall)
-					font-size: 0.9em
-				+media($xsSmall)
-					width: 100%
-				&:hover
-					background-color: $hoverColor
-				a
-					color: black
-				.fa
-					font-size: 1.3em
-					margin: 10px
-					+media($small)
-						float: left
-						margin: 0px
-					+media($xsmall)
-						float: none
-						margin-right: 10px
-						font-size: 1em
-
-	//Анимации для кнопки меню
-	.menu-triger span
-		transition: 0.3s
-	.menu-triger.active span:nth-child(2n)
-		background-color: red
-		display: none
-	.menu-triger.active span:first-child
-		transform: rotate(45deg)
-		margin: 10px 0px 0px 0px
-	.menu-triger.active span:last-child
-		transform: rotate(-45deg)
-		margin: -2px 0px 0px 0px
+		&:hover
+			background-color: $hoverColor
+	&__link
+		color: black
+	&__icon
+		margin: 10px
+		font-size: 19px
+		+media($small)
+			float: left
+			margin: 0px
+		+media($xsmall)
+			float: none
+			margin-right: 10px
+			font-size: 16px
+//Анимации для кнопки меню
+.header__menu-triger span
+	transition: 0.3s
+.header__menu-triger.active span:nth-child(2n)
+	display: none
+	background-color: red
+.header__menu-triger.active span:first-child
+	margin: 10px 0px 0px 0px
+	transform: rotate(45deg)
+.header__menu-triger.active span:last-child
+	margin: -2px 0px 0px 0px
+	transform: rotate(-45deg)

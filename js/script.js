@@ -22,19 +22,19 @@ $(document).ready(function () {
 //Две функции для анимации меню
 function showMainMenu() {
 
-	var menuTrigger = $('.menu-triger');
+	var menuTrigger = $('.header__menu-triger');
 	var menu = $('.menu');
 
-	menuTrigger.click(function(event) {
+	menuTrigger.click(function() {
 		menu.slideToggle(200);
 	});
 }
 
 function animatMenu() {
 
-	var menuTrigger = $('.menu-triger');
+	var menuTrigger = $('.header__menu-triger');
 
-	menuTrigger.click(function(event) {
+	menuTrigger.click(function() {
 		$(this).toggleClass('active');
 	});
 }
@@ -118,10 +118,7 @@ function stopPlayVideo() {
 //Рандомные фразы
 function randomPhrases() {
 	var phrases = new Array('Всеж мы люди',
-							'Моча какая-то',
-							'Найди Свое Говно',
 							'Чего только не придумают',
-							'Креативная дезориентация',
 							'Это классика, это знать надо',
 							'Проходи, не задерживайся',
 							'Дешёвая провокация',
@@ -131,7 +128,7 @@ function randomPhrases() {
 							'Кетчупа не найдётся?',
 							'Бесплатные спецэффекты');
 	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-	var element = document.querySelector('.slogan');
+	var element = document.querySelector('.header__slogan');
 	element.innerHTML = randomPhrase;
 }
 //Кнопка наверх

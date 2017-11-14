@@ -1,25 +1,13 @@
 body
+	font-size: 16px
 	+media($xsSmall)
 		overflow-x: hidden
 h1, h2, h3, h4, h5, h6
-	font-family: $hFont
+	font-family: $mainFont
 	font-weight: normal
 	margin: 10px
 p
 	margin: 10px
-.wrapper
-	width: 1000px
-	margin-right: auto
-	margin-left: auto
-	+media($small)
-		width: 80%
-	+media($xsmall)
-		width: 90%
-	+media($xsSmall)
-		width: 95%
-
-.cf
-	+clearfix
 ul
 	padding: 0
 ul li
@@ -29,9 +17,8 @@ ul li
 		text-decoration: none
 		&:hover
 			color: black
-
 a
-	font-family: $hFont
+	font-family: $mainFont
 	color: black
 	transition: 0.3s
 	&:hover
@@ -42,7 +29,6 @@ p
 	a
 		&:hover
 			color: black
-
 button
 	background-color: $mainColor
 	color: $linkColor
@@ -72,9 +58,24 @@ fieldset
 	padding: 0 !important
 	margin: 0 !important
 	outline: none
+
+// Global classes
 .no-lr-margin
 	margin-right: 0px
 	margin-left: 0px
+.wrapper
+	width: 1000px
+	margin-right: auto
+	margin-left: auto
+	+media($small)
+		width: 80%
+	+media($xsmall)
+		width: 90%
+	+media($xsSmall)
+		width: 95%
+.cf
+	+clearfix
+
 //Хлебные крошки
 .breadcrumbs
 	margin-top: 10px
@@ -95,6 +96,7 @@ fieldset
 	display: inline-block
 	padding: 3px
 	margin: 0px 0px 0px 10px
+
 //Общий класс для кнопок
 .btn-all
 	padding: 5px 10px 5px 10px
@@ -109,6 +111,7 @@ fieldset
 	border-radius: 3px
 	&:hover
 		box-shadow: 0 0 3px #000
+
 //Модально окно для всего
 .modal-bg-layer
 	display: none
@@ -172,6 +175,7 @@ fieldset
 			+media($xsSmall)
 				width: 100%
 				max-height: 100%
+
 //Пагинация в поиске
 .search-pagination
 	color: black
@@ -181,9 +185,11 @@ fieldset
 			color: $mainColor
 	&--active
 		color: $mainColor
+
 //Disqus
 .disqus-block
 	margin-top: 25px
+
 //Кнопка наверх
 .scroll-up
 	display: none
@@ -197,6 +203,7 @@ fieldset
 	transition: .5s
 	&:hover
 		opacity: 1
+
 //Прелоадер
 .preloader-block
 	display: block
