@@ -22,7 +22,7 @@ const paths = {
 	watch: {
 		html: './html/**/*.html',
 		css: './css/**/*.sass',
-		js: './js/**/.js'
+		js: './js/script.js'
 	}
 }
 
