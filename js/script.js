@@ -35,7 +35,7 @@ function animatMenu() {
 	var menuTrigger = $('.header__menu-triger');
 
 	menuTrigger.click(function() {
-		$(this).toggleClass('active');
+		$(this).toggleClass('menu-triger--active');
 	});
 }
 

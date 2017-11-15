@@ -84,20 +84,45 @@
 			+media($small)
 				width: 33%
 	&__menu-triger
-		width: 35px
-		height: 35px
-		cursor: pointer
 		z-index: 20
 		+media($xsSmall)
 			order: 2
+.menu-triger
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	min-height: 35px
+	height: 35px
+	padding: 0 15px
+	border-radius: 3px
+	cursor: pointer
+	&__icon
+		margin-right: 7px
 		span
 			display: block
 			height: 2px
-			width: 30px
-			margin-bottom: 10px
+			width: 11px
+			margin-bottom: 4px
 			background-color: black
 			transition: 0.3s
-.main-navigation
+		&::before
+			content: ""
+			display: block
+			height: 2px
+			width: 15px
+			margin-bottom: 4px
+			transition: 0.3s
+			background-color: black
+		&::after
+			content: ""
+			display: block
+			height: 2px
+			width: 13px
+			transition: 0.3s
+			background-color: black
+	&--active
+		background-color: #e8e8e8
 .menu
 	display: none
 	position: absolute
@@ -148,15 +173,3 @@
 			float: none
 			margin-right: 10px
 			font-size: 16px
-//Анимации для кнопки меню
-.header__menu-triger span
-	transition: 0.3s
-.header__menu-triger.active span:nth-child(2n)
-	display: none
-	background-color: red
-.header__menu-triger.active span:first-child
-	margin: 10px 0px 0px 0px
-	transform: rotate(45deg)
-.header__menu-triger.active span:last-child
-	margin: -2px 0px 0px 0px
-	transform: rotate(-45deg)
