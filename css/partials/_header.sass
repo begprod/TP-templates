@@ -1,12 +1,10 @@
 .header
 	min-width: 100%
-	min-height: 100px
+	height: 100%
 	margin-bottom: 40px
 	border-bottom: 1px solid #E5E5E5
 	+media($small)
 		margin-bottom: 10px
-	+media($xsSmall)
-		height: 150px
 	&__inner
 		display: flex
 		flex-direction: row
@@ -14,9 +12,11 @@
 		align-items: center
 		align-content: center
 		min-height: 100px
+		height: 100px // for IE10
 		+media($xsSmall)
 			flex-wrap: wrap
-			padding: 15px 15px 0 15px
+			height: 150px // for IE10
+			padding: 0 15px 0 15px
 	&__logo
 		font-size: 32px
 		color: $orangeColor
@@ -34,6 +34,8 @@
 		font-weight: bold
 		letter-spacing: -1px
 		color: $orangeColor
+		&:hover
+			color: $orangeColor
 	&__slogan
 		display: block
 		margin-left: 2px
@@ -85,6 +87,7 @@
 		width: 35px
 		height: 35px
 		cursor: pointer
+		z-index: 20
 		+media($xsSmall)
 			order: 2
 		span
