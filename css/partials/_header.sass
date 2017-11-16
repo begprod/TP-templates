@@ -3,7 +3,7 @@
 	height: 100%
 	margin-bottom: 40px
 	border-bottom: 1px solid #E5E5E5
-	+media($small)
+	+media($medium)
 		margin-bottom: 10px
 	&__inner
 		display: flex
@@ -15,16 +15,18 @@
 		height: 100px // for IE10
 		+media($xsSmall)
 			flex-wrap: wrap
+			align-items: flex-start
 			height: 150px // for IE10
 			padding: 0 15px 0 15px
 	&__logo
 		font-size: 32px
 		color: $orangeColor
-		+media($small)
+		+media($medium)
 			font-size: 28px
 			margin-right: 25px
 		+media($xsSmall)
 			order: 1
+			margin-right: 0
 	&__site-name
 		position: relative
 		display: block
@@ -45,7 +47,7 @@
 		cursor: default
 	&__search
 		flex-basis: 50%
-		+media($small)
+		+media($medium)
 			flex-basis: 65%
 		+media($xsSmall)
 			order: 3
@@ -65,7 +67,7 @@
 			border: 1px solid $lightGray
 			outline: none
 			-webkit-appearance: none // remove shadow on web-kit safari
-			+media($small)
+			+media($medium)
 				width: 50%
 			+media($xsSmall)
 				width: 65%
@@ -81,7 +83,7 @@
 			border-radius: 3px
 			outline: none
 			opacity: 1
-			+media($small)
+			+media($medium)
 				width: 33%
 	&__menu-triger
 		z-index: 20
@@ -93,7 +95,7 @@
 	justify-content: center
 	align-items: center
 	min-height: 35px
-	height: 35px
+	height: 35px // for IE10
 	padding: 0 15px
 	border-radius: 3px
 	cursor: pointer
@@ -152,7 +154,7 @@
 		padding-top: 3%
 		text-align: center
 		background-color: white
-		+media($small)
+		+media($medium)
 			width: 20%
 			margin-right: 5%
 		+media($xsmall)
@@ -166,7 +168,7 @@
 	&__icon
 		margin: 10px
 		font-size: 19px
-		+media($small)
+		+media($medium)
 			float: left
 			margin: 0px
 		+media($xsmall)
