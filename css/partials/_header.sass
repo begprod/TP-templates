@@ -20,7 +20,7 @@
 			padding: 0 15px 0 15px
 	&__logo
 		font-size: 32px
-		color: $orangeColor
+		color: $mainColor
 		+media($medium)
 			font-size: 28px
 			margin-right: 25px
@@ -35,9 +35,9 @@
 		font-family: $mainFont
 		font-weight: bold
 		letter-spacing: -1px
-		color: $orangeColor
+		color: $mainColor
 		&:hover
-			color: $orangeColor
+			color: $mainColor
 	&__slogan
 		display: block
 		margin-left: 2px
@@ -48,47 +48,58 @@
 	&__search
 		flex-basis: 50%
 		+media($medium)
-			flex-basis: 65%
+			flex-basis: 60%
 		+media($xsSmall)
 			order: 3
 			flex-basis: 100%
 			margin-top: 25px
 			margin-right: auto
 			margin-left: auto
-		.search-form--fieldset
-			width: 100%
-		.search-form__input
-			display: inline-block
-			vertical-align: top
-			width: 70%
-			height: 35px
-			padding-left: 10px
-			border-radius: 3px
-			border: 1px solid $lightGray
-			outline: none
-			-webkit-appearance: none // remove shadow on web-kit safari
-			+media($medium)
-				width: 50%
-			+media($xsSmall)
-				width: 65%
-		.btn-all--search-btn
-			display: inline-block
-			vertical-align: top
-			width: 25%
-			height: 35px
-			margin-left: -10px
-			color: black
-			background-color: white
-			border: 1px solid $lightGray
-			border-radius: 3px
-			outline: none
-			opacity: 1
-			+media($medium)
-				width: 33%
 	&__menu-triger
 		z-index: 20
 		+media($xsSmall)
 			order: 2
+.search-form
+	// background-color: pink
+	// outline: 3px solid red
+	&__fieldset
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		width: 100%
+		// background-color: hotpink
+	&__input
+		flex-basis: 75%
+		height: 35px
+		padding-left: 10px
+		border: 1px solid $lightGray
+		border-top-left-radius: 3px
+		border-bottom-left-radius: 3px
+		background-color: white
+		outline: none
+		-webkit-appearance: none // remove shadow on web-kit safari
+		+media($medium)
+			width: 50%
+		+media($xsSmall)
+			width: 65%
+		&:focus
+			outline: none
+			border: 1px solid $lightGrayState
+			z-index: 2
+	&__search-btn
+		flex-basis: 25%
+		height: 35px
+		margin-left: -1px
+		border: 1px solid $lightGray
+		// border-left: none
+		border-top-right-radius: 3px
+		border-bottom-right-radius: 3px
+		background-color: white
+		color: black
+		outline: none
+		+media($medium)
+			width: 33%
 .menu-triger
 	display: flex
 	flex-direction: row

@@ -5,12 +5,12 @@
 			<div class="header__slogan">Кетчупа не найдётся?</div>
 		</div>
 		<div class="header__search">
-			<form class="sisea-search-form" action="[[~[[+landing]]]]" method="[[+method]]">
-				<fieldset class="search-form--fieldset">
-					<input placeholder="Найти фильм" class="search-form__input" type="text" name="[[+searchIndex]]" id="[[+searchIndex]]"/>
+			<form class="sisea-search-form search-form" action="[[~[[+landing]]]]" method="[[+method]]">
+				<div class="search-form__fieldset">
+					<input placeholder="Найти фильм" class="search-form__input" type="text" name="[[+searchIndex]]" id="[[+searchIndex]]" />
 					<input type="hidden" name="id" value="[[+landing]]" />
-					<input class="btn-all btn-all--search-btn" type="submit" value="Найти" />
-				</fieldset>
+					<input class="btn-all search-form__search-btn" type="submit" value="Найти" />
+				</div>
 			</form>
 		</div>
 		<div class="menu-triger header__menu-triger">
