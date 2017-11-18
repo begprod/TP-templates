@@ -7,10 +7,10 @@
 		width: 30%
 		float: left
 		max-height: 200px
-		+media($medium)
+		+media($large)
 			float: left
 			width: 50%
-		+media($xsSmall)
+		+media($small)
 			width: 100%
 			max-height: 100%
 			margin-bottom: 10px
@@ -18,16 +18,16 @@
 		display: inline-block
 		width: 50%
 		margin-left: 30px
+		+media($large)
+			width: 30%
 		+media($medium)
 			width: 30%
-		+media($xsmall)
-			width: 30%
-		+media($xsSmall)
+		+media($small)
 			width: 100%
 			margin: 0
 			padding: 0
 		h3, h5, h6
-			+media($xsmall)
+			+media($medium)
 				margin: 0px 0px 10px 0px
 		.btn-more-unit
 			display: block
@@ -46,14 +46,14 @@
 			.fa-chevron-right
 				margin-right: 10px
 				font-size: 14px
-			+media($medium)
+			+media($large)
 				width: 70%
-			+media($xsmall)
+			+media($medium)
 				margin: 10px 0px 0px 0px
 		.rp__year
 			font-size: 12px
 			margin: 10px
-			+media($xsmall)
+			+media($medium)
 				margin: 0px 0px 10px 0px
 //Пагинация
 .sticky-pagination

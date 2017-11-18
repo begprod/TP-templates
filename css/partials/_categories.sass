@@ -3,7 +3,7 @@
 	width: 100%
 	height: 100%
 	margin-bottom: 50px
-	+media($medium)
+	+media($large)
 		width: 90%
 		margin: 30px auto
 	.category-header
@@ -16,12 +16,12 @@
 			margin-left: 0px
 			margin-bottom: 20px
 			font-size: 27px
-			+media($medium)
+			+media($large)
 				width: auto
 				margin-right: 20px
-			+media($xsmall)
+			+media($medium)
 				font-size: 22px
-			+media($xsSmall)
+			+media($small)
 				width: 100%
 				font-size: 20px
 		.btn-more
@@ -37,9 +37,9 @@
 			border-radius: 3px
 			&:hover
 				box-shadow: 0 0 3px #000
-			+media($medium)
+			+media($large)
 				width: 15%
-			+media($xsSmall)
+			+media($small)
 				width: 100%
 	.category-unit
 		display: block
@@ -67,14 +67,14 @@
 		&:hover .overlay
 			transition: .5s
 			opacity: 1
-		+media($medium)
+		+media($large)
 			width: 30%
 			height: 100%
 			min-height: 150px
-		+media($xsmall)
+		+media($medium)
 			min-height: 150px
 			height: 100%
-		+media($xsSmall)
+		+media($small)
 			width: 100%
 			height: 100%
 			min-height: 250px
@@ -91,7 +91,7 @@
 			margin-bottom: 3px
 			opacity: 0
 			z-index: 5
-			+media($medium)
+			+media($large)
 				opacity: 1
 
 .category-items .category-unit:nth-child(2)
@@ -99,13 +99,13 @@
 	height: 500px
 	float: left
 	margin-right: 3%
-	+media($medium)
+	+media($large)
 		width: 30%
 		height: 100%
-	+media($xsmall)
+	+media($medium)
 		min-height: 150px
 		height: 100%
-	+media($xsSmall)
+	+media($small)
 		width: 100%
 		height: 100%
 		min-height: 250px
@@ -116,7 +116,7 @@
 	margin: 0px 10px 0px 10px
 	font-size: 16px
 	z-index: 5
-	+media($medium)
+	+media($large)
 		opacity: 1
 .category-unit__country
 	position: relative
@@ -124,7 +124,7 @@
 	margin: 0px 10px 0px 10px
 	font-size: 14px
 	z-index: 5
-	+media($medium)
+	+media($large)
 		opacity: 1
 .category-unit__descr
 	position: absolute
@@ -135,7 +135,7 @@
 	width: 100%
 	opacity: 0
 	z-index: 5
-	+media($medium)
+	+media($large)
 		display: none
 .overlay
 	display: block
@@ -150,5 +150,5 @@
 	background-color: rgba(black,.7)
 	opacity: 0.4
 	z-index: 1
-	+media($medium)
+	+media($large)
 		opacity: .7

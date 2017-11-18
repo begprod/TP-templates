@@ -1,6 +1,6 @@
 body
 	font-size: 16px
-	+media($xsSmall)
+	+media($small)
 		overflow-x: hidden
 h1, h2, h3, h4, h5, h6
 	font-family: $mainFont
@@ -68,11 +68,11 @@ fieldset
 	width: 1000px
 	margin-right: auto
 	margin-left: auto
-	+media($medium)
+	+media($large)
 		width: 80%
-	+media($xsmall)
+	+media($medium)
 		width: 90%
-	+media($xsSmall)
+	+media($small)
 		width: 95%
 .cf
 	+clearfix
@@ -100,7 +100,7 @@ fieldset
 .breadcrumbs
 	margin-top: 10px
 	margin-bottom: 10px
-	+media($xsSmall)
+	+media($small)
 		font-size: 0.5em
 .breadcrumbs a
 	padding: 3px
@@ -154,15 +154,15 @@ fieldset
 	margin-right: auto
 	position: fixed
 	z-index: 100500
-	+media($medium)
+	+media($large)
 		top: 70%
 		width: 60%
 		height: 300px
-	+media($xsmall)
+	+media($medium)
 		top: 80%
 		width: 70%
 		height: 200px
-	+media($xsSmall)
+	+media($small)
 		width: 90%
 	iframe
 		width: 100%
@@ -177,7 +177,7 @@ fieldset
 		transition: .3s
 		&:hover
 			text-shadow: 0 0 3px #000
-		+media($xsmall)
+		+media($medium)
 			right: 5px
 .film-rating-page--search-result
 	position: relative
@@ -189,10 +189,10 @@ fieldset
 			width: 100%
 			float: left
 			max-height: 200px
-			+media($medium)
+			+media($large)
 				float: left
 				width: 50%
-			+media($xsSmall)
+			+media($small)
 				width: 100%
 				max-height: 100%
 
@@ -250,7 +250,7 @@ fieldset
 	width: 100%
 	height: 100%
 	margin: 0 0
-	+media($medium)
+	+media($large)
 		margin: 0 0
 .grid-film__unit
 	display: inline-block
@@ -269,11 +269,11 @@ fieldset
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
+	+media($large)
+		height: 100px
 	+media($medium)
 		height: 100px
-	+media($xsmall)
-		height: 100px
-	+media($xsSmall)
+	+media($small)
 		height: 250px
 .grid-film__unit--25
 	background-color: white
@@ -281,27 +281,27 @@ fieldset
 	margin-right: 1%
 	&:last-child
 		margin-right: 0
-	+media($medium)
+	+media($large)
 		width: 23%
-	+media($xsmall)
+	+media($medium)
 		width: 21%
 		margin-right: 3%
-	+media($xsSmall)
+	+media($small)
 		width: 100%
 		margin: 10px 0 10px 0
 .grid-film__info
 	padding: 10px
 	a
 		text-decoration: none
-	+media($medium)
+	+media($large)
 		font-size: 11px
-	+media($xsmall)
+	+media($medium)
 		font-size: 14px
 .grid-film__head
 	margin-left: 0px
 	margin-bottom: 20px
 	font-size: 27px
-	+media($xsmall)
+	+media($medium)
 		font-size: 22px
-	+media($xsSmall)
+	+media($small)
 		text-align: left

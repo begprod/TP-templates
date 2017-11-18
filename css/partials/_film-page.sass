@@ -1,30 +1,30 @@
 .film-card-section
-	+media($xsmall)
+	+media($medium)
 		position: relative
 	.film-name
 		font-size: 1.5em
 		margin: 10px 0 15px 0
-		+media($xsmall)
+		+media($medium)
 			color: white
 			position: absolute
 			font-weight: bold
 			font-size: 2.5em
 			text-shadow: 0 0 3px black
-		+media($xsSmall)
+		+media($small)
 			top: 30px
 			font-size: 2em
 	.film-eng-name
 		color: gray
 		margin-top: -15px
 		margin-left: 0
-		+media($xsmall)
+		+media($medium)
 			color: white
 			position: absolute
 			font-weight: bold
 			font-size: 1em
 			text-shadow: 0 0 3px black
 			top: 140px
-		+media($xsSmall)
+		+media($small)
 			top: 25px
 	.film-top
 		width: 100%
@@ -35,22 +35,22 @@
 			margin-bottom: 20px
 			overflow: hidden
 			max-height: 320px
-			+media($medium)
+			+media($large)
 				width: 50%
-			+media($xsmall)
+			+media($medium)
 				width: 100%
 				height: 250px
-			+media($xsSmall)
+			+media($small)
 				height: 200px
 			img
 				width: 100%
 				min-height: 300px
-				+media($medium)
+				+media($large)
 					min-width: 100%
 					max-width: 100%
 					max-height: 100%
 					min-height: 100%
-				+media($xsmall)
+				+media($medium)
 					min-width: initial
 					max-width: initial
 					max-height: initial
@@ -61,14 +61,14 @@
 			width: 50%
 			float: left
 			margin-bottom: 20px
-			+media($medium)
+			+media($large)
 				width: 50%
-			+media($xsmall)
+			+media($medium)
 				width: 100%
 			table
 				width: 100%
 				margin-left: 30px
-				+media($xsSmall)
+				+media($small)
 					margin-left: 0px
 				tr
 					padding: 10px
@@ -92,9 +92,9 @@
 		width: 24%
 		height: 30px
 		margin-right: 15px
-		+media($medium)
+		+media($large)
 			width: 45%
-		+media($xsSmall)
+		+media($small)
 			width: 80%
 .rating-film
 	margin-top: 20px
@@ -104,7 +104,7 @@
 	width: 50%
 	margin-top: 50px
 	margin-left: 10px
-	+media($medium)
+	+media($large)
 		width: 95%
 .film-offer-form__film-name
 	display: block
@@ -124,7 +124,7 @@
 	display: block
 	width: 50%
 	padding: 10px 20px 10px 20px
-	+media($xsmall)
+	+media($medium)
 		margin: 0 auto
 //Spoiler
 .spoiler-link
@@ -144,9 +144,9 @@
 	width: 24%
 	background-color: $orangeColor
 	border-radius: 3px
-	+media($medium)
+	+media($large)
 		width: 45%
-	+media($xsSmall)
+	+media($small)
 		width: 80%
 		margin-top: 20px
 	.fa-play

@@ -3,7 +3,7 @@
 	height: 100%
 	margin-bottom: 40px
 	border-bottom: 1px solid #E5E5E5
-	+media($medium)
+	+media($large)
 		margin-bottom: 10px
 	&__inner
 		display: flex
@@ -13,7 +13,7 @@
 		align-content: center
 		min-height: 100px
 		height: 100px // for IE10
-		+media($xsSmall)
+		+media($small)
 			flex-wrap: wrap
 			align-items: flex-start
 			height: 150px // for IE10
@@ -21,10 +21,10 @@
 	&__logo
 		font-size: 32px
 		color: $mainColor
-		+media($medium)
+		+media($large)
 			font-size: 28px
 			margin-right: 25px
-		+media($xsSmall)
+		+media($small)
 			order: 1
 			margin-right: 0
 	&__site-name
@@ -47,9 +47,9 @@
 		cursor: default
 	&__search
 		flex-basis: 50%
-		+media($medium)
+		+media($large)
 			flex-basis: 60%
-		+media($xsSmall)
+		+media($small)
 			order: 3
 			flex-basis: 100%
 			margin-top: 25px
@@ -57,7 +57,7 @@
 			margin-left: auto
 	&__menu-triger
 		z-index: 20
-		+media($xsSmall)
+		+media($small)
 			order: 2
 .search-form
 	// background-color: pink
@@ -79,9 +79,9 @@
 		background-color: white
 		outline: none
 		-webkit-appearance: none // remove shadow on web-kit safari
-		+media($medium)
+		+media($large)
 			width: 50%
-		+media($xsSmall)
+		+media($small)
 			width: 65%
 		&:focus
 			outline: none
@@ -98,7 +98,7 @@
 		background-color: white
 		color: black
 		outline: none
-		+media($medium)
+		+media($large)
 			width: 33%
 .menu-triger
 	display: flex
@@ -150,7 +150,7 @@
 	border-bottom: 1px solid #E5E5E5
 	z-index: 15
 	background-color: white
-	+media($xsSmall)
+	+media($small)
 		position: absolute
 		top: -20px
 		width: 100%
@@ -165,12 +165,12 @@
 		padding-top: 3%
 		text-align: center
 		background-color: white
-		+media($medium)
+		+media($large)
 			width: 20%
 			margin-right: 5%
-		+media($xsmall)
+		+media($medium)
 			font-size: 15px
-		+media($xsSmall)
+		+media($small)
 			width: 100%
 		&:hover
 			background-color: $hoverColor
@@ -179,10 +179,10 @@
 	&__icon
 		margin: 10px
 		font-size: 19px
-		+media($medium)
+		+media($large)
 			float: left
 			margin: 0px
-		+media($xsmall)
+		+media($medium)
 			float: none
 			margin-right: 10px
 			font-size: 16px
