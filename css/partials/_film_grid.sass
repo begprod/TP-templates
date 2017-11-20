@@ -2,17 +2,25 @@
 	display: flex
 	flex-direction: row
 	justify-content: flex-start
+	align-items: flex-start
+	+media($small)
+		flex-wrap: wrap
 	&__unit
 		border-radius: 3px
 		transition: all .3s ease-in-out
-		&:hover
-			box-shadow: 0px 0px 3px $lightGrayState
-		&:hover .grid-film__info-name-link
-			color: $mainColor
 		&--25
 			flex-basis: 25%
 			margin-right: 33px
 			background-color: white
+			+media($large)
+				margin-right: 20px
+			+media($small)
+				flex-basis: 100%
+				margin-right: 0
+		&:hover
+			box-shadow: 0px 0px 3px $lightGrayState
+		&:hover .grid-film__info-name-link
+			color: $mainColor
 		&:last-child
 			margin-right: 0
 	&__img
@@ -23,8 +31,14 @@
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: center
+		+media($large)
+			height: 100px
+		+media($small)
+			height: 250px
 	&__info
 		padding: 10px
+		+media($large)
+			font-size: 14px
 	&__info-name-link
 		text-decoration: none
 		transition: all .3s ease-in-out
