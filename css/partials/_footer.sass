@@ -1,32 +1,28 @@
-footer
-	max-width: 100%
-	min-height: 100px
-	text-align: center
+.footer
+	width: 100%
 	border-top: 1px solid #E5E5E5
-	margin-top: 50px
-	padding-top: 20px
-	a
-		color: black
-		&:hover
-			color: black
-	.footer-menu
-		display: inline-block
-		vertical-align: top
-		width: 30%
+	+media($medium)
+		border-bottom: 1px solid #E5E5E5
+	&__inner
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		align-items: center
+		height: 100px
+		min-height: 100px
+		+media($medium)
+			flex-direction: column
+			height: 100%
+			padding: 25px 0
+	&__item
+		flex-basis: 30%
 		text-align: center
-		+media($small)
-			width: 100%
-	.copyright-footer
-		display: inline-block
-		vertical-align: top
-		width: 30%
-		text-align: center
-		+media($small)
-			width: 100%
-	.info-footer
-		display: inline-block
-		vertical-align: top
-		width: 30%
-		text-align: center
-		+media($small)
-			width: 100%
+		+media($medium)
+			margin-bottom: 15px
+.footer-nav
+	&__inner
+		margin: 0
+	&__item
+		margin: 5px 0
+	&__link
+		text-decoration: underline
