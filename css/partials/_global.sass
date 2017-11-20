@@ -26,17 +26,9 @@ a
 p
 	font-family: $textFont
 	font-weight: normal
-	a
-		&:hover
-			color: $mainColor
 button
 	border: none
 	transition: 0.3s
-	a
-		text-decoration: none
-		color: $linkColor
-		&:hover
-			color: $linkColor
 	&:focus
 		outline: none
 		box-shadow: 0 0 3px #000
@@ -59,11 +51,6 @@ textarea
 		outline: 1px solid $mainColor
 label
 	margin-bottom: 5px
-fieldset
-	border: none !important
-	padding: 0 !important
-	margin: 0 !important
-	outline: none
 
 // Helpers
 .wrapper
@@ -130,7 +117,7 @@ fieldset
 	margin: 0px 0px 0px 10px
 
 //Общий класс для кнопок
-.btn-all
+.btn
 	padding: 5px 10px 5px 10px
 	background-color: $mainColor
 	text-align: center
@@ -191,6 +178,8 @@ fieldset
 			text-shadow: 0 0 3px #000
 		+media($medium)
 			right: 5px
+
+//????????????
 .film-rating-page--search-result
 	position: relative
 	padding: 10px
