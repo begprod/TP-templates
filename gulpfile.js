@@ -30,7 +30,7 @@ const serverConfig = {
 	server: {
 		baseDir: './build'
 	},
-	tunnel: false,
+	tunnel: true,
 	hots: 'localhost',
 	port: 9000,
 	logPrefix: 'trashopoisk_project'
