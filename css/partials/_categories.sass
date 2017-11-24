@@ -74,6 +74,17 @@
 		padding: 20px 20px 0 20px
 		margin: 0
 		z-index: 15
+		+media($large)
+			font-size: 16px
+		+media($medium)
+			font-size: 14px
+		+media($small)
+			font-size: 22px
+	&__eng-name
+		margin-top: 0
+		margin-bottom: 10px
+		+media($small)
+			font-size: 14px
 	&__year
 		margin-top: 10px
 	&__descr
@@ -92,4 +103,4 @@
 		transition: all .3s ease-in-out
 		z-index: 10
 		+media($large)
-			background-color: rgba(black, .5)
+			background-color: rgba(black, .2)

@@ -162,7 +162,7 @@ function spoilerOpenClose() {
 //Если поиск пустой, то ничего не делаем
 function checkSearch() { 
 	var searchInput = $('.search-form__input');
-	var searchBtn = $('.btn-all--search-btn');
+	var searchBtn = $('.search-form__search-btn');
 	searchBtn.attr('disabled', 'disabled');
 	searchInput.keyup(function() {
 		if($(this).val().length != 0) {
