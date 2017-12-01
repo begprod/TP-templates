@@ -3,7 +3,7 @@
 	padding: 40px 0 0 0
 	font-size: 14px
 	+media($small)
-		padding-top: 25px
+		padding: 25px 15px 0 15px
 		font-size: 10px
 	&__link
 		padding: 3px
@@ -53,8 +53,8 @@
 
 //Кнопка наверх
 .scroll-up
-	display: none
 	position: fixed
+	display: none
 	right: 50px
 	bottom: 50px
 	font-size: 3.5em
@@ -64,6 +64,31 @@
 	transition: .5s
 	&:hover
 		opacity: 1
+
+//Пагинация, если js не работает
+.sticky-pagination
+	height: 100% !important
+ul.pagination
+	padding: 0
+	li
+		display: inline-block
+		margin-right: 10px
+	li
+		&:first-child
+			display: none
+		&:last-child
+			display: none
+	.active
+		a
+			color: $mainColor
+		a
+			&:hover
+				color: $mainColor
+.rating-page__head
+	margin-left: 10px
+	font-size: 1.5em
+.film-rating-page__link
+	text-decoration: none
 
 //Disqus
 .disqus-block

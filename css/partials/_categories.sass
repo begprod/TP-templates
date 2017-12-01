@@ -1,3 +1,4 @@
+//Блок на главной странице
 .category-grid
 	position: relative
 	display: flex
@@ -27,28 +28,6 @@
 			+media($small)
 				flex-basis: 100%
 				margin-right: 0
-		&::after
-			content: ""
-			position: absolute
-			top: 3%
-			right: -6px
-			width: 5px
-			height: 95%
-			background-color: #535353
-			z-index: -1
-			+media($small)
-				display: none
-		&::before
-			content: ""
-			position: absolute
-			top: 6%
-			right: -12px
-			width: 5px
-			height: 90%
-			background-color: #535353
-			z-index: -1
-			+media($small)
-				display: none
 .category-unit
 	color: white
 	text-decoration: none

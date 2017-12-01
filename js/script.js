@@ -134,7 +134,7 @@ function randomPhrases() {
 //Кнопка наверх
 function scrollUp() {
 	var scrollBtn = $('.scroll-up');
-	var bodyHtml = $("html, body");
+	var bodyHtml = $('html, body');
 
 scrollBtn.click(function (event) {
 	bodyHtml.animate({ scrollTop: 0 }, 400);
