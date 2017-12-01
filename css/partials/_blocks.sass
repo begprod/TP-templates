@@ -1,0 +1,56 @@
+//Хлебные крошки
+.breadcrumbs
+	padding: 40px 0 0 0
+	font-size: 14px
+	+media($small)
+		padding-top: 25px
+		font-size: 10px
+	&__link
+		padding: 3px
+		margin: 0 10px
+		text-decoration: none
+		&:first-child
+			margin-left: 0
+		&:hover
+			text-decoration: underline
+			color: black
+	&__current
+		color: $mainColor
+		display: inline-block
+		padding: 3px
+		margin: 0 0 0 10px
+
+//Пагинация в поиске
+.search-pagination
+	color: black
+	a
+		text-decoration: none
+		&:hover
+			color: $mainColor
+	&--active
+		color: $mainColor
+
+//Прелоадер
+.preloader-block
+	display: block
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	background-color: white
+	opacity: .8
+	z-index: 100500
+.preloader-block__anim
+	display: block
+	position: relative
+	top: 40%
+	width: 100px
+	height: 100px
+	margin: 0 auto
+
+//Disqus
+.disqus-block
+	margin-top: 25px
