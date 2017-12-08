@@ -1,24 +1,35 @@
 //Хлебные крошки
 .breadcrumbs
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: flex-start
+	align-items: center
 	padding: 40px 0 0 0
 	font-size: 14px
 	+media($small)
-		padding: 25px 15px 0 15px
 		font-size: 10px
+		padding: 25px 15px 0 15px
 	&__link
-		padding: 3px
-		margin: 0 10px
+		margin: 0 13px
+		overflow: hidden
+		white-space: nowrap
 		text-decoration: none
+		text-overflow: ellipsis
+		cursor: default
 		&:first-child
 			margin-left: 0
 		&:hover
-			text-decoration: underline
 			color: black
+			text-decoration: underline
 	&__current
+		margin-left: 13px
 		color: $mainColor
-		display: inline-block
-		padding: 3px
-		margin: 0 0 0 10px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		cursor: default
+		transition: all .1s ease-in-out
 
 //Пагинация в поиске
 .search-pagination
@@ -90,6 +101,14 @@ ul.pagination
 .film-rating-page__link
 	text-decoration: none
 
-//Disqus
-.disqus-block
-	margin-top: 25px
+//Spoiler
+.spoiler-link
+	margin: 10px 0px 10px 0px
+	text-decoration: underline
+	cursor: pointer
+.spoiler-content
+	display: none
+	background-color: #f4f4f4
+	border-radius: 3px
+	padding: 3px
+	margin: 5px

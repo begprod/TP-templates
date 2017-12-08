@@ -1,56 +1,74 @@
-//= ../../blocks/_breadcrumbs.html
-<section class="film-card-section">
-	<div class="wrapper">
-		<h1 class="film-name">Человеческая многоножка 2</h1>
-		<h5 class="film-eng-name">English name</h5>
-		<div class="film-top cf">
-			<div class="film-poster">
-				<img src="images/green.jpg" alt="">
+<section class="l-section l-section--film-page">
+	<div class="film-hero" style="background-image: url('images/green.jpg');">
+		<div class="film-hero__inner">
+			//= ../../blocks/_breadcrumbs.html
+			<div class="film-hero__info">
+				<div class="film-hero__year">Россия, 1999</div>
+				<h1 class="film-hero__head">Зеленый слоник</h1>
+				<h2 class="film-hero__eng-name">Green Elephant</h2>
 			</div>
-			<div class="film-info cf">
-				<table>
+			<div class="film-hero__btns">
+				<button class="btn btn-all--watch-trailer film-hero__btn" data-trailer="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>">
+					Трейлер
+				</button>
+				<button class="btn btn-all--watch-film film-hero__btn" data-film="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">
+					<i class="fa fa-play" aria-hidden="true"></i>Смотреть бесплатно
+				</button>
+			</div>
+			<div class="rating-film rating-film--develop">
+				<span>Оцените фильм</span>
+			</div>
+			<div class="social-likes social-likes--develop">
+				<span>Поделиться фильмом</span>
+				<span>Share btns</span>
+			</div>
+		</div>
+	</div>
+	<div class="film-info l-section__inner wrapper">
+		<div class="film-info__left">
+			<div class="film-info__cover">
+				<img src="images/film-cover.jpg" alt="">
+			</div>
+			<div class="film-info__">
+				<table class="table film-info__table">
 					<tbody>
-						<tr>
-							<td>Год</td>
-							<td>1992</td>
+						<tr class="table__row">
+							<td class="table__type">Год</td>
+							<td class="table__value">1992</td>
 						</tr>
-						<tr>
-							<td>Режиссер</td>
-							<td>Светлана Баскова</td>
+						<tr class="table__row">
+							<td class="table__type">Режиссер</td>
+							<td class="table__value">Светлана Баскова</td>
 						</tr>
-						<tr>
-							<td>Продюссер</td>
-							<td>Олег Мавромати</td>
+						<tr class="table__row">
+							<td class="table__type">Продюссер</td>
+							<td class="table__value">Олег Мавромати</td>
 						</tr>
-						<tr>
-							<td>Страна</td>
-							<td>Россия</td>
+						<tr class="table__row">
+							<td class="table__type">Страна</td>
+							<td class="table__value">Россия</td>
 						</tr>
-						<tr>
-							<td>Время</td>
-							<td>86 мин</td>
+						<tr class="table__row">
+							<td class="table__type">Время</td>
+							<td class="table__value">86 мин</td>
 						</tr>
-						<tr>
-							<td>Оператор</td>
-							<td>Светлана Баскова</td>
+						<tr class="table__row">
+							<td class="table__type">Оператор</td>
+							<td class="table__value">Светлана Баскова</td>
 						</tr>
-						<tr>
-							<td>Сценарий</td>
-							<td>Светлана Баскова</td>
+						<tr class="table__row">
+							<td class="table__type">Сценарий</td>
+							<td class="table__value">Светлана Баскова</td>
 						</tr>
-						<tr>
-							<td>Слоган </td>
-							<td>Чисти на</td>
+						<tr class="table__row">
+							<td class="table__type">Слоган </td>
+							<td class="table__value">Чисти на! Раз! Раз! Раз! Раз!</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-		<div class="btn btn-all--watch-trailer" data-trailer='<iframe src="https://www.youtube.com/embed/HunbC4UEWMg" frameborder="0" allowfullscreen></iframe>'>Смотреть трейлер</div>
-		<div class="btn btn-all--watch-film" data-film='<iframe src="//vk.com/video_ext.php?oid=-121184905&id=456239017&hash=3234d02d98eb2699&hd=2" width="853" height="480"  frameborder="0"></iframe>'>
-			<i class="fa fa-play" aria-hidden="true"></i>Смотреть бесплатно</div>
-		<div class="film-description">
-			<h2>Описание</h2>
+		<div class="film-info__right">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro sed vero totam, fuga aliquid, ex beatae autem, eveniet
 				iste quas asperiores unde ratione! Inventore earum, nisi quas fugiat assumenda eveniet amet error facere, placeat in
 				id magni quo impedit quibusdam, ducimus omnis voluptate perferendis tempora qui explicabo nulla quaerat sapiente recusandae.
@@ -59,21 +77,6 @@
 				excepturi omnis tenetur! Et voluptatum accusamus molestias ea, ut culpa, iste cum minus aliquam dolorum. Quos, autem,
 				et.
 			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur sit esse atque saepe repellat temporibus, adipisci
-				natus mollitia expedita quam, aperiam non recusandae assumenda qui neque ratione, deleniti officia est error nemo ipsa!
-				Et tempora quae, ipsum doloremque sit repellendus nobis. Tempore nisi enim architecto asperiores provident quae impedit
-				minus sit possimus iste, libero voluptate ullam laborum officiis nostrum aliquid vitae temporibus. Optio iste nemo ea
-				asperiores, ratione ipsum! Voluptatibus animi, alias, tenetur reprehenderit tempore officiis. Alias deleniti ipsa, soluta
-				deserunt, tempore ex vel sed similique tenetur facilis debitis aliquam repudiandae esse mollitia, dicta ipsam, quaerat
-				quod veniam minima.
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ad, ducimus eos id, impedit placeat mollitia rem, voluptatibus
-				possimus asperiores repellendus. Aperiam corporis aliquid officiis aspernatur omnis, dolor beatae nemo distinctio nam,
-				mollitia veritatis odit a. Nemo, libero architecto eaque quia similique dolore, aliquam, voluptatibus molestiae dicta
-				eligendi animi. Amet.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum fugiat aliquam deserunt nostrum quod ab voluptates quaerat
-				labore a, hic eaque fuga fugit, pariatur cum officia excepturi expedita quam quas optio ducimus repellat repudiandae.
-				Mollitia ut, facere voluptate soluta id.</p>
 			<a class="spoiler-link">Альтернативный обзор</a>
 			<div class="spoiler-content">
 				<p>Какая первая мысль приходит в воспалённый разум типичного Российского режиссёра? Конечно же сделать ремейк советского
@@ -91,15 +94,24 @@
 				<p>Этот "фильм" крайне не рекомендуется к просмотру. НО! Если вы хотите получить целую гамму отрицательных эмоций и знатный
 					батхерт, то можете полностью вымазаться этим говном.</p>
 				<p>Желаю всем причастным к созданию этого "кино", чтобы их жизнь превратилась в последние 20 минут
-					<a href="/luchshie-iz-xudshix/zelenyij-slonik.html"
-					    alt="Зеленый слоник" title="Зеленый слоник">Зеленого слоника.</a>
+					<a href="/luchshie-iz-xudshix/zelenyij-slonik.html" alt="Зеленый слоник" title="Зеленый слоник">Зеленого слоника.</a>
 				</p>
 			</div>
 		</div>
 	</div>
-	<section class="l-section cf">
-		<div class="wrapper">
-			<h2 class="l-section__head">Случайные фильмы</h2>
+
+	<div class="comments wrapper">
+		<div class="disqus-block disqus-block--develop">
+			comments
+		</div>
+	</div>
+
+	<!-- Случайные фильмы -->
+	<section class="l-section">
+		<div class="l-section__inner wrapper">
+			<div class="l-section__head b-head">
+				<h2 class="b-head__title">Случайные фильмы</h2>
+			</div>
 			<div class="grid-film">
 				<article class="grid-film__unit grid-film__unit--25">
 					<a href="/" class="grid-film__img" style="background-image:url('images/green.jpg');">
@@ -146,6 +158,8 @@
 			</div>
 		</div>
 	</section>
+	<!-- Случайные фильмы -->
+
 	<div class="modal-bg-layer"></div>
 	<div class="modal-body">
 		<div class="modal-body__close-btn">

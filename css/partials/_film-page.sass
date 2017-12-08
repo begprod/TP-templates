@@ -1,113 +1,170 @@
-.film-card-section
-	padding-top: 40px
-	+media($medium)
-		padding-top: 0
+.film-hero
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: stretch
+	height: 600px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	+media($small)
+		height: 500px
+	+media($tiny)
+		height: auto
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		display: block
+		box-shadow: inset 0 0 500px 100px rgba(0,0,0,0.9)
+		background-color: rgba(black, .1)
+		+media($medium)
+			box-shadow: inset 0 0 200px 50px rgba(0,0,0,0.9)
+	&__inner
 		position: relative
-	.film-name
-		font-size: 1.5em
-		margin: 10px 0 15px 0
-		+media($medium)
-			color: white
-			position: absolute
-			font-weight: bold
-			font-size: 2.5em
-			text-shadow: 0 0 3px black
-		+media($small)
-			top: 30px
-			font-size: 2em
-	.film-eng-name
-		color: gray
-		margin-top: -15px
-		margin-left: 0
-		+media($medium)
-			color: white
-			position: absolute
-			font-weight: bold
-			font-size: 1em
-			text-shadow: 0 0 3px black
-			top: 140px
-		+media($small)
-			top: 25px
-	.film-top
-		width: 100%
-		margin: 20px 0px 0px 0px
-		.film-poster
-			width: 50%
-			float: left
-			margin-bottom: 20px
-			overflow: hidden
-			max-height: 320px
-			+media($large)
-				width: 50%
-			+media($medium)
-				width: 100%
-				height: 250px
-			+media($small)
-				height: 200px
-			img
-				width: 100%
-				min-height: 300px
-				+media($large)
-					min-width: 100%
-					max-width: 100%
-					max-height: 100%
-					min-height: 100%
-				+media($medium)
-					min-width: initial
-					max-width: initial
-					max-height: initial
-					min-height: initial
-					width: 100%
-					height: auto
-		.film-info
-			width: 50%
-			float: left
-			margin-bottom: 20px
-			+media($large)
-				width: 50%
-			+media($medium)
-				width: 100%
-			table
-				width: 100%
-				margin-left: 30px
-				+media($small)
-					margin-left: 0px
-				tr
-					padding: 10px
-					td
-						padding: 10px
-						border-bottom: 1px solid #E5E5E5
-						&:first-child
-							font-weight: bold
-	.film-description
-		p
-			line-height: 21px
-			font-size: 15px
-			margin-left: 0
-		h2
-			margin-left: 0
-		h3
-			margin-left: 0
-	.btn-all--watch-trailer
-		// display: none
-		vertical-align: top
-		width: 24%
-		height: 30px
-		line-height: 30px
-		margin-right: 15px
-		background-color: $mainColor
-		&:hover
-			color: white
-			border: none
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		justify-content: space-between
+		align-items: center
+		flex-basis: 100%
+		padding: 15px 0 15px 0
+		z-index: 10
+		color: white
 		+media($large)
-			width: 45%
+			padding-top: 50px
+		.breadcrumbs
+			position: absolute
+			top: 15px
+			left: 15px
+			padding: 0
+			a
+				color: white
+				&:hover
+					color: white
+			&__current
+				max-width: 150px
+				color: $altColor
+				cursor: default
+				&:hover
+					max-width: 260px
+				+media($large)
+					max-width: none
+	&__info
+		max-width: 40%
+		text-align: center
+		+media($large)
+			min-width: 70%
+		+media($tiny)
+			min-width: 90%
+	&__year
+		margin: 0
+		padding-bottom: 7px
+		font-size: 13px
+	&__head
+		margin: 0
+		padding-bottom: 7px
+		font-size: 33px
+		+media($tiny)
+			font-size: 23px
+	&__eng-name
+		margin: 0
+		font-size: 13px
+	&__btns
+		+media($tiny)
+			width: 90%
+			margin: 50px 0
+	&__btn
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+
+.film-info
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: flex-start
+	align-items: flex-start
+	padding-top: 50px
+	+media($small)
+		flex-wrap: wrap
+	&__left
+		flex-basis: 250px
+		padding-right: 50px
+		+media($large)
+			padding-right: 20px
+		+media($small)
+			flex-basis: 100%
+			padding: 0
+	&__right
+		flex-basis: 700px
+		padding-left: 20px
+		+media($large)
+			flex-basis: 500px
+		+media($small)
+			flex-basis: 100%
+			margin-bottom: 40px
+			padding: 0
+	&__cover
+		margin-bottom: 25px
+		+media($small)
+			display: none
+
+.table
+	width: 100%
+	margin-bottom: 25px
+	&__row
+		+media($small)
+			border-bottom: 1px solid #e5e5e5
+	&__type
+		vertical-align: top
+		width: 50%
+		padding-right: 10px
+		padding-bottom: 15px
+		font-size: 12px
+		color: #888
+		+media($small)
+			width: 20%
+			padding: 10px 10px 10px 0
+	&__value
+		vertical-align: top
+		width: 50%
+		padding-bottom: 15px
+		font-size: 12px
 		+media($small)
 			width: 80%
-.rating-film
-	margin-top: 20px
-	overflow: hidden
+			padding: 10px 0 10px 10px
 
-//Форма предложить фильм
+.btn-all--watch-trailer
+	display: none
+	vertical-align: top
+	height: 50px
+	margin-right: 15px
+	background-color: $mainColor
+	&:hover
+		color: white
+		border: none
+	+media($tiny)
+		width: 100%
+
+.btn-all--watch-film
+	display: none
+	vertical-align: top
+	height: 50px
+	background-color: $altColor
+	border-radius: 3px
+	&:hover
+		color: white
+		border: none
+	.fa-play
+		margin-right: 10px
+	+media($tiny)
+		width: 100%
+
+// Форма предложить фильм
 .film-offer-form
 	width: 50%
 	margin: 50px 0 50px 0
@@ -134,38 +191,7 @@
 	+media($medium)
 		margin: 0 auto
 
-//Spoiler
-.spoiler-link
-	margin: 10px 0px 10px 0px
-	text-decoration: underline
-	cursor: pointer
-.spoiler-content
-	display: none
-	background-color: #f4f4f4
-	border-radius: 3px
-	padding: 3px
-	margin: 5px
-.btn-all--watch-film
-	// display: none
-	vertical-align: top
-	height: 30px
-	line-height: 30px
-	width: 24%
-	background-color: $altColor
-	border-radius: 3px
-	&:hover
-		color: white
-		border: none
-	+media($large)
-		width: 45%
-	+media($small)
-		width: 80%
-		margin-top: 20px
-	.fa-play
-		margin-right: 10px
-.grid-film--film-page
-	margin: 50px auto
-//Report btn
+// Report link
 .film-report-form-link
 	position: absolute
 	bottom: -25px
@@ -173,9 +199,10 @@
 	color: white
 	cursor: pointer
 	text-decoration: underline
-//Report form
+
+// Report form
 .report-film-form
-	display: none;
+	display: none
 	position: absolute
 	top: 50%
 	left: 50%
@@ -183,7 +210,7 @@
 	padding: 20px 25px
 	background-color: white
 	box-shadow: 0 0 5px black
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%)
 	z-index: 1000000
 .report-film-form__head
 	font-weight: bold
@@ -211,3 +238,39 @@
 	display: block
 	margin: 0 auto
 	padding: 10px 20px
+
+// Like & Dislike
+.rating-film
+	overflow: hidden
+	+media($tiny)
+		margin-bottom: 50px
+	&--develop
+		width: 300px
+		height: 80px
+		line-height: 80px
+		color: black
+		text-align: center
+		background-color: #f8f8f8
+		opacity: .5
+
+// Share buttons
+.social-likes
+	&--develop
+		width: 300px
+		height: 40px
+		line-height: 40px
+		color: black
+		text-align: center
+		background-color: #f8f8f8
+		opacity: .5
+	+media($tiny)
+		display: none
+
+// Disqus
+.disqus-block
+	&--develop
+		min-height: 560px
+		color: white
+		text-align: center
+		background-color: black
+		opacity: .5
