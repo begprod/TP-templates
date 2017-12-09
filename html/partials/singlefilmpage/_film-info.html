@@ -1,11 +1,11 @@
-<section class="l-section l-section--film-page">
+<section class="l-section l-section--film-page" itemscope itemtype="http://schema.org/Movie">
 	<div class="film-hero" style="background-image: url('images/green.jpg');">
 		<div class="film-hero__inner">
 			//= ../../blocks/_breadcrumbs.html
 			<div class="film-hero__info">
 				<div class="film-hero__year">Россия, 1999</div>
-				<h1 class="film-hero__head">Зеленый слоник</h1>
-				<h2 class="film-hero__eng-name">Green Elephant</h2>
+				<h1 class="film-hero__head" itemprop="name">Зеленый слоник</h1>
+				<h2 class="film-hero__eng-name" itemprop="alternativeHeadline">Green Elephant</h2>
 			</div>
 			<div class="film-hero__btns">
 				<button class="btn btn-all--watch-trailer film-hero__btn" data-trailer="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>">
@@ -27,18 +27,18 @@
 	<div class="film-info l-section__inner wrapper">
 		<div class="film-info__left">
 			<div class="film-info__cover">
-				<img src="images/film-cover.jpg" alt="">
+				<img src="images/film-cover.jpg" itemprop="image" alt="Зеленый слоник">
 			</div>
 			<div class="film-info__">
 				<table class="table film-info__table">
 					<tbody>
 						<tr class="table__row">
 							<td class="table__type">Год</td>
-							<td class="table__value">1992</td>
+							<td class="table__value" itemprop="datePublished">1992</td>
 						</tr>
 						<tr class="table__row">
 							<td class="table__type">Режиссер</td>
-							<td class="table__value">Светлана Баскова</td>
+							<td class="table__value" itemprop="director">Светлана Баскова</td>
 						</tr>
 						<tr class="table__row">
 							<td class="table__type">Продюссер</td>
@@ -50,7 +50,7 @@
 						</tr>
 						<tr class="table__row">
 							<td class="table__type">Время</td>
-							<td class="table__value">86 мин</td>
+							<td class="table__value" itemprop="duration">86 мин</td>
 						</tr>
 						<tr class="table__row">
 							<td class="table__type">Оператор</td>
@@ -68,7 +68,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="film-info__right">
+		<div class="film-info__right" itemprop="description">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro sed vero totam, fuga aliquid, ex beatae autem, eveniet
 				iste quas asperiores unde ratione! Inventore earum, nisi quas fugiat assumenda eveniet amet error facere, placeat in
 				id magni quo impedit quibusdam, ducimus omnis voluptate perferendis tempora qui explicabo nulla quaerat sapiente recusandae.
