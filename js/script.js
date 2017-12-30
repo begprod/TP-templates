@@ -179,18 +179,10 @@ function showReportForm() {
 	var reportForm = $('.report-film-form');
 	var reportFormInput = $('.report-film-form__input');
 	var reportFormClose = $('.report-film-form__close');
-	var getFilmName = $('.film-name').text();
+	var getFilmName = $('.film-hero__head').text();
 
 	var showBtnTrailer = $('.btn-all--watch-trailer');
 	var showBtnFilm = $('.btn-all--watch-film');
-	
-	showBtnTrailer.click(function() {
-		reportFormlink.text('Трейлер не работает');
-	});
-
-	showBtnFilm.click(function() {
-		reportFormlink.text('Фильм не работает');
-	});
 
 	reportFormlink.click(function() {
 		reportForm.fadeIn(300);

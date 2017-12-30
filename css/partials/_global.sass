@@ -201,6 +201,7 @@ label
 			+media($small)
 				width: 100%
 				max-height: 100%
+
 // Линии справа от блока
 .decor-lines
 	&::after
@@ -222,6 +223,11 @@ label
 		width: 5px
 		height: 90%
 		background-color: #535353
-		// z-index: -1
 		+media($small)
 			display: none
+
+// Input error class
+.ajax_form 
+	.error
+		border: 2px solid red
+		color: black
