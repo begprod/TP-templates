@@ -26,6 +26,8 @@
 		+media($small)
 			order: 1
 			margin-right: 0
+		+media($tiny)
+			font-size: 25px
 
 	&__site-name
 		position: relative
@@ -46,6 +48,8 @@
 		font-family: $mainFont
 		font-weight: bold
 		cursor: default
+		+media($tiny)
+			font-size: 11px
 
 	&__search
 		flex-basis: 50%
@@ -65,11 +69,11 @@
 		flex-wrap: nowrap
 		justify-content: flex-end
 		align-items: center
+		+media($small)
+			order: 2
 
 	&__menu-triger
 		z-index: 20
-		+media($small)
-			order: 2
 
 	&__login
 		margin-left: 30px
@@ -79,6 +83,8 @@
 		&:focus
 			box-shadow: none
 			color: $mainColor
+		+media($tiny)
+			margin-left: 0
 
 .search-form
 	&__fieldset
