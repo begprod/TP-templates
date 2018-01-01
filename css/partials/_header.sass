@@ -2,6 +2,7 @@
 	min-width: 100%
 	height: 100%
 	border-bottom: 1px solid #E5E5E5
+
 	&__inner
 		display: flex
 		flex-direction: row
@@ -15,6 +16,7 @@
 			align-items: flex-start
 			height: 150px
 			padding: 0 15px 0 15px
+
 	&__logo
 		font-size: 32px
 		color: $mainColor
@@ -24,6 +26,7 @@
 		+media($small)
 			order: 1
 			margin-right: 0
+
 	&__site-name
 		position: relative
 		display: block
@@ -35,6 +38,7 @@
 		color: $mainColor
 		&:hover
 			color: $mainColor
+
 	&__slogan
 		display: block
 		margin-left: 2px
@@ -42,6 +46,7 @@
 		font-family: $mainFont
 		font-weight: bold
 		cursor: default
+
 	&__search
 		flex-basis: 50%
 		+media($large)
@@ -53,10 +58,28 @@
 			margin-top: 25px
 			margin-right: auto
 			margin-left: auto
+
+	&__links
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: flex-end
+		align-items: center
+
 	&__menu-triger
 		z-index: 20
 		+media($small)
 			order: 2
+
+	&__login
+		margin-left: 30px
+		&:hover
+			box-shadow: none
+			color: $mainColor
+		&:focus
+			box-shadow: none
+			color: $mainColor
+
 .search-form
 	&__fieldset
 		display: flex
@@ -64,6 +87,7 @@
 		justify-content: center
 		align-items: center
 		width: 100%
+
 	&__input
 		flex-basis: 75%
 		height: 35px
@@ -83,6 +107,7 @@
 			outline: none
 			border: 1px solid $lightGrayState
 			z-index: 2
+
 	&__search-btn
 		flex-basis: 25%
 		height: 35px
@@ -98,6 +123,7 @@
 				border: 1px solid $lightGray
 		+media($large)
 			width: 33%
+
 .menu-triger
 	display: flex
 	flex-direction: row
@@ -106,8 +132,16 @@
 	min-height: 35px
 	height: 35px
 	padding: 0 15px
+	border: 1px solid transparent
 	border-radius: 3px
 	cursor: pointer
+	&:hover
+		box-shadow: none
+		border: 1px solid $lightGrayState
+	&:focus
+		box-shadow: none
+		border: 1px solid $lightGrayState
+
 	&__icon
 		margin-right: 7px
 		span
@@ -132,14 +166,17 @@
 			width: 13px
 			transition: 0.3s
 			background-color: black
+
 	&--active
 		background-color: #e8e8e8
+
 .menu
 	display: none
 	width: 100%
 	height: 100%
 	z-index: 15
 	background-color: white
+
 	&__inner
 		display: flex
 		flex-direction: row
@@ -154,6 +191,7 @@
 			align-items: center
 			height: 100%
 			padding-top: 20px
+
 	&__item
 		flex-basis: 25%
 		display: flex
@@ -172,8 +210,10 @@
 			margin-bottom: 40px
 		&:hover
 			background-color: white
+
 	&__link
 		color: black
+
 	&__icon
 		margin-right: 15px
 		font-size: 18px
