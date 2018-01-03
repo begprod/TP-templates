@@ -22,7 +22,7 @@ const paths = {
 	watch: {
 		html: './html/**/*.html',
 		css: './css/**/*.sass',
-		js: './js/script.js'
+		js: './js/**/*.js'
 	}
 }
 
@@ -63,6 +63,7 @@ gulp.task('sass', () => {
 //JS
 gulp.task('js', () => {
 	gulp.src(paths.src.js)
+		.pipe(rigger())
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.build.js))
 		.pipe(reload({
