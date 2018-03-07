@@ -3,12 +3,13 @@
 	display: flex
 	justify-content: center
 	align-items: stretch
-	height: 600px
+	height: calc(100vh - 100px)
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
 	background-attachment: fixed
 	+media($large)
+		height: 600px
 		background-attachment: initial
 	+media($small)
 		height: 500px
@@ -62,23 +63,28 @@
 			min-width: 70%
 		+media($tiny)
 			min-width: 90%
+
 	&__year
 		margin: 0
 		padding-bottom: 7px
 		font-size: 13px
+
 	&__head
 		margin: 0
 		padding-bottom: 7px
 		font-size: 33px
 		+media($tiny)
 			font-size: 23px
+
 	&__eng-name
 		margin: 0
 		font-size: 13px
+
 	&__btns
 		+media($tiny)
 			width: 90%
 			margin: 50px 0
+
 	&__btn
 		&:last-child
 			margin-bottom: 0
@@ -94,6 +100,7 @@
 	padding-top: 50px
 	+media($small)
 		flex-wrap: wrap
+
 	&__left
 		flex-basis: 250px
 		padding-right: 50px
@@ -102,15 +109,18 @@
 		+media($small)
 			flex-basis: 100%
 			padding: 0
+
 	&__right
 		flex-basis: 700px
-		padding-left: 20px
+		padding: 0 20px 40px 20px
+		flex-grow: 1
 		+media($large)
 			flex-basis: 500px
 		+media($small)
 			flex-basis: 100%
 			margin-bottom: 40px
 			padding: 0
+
 	&__cover
 		width: 130px
 		height: 180px
@@ -127,9 +137,11 @@
 .table
 	width: 100%
 	margin-bottom: 25px
+
 	&__row
 		+media($small)
 			border-bottom: 1px solid #e5e5e5
+
 	&__type
 		vertical-align: top
 		width: 50%
@@ -141,6 +153,7 @@
 			width: 20%
 			padding: 10px 10px 10px 0
 			font-size: 14px
+
 	&__value
 		vertical-align: top
 		width: 50%
@@ -174,6 +187,7 @@
 	&:hover
 		color: white
 		border: none
+
 	.fa-play
 		margin-right: 10px
 	+media($tiny)
@@ -185,6 +199,7 @@
 	margin: 50px 0 50px 0
 	+media($large)
 		width: 95%
+
 .film-offer-form__film-name
 	display: block
 	width: 100%
@@ -192,6 +207,7 @@
 	margin-top: 10px
 	margin-bottom: 20px
 	padding-left: 10px
+
 .film-offer-form__descr
 	display: block
 	width: 100%
@@ -199,6 +215,7 @@
 	margin-top: 10px
 	margin-bottom: 20px
 	padding: 10px
+
 .btn-all--offer-form
 	display: block
 	width: 50%
@@ -227,9 +244,11 @@
 	box-shadow: 0 0 5px black
 	transform: translate(-50%, -50%)
 	z-index: 1000000
+
 .report-film-form__head
 	font-weight: bold
 	text-align: center
+
 .report-film-form__close
 	position: absolute
 	top: -30px
@@ -238,17 +257,21 @@
 	color: $mainColor
 	cursor: pointer
 	transition: all 0.3s ease-in-out
+
 .report-film-form__close:hover
 	text-shadow: 0 0 3px #000
+
 .report-film-form label
 	display: block
 	margin-bottom: 15px
+
 .report-film-form__input
 	display: block
 	width: 100%
 	height: 35px
 	padding-left: 10px
 	margin-bottom: 20px
+
 .btn-all--film-report
 	display: block
 	margin: 0 auto
@@ -259,6 +282,7 @@
 	overflow: hidden
 	+media($tiny)
 		margin-bottom: 50px
+
 	&--develop
 		width: 300px
 		height: 80px
@@ -270,6 +294,7 @@
 
 // Share buttons
 .social-likes
+
 	&--develop
 		width: 300px
 		height: 40px
@@ -278,11 +303,10 @@
 		text-align: center
 		background-color: #f8f8f8
 		opacity: .5
-	+media($tiny)
-		display: none
 
 // Disqus
 .disqus-block
+
 	&--develop
 		min-height: 560px
 		color: white
