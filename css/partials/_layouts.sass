@@ -47,9 +47,43 @@
 			flex-basis: 100%
 			font-size: 23px
 			margin: 0 0 20px 0
+		// Используется на странице категории category-page.html
 		&--small
 			font-size: 23px
 
 	&__btn
 		+media($small)
 			flex-basis: 100%
+
+// Кнопки категорий на странице категории
+.category-links
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: flex-start
+	align-items: flex-start
+	margin: 35px 0 45px 0
+	+media($small)
+		flex-wrap: wrap
+		margin: 0 0 20px 0
+
+	&__item
+		min-height: 26px
+		margin-right: 10px
+		font-size: 13px
+		line-height: 26px
+		border: 1px solid $lightGray
+		+media($small)
+			margin-bottom: 10px
+
+		&.is-current
+			background-color: $mainColor
+			color: white
+			&:hover
+				background-color: transparentize($mainColor, .2)
+				border-color: transparent
+				color: white
+			&:focus
+				background-color: transparentize($mainColor, .2)
+				border-color: transparent
+				color: white
