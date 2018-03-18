@@ -1,8 +1,10 @@
 .category
+
 	&__items
 		padding-top: 40px
 		+media($small)
 			padding-top: 20px
+
 .category-item
 	display: flex
 	flex-direction: row
@@ -17,6 +19,7 @@
 		color: $mainColor
 	&:hover .category-item__name--eng
 		color: black
+
 	&__cover
 		position: relative
 		margin: 0 40px 0 0
@@ -24,6 +27,7 @@
 			width: 100%
 			margin-right: 0
 			margin-bottom: 20px
+
 	&__img
 		width: 280px
 		height: 170px
@@ -37,9 +41,11 @@
 			height: 100%
 			+media($small)
 				height: auto
+
 	&__year
 		margin: 7px 0 0 0
 		font-size: 11px
+
 	&__name
 		display: block
 		margin: 15px 0 0 0
@@ -48,15 +54,15 @@
 		&--eng
 			margin-top: 10px
 			font-size: 15px
+
 	&__authors
 		margin: 15px 0 0 0
 		font-size: 13px
+
 	&__btn
 		display: inline-block
-		height: 32px
 		margin-top: 15px
 		line-height: 30px
-		color: black
-		border: 1px solid $lightGray
+
 	&__icon
 		margin-right: 10px
