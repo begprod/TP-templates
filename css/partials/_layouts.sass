@@ -1,0 +1,55 @@
+// Глобальный контейнер
+.wrapper
+	width: 1250px
+	margin: 0 auto
+	+media($large)
+		width: 90%
+	+media($small)
+		width: 95%
+
+// Глобальный layout
+.l-section
+	width: 100%
+	height: 100%
+	margin: 0 auto 50px auto
+	padding-top: 40px
+
+	&__inner
+		+media($small)
+			padding: 0 15px
+
+	&--film-page
+		padding-top: 0
+
+	&__head
+		margin: 0
+		font-size: 27px
+		line-height: 31px
+		+media($medium)
+			font-size: 22px
+		+media($small)
+			text-align: left
+
+// Блок с заголовком и кнопкой
+.b-head
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	+media($small)
+		flex-wrap: wrap
+
+	&__title
+		margin: 0 20px 0 0
+		font-size: 27px
+		line-height: 31px
+		+media($small)
+			flex-basis: 100%
+			font-size: 23px
+			margin: 0 0 20px 0
+		&--small
+			font-size: 23px
+
+	&__btn
+		+media($small)
+			flex-basis: 100%
