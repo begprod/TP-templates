@@ -30,19 +30,70 @@
 		line-height: 34px
 		outline: none
 		border-radius: 3px
-		border: 1px solid rgba(0,0,0,.2)
+		border: 1px solid $lightGray
 		text-overflow: ellipsis
 		&:focus
-			border: 1px solid rgba(0,0,0,.5)
+			border: 1px solid $lightGrayState
 
 	&__textarea
 		padding: 0 10px
-		border: 1px solid rgba(0,0,0,.2)
+		border: 1px solid $lightGray
 		&:focus
-			border: 1px solid rgba(0,0,0,.5)
+			border: 1px solid $lightGrayState
 	
 	&__checkbox
+		position: relative
 		// border: 1px solid red
+
+		input[type="checkbox"]
+			display: none
+		
+			&:checked
+				& + label
+					&::before
+						content: ""
+						position: absolute
+						top: 45%
+						left: 0
+						right: 0
+						margin: 0 auto
+						display: inline-block
+						width: 10px
+						height: 16px
+						transform: translateY(-50%) rotate(45deg)
+						border: solid $altColor
+						border-width: 0 2px 2px 0
+
+
+			&:disabled
+				& + label
+					color: lightgray
+					&:hover
+						color: red
+					&::after
+						background-color: lightgray
+						border-color: lightgray
+
+			& + label
+				position: relative
+				padding: 0 10px
+				color: $lightGray
+				cursor: pointer
+				transition: all .3s ease-in-out
+				&:hover
+					color: $lightGray
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 20px
+					height: 20px
+					font-size: 20px
+					text-align: center
+					transition: all .3s ease-in-out
+					border: 1px solid $lightGray
+					border-radius: 3px
 
 	&__btns
 		margin-top: 40px
