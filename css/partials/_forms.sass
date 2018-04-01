@@ -6,6 +6,15 @@
 		padding: 0
 		border: none
 
+	&__check
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: flex-start
+		align-items: stretch
+		.b-form__checkbox
+			margin-right: 15px
+
 	&__label
 		display: block
 		margin-bottom: 10px
@@ -24,13 +33,16 @@
 		border: 1px solid rgba(0,0,0,.2)
 		text-overflow: ellipsis
 		&:focus
-			border: 1px solid rgba(0,0,0,.5);
+			border: 1px solid rgba(0,0,0,.5)
 
 	&__textarea
 		padding: 0 10px
 		border: 1px solid rgba(0,0,0,.2)
 		&:focus
-			border: 1px solid rgba(0,0,0,.5);
+			border: 1px solid rgba(0,0,0,.5)
+	
+	&__checkbox
+		// border: 1px solid red
 
 	&__btns
 		margin-top: 40px
@@ -42,6 +54,10 @@
 		&:hover
 			color: white
 			border: none
+
+	&__hint-text
+		font-size: 13px
+		line-height: 15px
 
 	&__error-text
 		display: inline-block
