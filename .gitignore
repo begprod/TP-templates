@@ -1,6 +1,7 @@
 node_modules/
 build/
 images/
+.idea/
 *.DS_Store
 *.cfg
 *.psd
