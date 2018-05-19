@@ -88,35 +88,19 @@
 			margin: 50px 0
 
 	&__btn
+		display: none
 		min-height: 50px
 		line-height: 50px
 		color: white
+		&:hover, &:focus
+			color: white
 		&:last-child
 			margin-bottom: 0
 		+media($tiny)
+			width: 100%
 			margin-bottom: 20px
-
-.btn-all--watch-trailer
-	display: none
-	vertical-align: top
-	margin-right: 15px
-	background-color: $mainColor
-	&:hover
-		color: white
-	+media($tiny)
-		width: 100%
-
-.btn-all--watch-film
-	display: none
-	vertical-align: top
-	background-color: $altColor
-	&:hover
-		color: white
-
-	.fa-play
-		margin-right: 10px
-	+media($tiny)
-		width: 100%
+		.fa
+			margin-right: 10px
 
 .film-info
 	display: flex

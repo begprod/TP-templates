@@ -8,10 +8,11 @@
 				<h2 class="film-hero__eng-name" itemprop="alternativeHeadline">Green Elephant</h2>
 			</div>
 			<div class="film-hero__btns">
-				<button class="btn btn-all--watch-trailer film-hero__btn" data-trailer="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>">
+                <!-- TODO: в MODX меняем div на buttons type="button" -->
+				<button class="btn btn--main film-hero__btn js-popup-trigger" type="button" data-frame="<iframe width='560' height='315' src='https://www.youtube.com/embed/3lvUCAHRa6I?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>">
 					Трейлер
 				</button>
-				<button class="btn btn-all--watch-film film-hero__btn" data-film="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">
+				<button class="btn btn--alt film-hero__btn js-popup-trigger" type="button" data-frame="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">
 					<i class="fa fa-play" aria-hidden="true"></i>Смотреть бесплатно
 				</button>
 			</div>
@@ -24,6 +25,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="film-info l-section__inner wrapper">
 		<div class="film-info__left">
 			<div class="film-info__cover">
@@ -160,13 +162,14 @@
 	</section>
 	<!-- Случайные фильмы -->
 
-	<div class="modal-bg-layer"></div>
-	<div class="modal-body">
-		<div class="modal-body__close-btn">
+	<div class="modal-body js-popup-wrapper">
+		<div class="modal-body__close-btn js-popup-close">
 			<i class="fa fa-times"></i>
 		</div>
 		<div class="film-report-form-link">Сообщить о проблеме с видео</div>
 	</div>
+    <div class="modal-bg-layer js-popup-paranja"></div>
+
 	<div class="report-film-form">
 		<div class="report-film-form__close">
 			<i class="fa fa-times"></i>

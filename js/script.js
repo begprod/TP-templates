@@ -3,10 +3,9 @@
 $(document).ready(function() {
 	//глобальные функции вызываем здесь
 	//остальные вызываем на нужных страницах, просто в теге <script>
-    hidePreloader();
-    mainMenu();
-	modalWindow();
-	stopPlayVideo();
+	hidePreloader();
+	mainMenu();
+	watchFilm();
 	randomPhrases();
 	scrollUp();
 	spoilerOpenClose();
@@ -16,7 +15,7 @@ $(document).ready(function() {
 
 // Прелоадер
 function hidePreloader() {
-	var preloader = $('.js-preloader');
+	var preloader = $('.js-preloader'); // TODO: добавить класс в шаблонах MODX
 
 	preloader.delay(1000).fadeOut(300);
 }
@@ -24,8 +23,8 @@ function hidePreloader() {
 
 // Главное меню
 function mainMenu() {
-	var menu = $('.js-menu');
-	var trigger = $('.js-trigger');
+	var menu = $('.js-menu'); // TODO: добавить класс в шаблонах MODX
+	var trigger = $('.js-trigger'); // TODO: добавить класс в шаблонах MODX
 
 	trigger.click(function () {
 		$(this).toggleClass('menu-triger--active');
@@ -34,84 +33,39 @@ function mainMenu() {
 }
 
 
-//Функция для модального окна
-function modalWindow() {
+// Popup с фильмом или трейлером, проверка для кнопок
+function watchFilm() {
+	var popupTrigger = $('.js-popup-trigger'); // TODO: добавить класс в шаблонах MODX
+	var popupParanja = $('.js-popup-paranja'); // TODO: добавить класс в шаблонах MODX
+	var popupWrapper = $('.js-popup-wrapper'); // TODO: добавить класс в шаблонах MODX
+	var popupCloseBtn = $('.js-popup-close'); // TODO: добавить класс в шаблонах MODX
 
-	var trailerBtn = $('.btn-all--watch-trailer');
-	var filmBtn = $('.btn-all--watch-film');
-	var modalCloseBtn = $('.modal-body__close-btn');
-	var modalBg = $('.modal-bg-layer');
-	var modalBody = $('.modal-body');
+	popupTrigger.each(function () {
+		if ($(this).attr('data-frame').length) {
+			$(this).fadeIn(300);
+		}
+    });
 
-	trailerBtn.click(function(event) {
-		modalBg.fadeIn(200);
-		modalBody.fadeIn(200);
-		$('body').css('overflow','hidden');
-	});
-	filmBtn.click(function(event) {
-		modalBg.fadeIn(200);
-		modalBody.fadeIn(200);
-		$('body').css('overflow','hidden');
-	});
-		modalCloseBtn.click(function(event) {
-		modalBg.fadeOut(200);
-		modalBody.fadeOut(200);
-		$('body').css('overflow','auto');
-	});
-	modalBg.click(function(event) {
-		$(this).fadeOut(200);
-		modalBody.fadeOut(200);
-		$('body').css('overflow','auto');
-	});
+    popupTrigger.click(function () {
+		var popupData = $(this).attr('data-frame');
+
+		popupParanja.fadeIn(300);
+		popupWrapper.fadeIn(300).append(popupData);
+		$('body').addClass('is-cropped');
+    });
+
+    popupCloseBtn.click(function () {
+		popupParanja.fadeOut(300);
+		popupWrapper.fadeOut(300).find('iframe').remove();
+		$('body').removeClass('is-cropped');
+    });
+
+    popupParanja.click(function () {
+		popupParanja.fadeOut(300);
+		popupWrapper.fadeOut(300).find('iframe').remove();
+		$('body').removeClass('is-cropped');
+    });
 }
-
-
-//Показывает кнопку "Смотреть трейлер", если есть iframe
-function btnTrailer() {
-	var showBtnTrailer = $('.btn-all--watch-trailer');
-	var checkTrailer =  showBtnTrailer.attr('data-trailer');
-	var showBtnFilm = $('.btn-all--watch-film');
-	var checkFilm =  showBtnFilm.attr('data-film');
-
-	if(checkTrailer.length){
-		showBtnTrailer.css('display', 'inline-block');
-	} else {
-		showBtnTrailer.css('display', 'none');
-	}
-	if(checkFilm.length){
-		showBtnFilm.css('display', 'inline-block');
-	} else {
-		showBtnFilm.css('display', 'none');
-	}
-}
-
-
-//Функция для видео
-	function stopPlayVideo() {
-		//добавилась кнопка смотреть бесплатно
-		var trailerBtn = $('.btn-all--watch-trailer');
-		var filmBtn = $('.btn-all--watch-film');
-		var modalCloseBtn = $('.modal-body__close-btn');
-		var modalBg = $('.modal-bg-layer');
-		var modalBody = $('.modal-body');
-		var trailerData = trailerBtn.attr('data-trailer');
-		var filmData = filmBtn.attr('data-film');
-
-		//новый алгоритм просмотра видео
-		trailerBtn.click(function(){
-			modalBody.append(trailerData);
-		});
-		filmBtn.click(function(){
-			modalBody.append(filmData);
-		});
-		modalCloseBtn.click(function(){
-			modalBody.find('iframe').remove();
-		});
-		modalBg.click(function(){
-			modalBody.find('iframe').remove();
-		});
-	}
-
 
 //Рандомные фразы
 function randomPhrases() {
