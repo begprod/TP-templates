@@ -101,13 +101,18 @@ ul.pagination
 	text-decoration: none
 
 //Spoiler
-.spoiler-link
-	margin: 10px 0
-	text-decoration: underline
-	cursor: pointer
-.spoiler-content
-	display: none
-	padding: 20px
-	margin: 15px 0 15px 0
-	background-color: #f4f4f4
-	border-radius: 3px
+.spoiler
+
+	&__link
+		margin: 10px 0
+		text-decoration: underline
+		cursor: pointer
+		&:hover, &:focus
+			box-shadow: none
+
+	&__content
+		display: none
+		padding: 20px
+		margin: 15px 0 15px 0
+		background-color: #f4f4f4
+		border-radius: 3px

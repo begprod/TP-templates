@@ -2,20 +2,21 @@
 	<div class="wrapper header__inner">
 		<div class="header__logo">
 			<a class="header__site-name" href="./index.html">ТрэшоПоиск</a>
-			<div class="header__slogan">Кетчупа не найдётся?</div>
+			<div class="header__slogan js-phrases">Кетчупа не найдётся?</div>
 		</div>
 		<div class="header__search">
 			<form class="sisea-search-form search-form" action="[[~[[+landing]]]]" method="[[+method]]">
 				<div class="search-form__fieldset">
-					<input placeholder="Фильмы, режиссеры, страны" class="search-form__input" type="text" name="[[+searchIndex]]" id="[[+searchIndex]]" />
+					<input placeholder="Фильмы, режиссеры, страны" class="search-form__input js-search-input" type="text" name="[[+searchIndex]]" id="[[+searchIndex]]" />
 					<input type="hidden" name="id" value="[[+landing]]" />
-					<input class="btn search-form__search-btn" type="submit" value="Найти" />
+					<input class="btn search-form__search-btn js-search-btn" type="submit" value="Найти" />
 				</div>
 			</form>
 		</div>
+		<!-- TODO: MODX Поправить class menu-triger >>> menu-triGGer -->
 		<div class="header__links">
-			<button class="menu-triger header__menu-triger js-trigger">
-				<div class="menu-triger__icon">
+			<button class="menu-trigger header__menu-trigger js-trigger">
+				<div class="menu-trigger__icon">
 					<span>
 						<span class="visuallyhidden">Меню</span>
 					</span>

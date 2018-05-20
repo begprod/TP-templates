@@ -1,14 +1,11 @@
 /* global $ */
-
 $(document).ready(function() {
-	//глобальные функции вызываем здесь
-	//остальные вызываем на нужных страницах, просто в теге <script>
 	hidePreloader();
 	mainMenu();
 	watchFilm();
 	randomPhrases();
-	scrollUp();
-	spoilerOpenClose();
+	scrollUpBtn();
+	spoilerContent();
 	checkSearch();
 });
 
@@ -27,7 +24,7 @@ function mainMenu() {
 	var trigger = $('.js-trigger'); // TODO: добавить класс в шаблонах MODX
 
 	trigger.click(function () {
-		$(this).toggleClass('menu-triger--active');
+		$(this).toggleClass('menu-trigger--active');
 		menu.slideToggle(300);
 	});
 }
@@ -39,6 +36,12 @@ function watchFilm() {
 	var popupParanja = $('.js-popup-paranja'); // TODO: добавить класс в шаблонах MODX
 	var popupWrapper = $('.js-popup-wrapper'); // TODO: добавить класс в шаблонах MODX
 	var popupCloseBtn = $('.js-popup-close'); // TODO: добавить класс в шаблонах MODX
+	// Report form
+    var reportFormTrigger = $('.js-film-report-form-trigger'); // TODO: добавить класс в шаблонах MODX
+    var reportForm = $('.js-report-form'); // TODO: добавить класс в шаблонах MODX
+    var reportFormInput = $('.js-report-form-input'); // TODO: добавить класс в шаблонах MODX
+    var reportFormClose = $('.js-report-form-close'); // TODO: добавить класс в шаблонах MODX
+    var filmName = $('.js-film-name').text(); // TODO: добавить класс в шаблонах MODX
 
 	popupTrigger.each(function () {
 		if ($(this).attr('data-frame').length) {
@@ -57,98 +60,88 @@ function watchFilm() {
     popupCloseBtn.click(function () {
 		popupParanja.fadeOut(300);
 		popupWrapper.fadeOut(300).find('iframe').remove();
+        reportForm.fadeOut(100);
 		$('body').removeClass('is-cropped');
     });
 
     popupParanja.click(function () {
 		popupParanja.fadeOut(300);
 		popupWrapper.fadeOut(300).find('iframe').remove();
+        reportForm.fadeOut(100);
 		$('body').removeClass('is-cropped');
     });
-}
 
-//Рандомные фразы
-function randomPhrases() {
-	var phrases = new Array('Всеж мы люди',
-							'Чего только не придумают',
-							'Это классика, это знать надо',
-							'Проходи, не задерживайся',
-							'Дешёвая провокация',
-							'Одиночный пикет',
-							'Смазка для общества',
-							'Что ж вы люди делаете?',
-							'Кетчупа не найдётся?',
-							'Бесплатные спецэффекты');
-	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-	var element = document.querySelector('.header__slogan');
-	element.innerHTML = randomPhrase;
-}
+    //Report film form
+    reportFormTrigger.click(function() {
+		reportForm.fadeIn(300);
+		reportFormInput.val(filmName);
+	});
 
-
-//Кнопка наверх
-function scrollUp() {
-	var scrollBtn = $('.scroll-up');
-	var bodyHtml = $('html, body');
-
-scrollBtn.click(function (event) {
-	bodyHtml.animate({ scrollTop: 0 }, 400);
-	return false;
-});
-
-$(window).scroll(function () {
-	if ($(document).scrollTop() > 700) {
-		scrollBtn.fadeIn(300);
-	} else {
-		scrollBtn.fadeOut(300);
-	}
-});
-}
-
-
-//Spoiler
-function spoilerOpenClose() {
-	var spoilerLink = $('.spoiler-link');
-	var spoilerBlock = $('.spoiler-content');
-	spoilerLink.click(function() {
-		spoilerBlock.slideToggle(500);
+	reportFormClose.click(function() {
+		$(this).parent().fadeOut(300);
 	});
 }
 
+// Рандомные фразы в хедере
+function randomPhrases() {
+	var phrases = ['Всеж мы люди', 'Чего только не придумают', 'Это классика, это знать надо', 'Проходи, не задерживайся', 'Дешёвая провокация', 'Одиночный пикет', 'Смазка для общества', 'Что ж вы люди делаете?', 'Кетчупа не найдётся?', 'Бесплатные спецэффекты'];
+	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+	var element = $('.js-phrases'); // TODO: добавить класс в шаблонах MODX
 
-//Если поиск пустой, то ничего не делаем
-function checkSearch() { 
-	var searchInput = $('.search-form__input');
-	var searchBtn = $('.search-form__search-btn');
-	searchBtn.attr('disabled', 'disabled');
-	searchInput.keyup(function() {
-		if($(this).val().length != 0) {
-			searchBtn.removeAttr('disabled');
+	element.text(randomPhrase);
+}
+
+
+// Кнопка наверх
+function scrollUpBtn() {
+	var trigger = $('.js-scroll-up-btn'); // TODO: добавить класс в шаблонах MODX
+	var bodyHtml = $('html, body');
+
+	trigger.click(function () {
+		bodyHtml.animate({
+			scrollTop: 0
+		}, 400);
+	});
+
+	$(window).scroll(function () {
+		if ($(document).scrollTop() > 700) {
+			trigger.fadeIn(300);
 		} else {
-			searchBtn.attr('disabled', 'disabled');
+			trigger.fadeOut(300);
 		}
 	});
 }
 
 
-//Report film form
-function showReportForm() {
-	var reportFormlink = $('.film-report-form-link');
-	var reportForm = $('.report-film-form');
-	var reportFormInput = $('.report-film-form__input');
-	var reportFormClose = $('.report-film-form__close');
-	var getFilmName = $('.film-hero__head').text();
+// Spoiler
+function spoilerContent() {
+	var spoilerContainer = $('.js-spoiler'); // TODO: добавить класс в шаблонах MODX
 
-	var showBtnTrailer = $('.btn-all--watch-trailer');
-	var showBtnFilm = $('.btn-all--watch-film');
+	spoilerContainer.each(function () {
+		var trigger = $(this).find('.js-spoiler-trigger'); // TODO: добавить класс в шаблонах MODX
+		var spoilerContent = $(this).find('.js-spoiler-content'); // TODO: добавить класс в шаблонах MODX
 
-	reportFormlink.click(function() {
-		reportForm.fadeIn(300);
-		reportFormInput.val(getFilmName);
+		trigger.click(function () {
+			spoilerContent.slideToggle();
+        });
 	});
-	$('.modal-body__close-btn').click(function() {
-		reportForm.fadeOut(100);
-	});
-	reportFormClose.click(function() {
-		$(this).parent().fadeOut(300);
+}
+
+
+// Проверка поля поиска
+function checkSearch() {
+	var searchInput = $('.js-search-input');
+	var searchBtn = $('.js-search-btn');
+
+	searchBtn.attr('disabled', 'disabled');
+
+	searchInput.keyup(function() {
+
+		if($(this).val().length != 0) {
+			searchBtn.removeAttr('disabled');
+		} else {
+			searchBtn.attr('disabled', 'disabled');
+		}
+
 	});
 }
