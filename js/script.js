@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 // Прелоадер
 function hidePreloader() {
-	var preloader = $('.js-preloader'); // TODO: добавить класс в шаблонах MODX
+	var preloader = $('.js-preloader');
 
 	preloader.delay(1000).fadeOut(300);
 }
@@ -20,8 +20,8 @@ function hidePreloader() {
 
 // Главное меню
 function mainMenu() {
-	var menu = $('.js-menu'); // TODO: добавить класс в шаблонах MODX
-	var trigger = $('.js-trigger'); // TODO: добавить класс в шаблонах MODX
+	var menu = $('.js-menu');
+	var trigger = $('.js-trigger');
 
 	trigger.click(function () {
 		$(this).toggleClass('menu-trigger--active');
@@ -32,47 +32,49 @@ function mainMenu() {
 
 // Popup с фильмом или трейлером, проверка для кнопок
 function watchFilm() {
-	var popupTrigger = $('.js-popup-trigger'); // TODO: добавить класс в шаблонах MODX
-	var popupParanja = $('.js-popup-paranja'); // TODO: добавить класс в шаблонах MODX
-	var popupWrapper = $('.js-popup-wrapper'); // TODO: добавить класс в шаблонах MODX
-	var popupCloseBtn = $('.js-popup-close'); // TODO: добавить класс в шаблонах MODX
+	var popupTrigger = $('.js-popup-trigger');
+	var popupParanja = $('.js-popup-paranja');
+	var popupWrapper = $('.js-popup-wrapper');
+	var popupCloseBtn = $('.js-popup-close');
 	// Report form
-    var reportFormTrigger = $('.js-film-report-form-trigger'); // TODO: добавить класс в шаблонах MODX
-    var reportForm = $('.js-report-form'); // TODO: добавить класс в шаблонах MODX
-    var reportFormInput = $('.js-report-form-input'); // TODO: добавить класс в шаблонах MODX
-    var reportFormClose = $('.js-report-form-close'); // TODO: добавить класс в шаблонах MODX
-    var filmName = $('.js-film-name').text(); // TODO: добавить класс в шаблонах MODX
+	var reportFormTrigger = $('.js-film-report-form-trigger');
+	var reportForm = $('.js-report-form');
+	var reportFormInput = $('.js-report-form-input');
+	var reportFormClose = $('.js-report-form-close');
+	var filmName = $('.js-film-name').text();
 
 	popupTrigger.each(function () {
 		if ($(this).attr('data-frame').length) {
 			$(this).fadeIn(300);
+		} else {
+			$(this).remove();
 		}
-    });
+	});
 
-    popupTrigger.click(function () {
+	popupTrigger.click(function () {
 		var popupData = $(this).attr('data-frame');
 
 		popupParanja.fadeIn(300);
 		popupWrapper.fadeIn(300).append(popupData);
 		$('body').addClass('is-cropped');
-    });
+	});
 
-    popupCloseBtn.click(function () {
+	popupCloseBtn.click(function () {
 		popupParanja.fadeOut(300);
 		popupWrapper.fadeOut(300).find('iframe').remove();
-        reportForm.fadeOut(100);
+		reportForm.fadeOut(100);
 		$('body').removeClass('is-cropped');
-    });
+	});
 
-    popupParanja.click(function () {
+	popupParanja.click(function () {
 		popupParanja.fadeOut(300);
 		popupWrapper.fadeOut(300).find('iframe').remove();
-        reportForm.fadeOut(100);
+		reportForm.fadeOut(100);
 		$('body').removeClass('is-cropped');
-    });
+	});
 
-    //Report film form
-    reportFormTrigger.click(function() {
+//Report film form
+	reportFormTrigger.click(function() {
 		reportForm.fadeIn(300);
 		reportFormInput.val(filmName);
 	});
@@ -86,7 +88,7 @@ function watchFilm() {
 function randomPhrases() {
 	var phrases = ['Всеж мы люди', 'Чего только не придумают', 'Это классика, это знать надо', 'Проходи, не задерживайся', 'Дешёвая провокация', 'Одиночный пикет', 'Смазка для общества', 'Что ж вы люди делаете?', 'Кетчупа не найдётся?', 'Бесплатные спецэффекты'];
 	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-	var element = $('.js-phrases'); // TODO: добавить класс в шаблонах MODX
+	var element = $('.js-phrases');
 
 	element.text(randomPhrase);
 }
@@ -94,7 +96,7 @@ function randomPhrases() {
 
 // Кнопка наверх
 function scrollUpBtn() {
-	var trigger = $('.js-scroll-up-btn'); // TODO: добавить класс в шаблонах MODX
+	var trigger = $('.js-scroll-up-btn');
 	var bodyHtml = $('html, body');
 
 	trigger.click(function () {
@@ -115,15 +117,15 @@ function scrollUpBtn() {
 
 // Spoiler
 function spoilerContent() {
-	var spoilerContainer = $('.js-spoiler'); // TODO: добавить класс в шаблонах MODX
+	var spoilerContainer = $('.js-spoiler');
 
 	spoilerContainer.each(function () {
-		var trigger = $(this).find('.js-spoiler-trigger'); // TODO: добавить класс в шаблонах MODX
-		var spoilerContent = $(this).find('.js-spoiler-content'); // TODO: добавить класс в шаблонах MODX
+		var trigger = $(this).find('.js-spoiler-trigger');
+		var spoilerContent = $(this).find('.js-spoiler-content');
 
 		trigger.click(function () {
 			spoilerContent.slideToggle();
-        });
+		});
 	});
 }
 
