@@ -162,33 +162,8 @@ label
 				width: 100%
 				max-height: 100%
 
-// Линии справа от блока
-.decor-lines
-	&::after
-		content: ""
-		position: absolute
-		top: 3%
-		right: -6px
-		width: 5px
-		height: 95%
-		background-color: #535353
-		// z-index: -1
-		+media($small)
-			display: none
-	&::before
-		content: ""
-		position: absolute
-		top: 6%
-		right: -12px
-		width: 5px
-		height: 90%
-		background-color: #535353
-		+media($small)
-			display: none
-
 // Input error class
 .ajax_form
-
 	.error
 		border: 2px solid red !important
 		color: black !important
