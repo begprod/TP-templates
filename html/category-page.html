@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-//= partials/_head.html
-<body>
-//= partials/_header.html
-//= partials/categorypage/_category-films.html
-//= partials/_footer.html
-//= ../html/blocks/_preloader.html
-//= ../html/blocks/_btn-sctoll-up.html
-//= partials/_scripts.html
-</body>
+	//= ./partials/_head.html
+	<body>
+		//= ./partials/_header.html
+		//= ./blocks/_breadcrumbs.html
+		<main class="category l-section">
+			<div class="l-section__inner wrapper">
+				<div class="l-section__head b-head">
+					<h1 class="b-head__title b-head__title--small">Лучшие из худших</h1>
+				</div>
+				//= ./partials/categorypage/_category-films.html
+			</div>
+		</main>
+		//= ./partials/_footer.html
+		//= ../html/blocks/_preloader.html
+		//= ../html/blocks/_btn-sctoll-up.html
+		//= ./partials/_scripts.html
+	</body>
 </html>
