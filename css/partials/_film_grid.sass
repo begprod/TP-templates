@@ -8,22 +8,23 @@
 	padding-top: 40px
 	+media($small)
 		flex-wrap: wrap
-	&__unit
-		position: relative
-		flex-basis: 270px
-		flex-grow: 1
-		margin-right: 30px
-		border-radius: 5px
-		&:last-child
-			margin-right: 0
-		+media($small)
-			margin-right: 0
-		&:hover
-			.grid-film__img
-				box-shadow: 0px 5px 15px #8a8a8a
-			.grid-film__title
-				a
-					color: $mainColor
+
+.grid-film-item
+	position: relative
+	flex-basis: 270px
+	flex-grow: 1
+	margin-right: 30px
+	border-radius: 5px
+	&:last-child
+		margin-right: 0
+	+media($small)
+		margin-right: 0
+	&:hover
+		.grid-film-item__img
+			box-shadow: 0px 5px 15px #8a8a8a
+		.grid-film-item__title
+			a
+				color: $mainColor
 	&__img
 		position: relative
 		display: block
