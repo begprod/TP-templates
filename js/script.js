@@ -7,6 +7,7 @@ $(document).ready(function() {
 	scrollUpBtn();
 	spoilerContent();
 	checkSearch();
+	sliderInit();
 });
 
 
@@ -145,5 +146,24 @@ function checkSearch() {
 			searchBtn.attr('disabled', 'disabled');
 		}
 
+	});
+}
+
+function sliderInit() {
+	$('.main-slider').owlCarousel({
+		items: 1,
+		margin: 20,
+		loop: true,
+		center: true,
+		stagePadding: 250,
+		nav: true
+	});
+
+	$('.films-slider').owlCarousel({
+		items: 6,
+		slideBy: 6,
+		margin: 20,
+		mouseDrag: false,
+		nav: true
 	});
 }
