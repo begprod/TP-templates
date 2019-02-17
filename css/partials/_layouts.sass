@@ -13,14 +13,11 @@
 	height: 100%
 	margin: 0 auto 50px auto
 	padding-top: 40px
-
 	&__inner
 		+media($small)
 			padding: 0 15px
-
 	&--film-page
 		padding-top: 0
-
 	&__head
 		margin: 0
 		font-size: 27px
@@ -38,7 +35,6 @@
 	align-items: center
 	+media($small)
 		flex-wrap: wrap
-
 	&__title
 		margin: 0 20px 0 0
 		font-size: 27px
@@ -50,8 +46,8 @@
 		// Используется на странице категории category-page.html
 		&--small
 			font-size: 23px
-
 	&__btn
+		display: inline-block
 		+media($small)
 			flex-basis: 100%
 
@@ -67,7 +63,6 @@
 		flex-wrap: wrap
 	+media($tiny)
 		margin: 0
-
 	&__item
 		display: inline-block
 		min-height: 26px
@@ -77,7 +72,6 @@
 		border: 1px solid $lightGray
 		+media($medium)
 			margin-bottom: 10px
-
 		&.is-current
 			background-color: $mainColor
 			color: white
