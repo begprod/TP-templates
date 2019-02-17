@@ -152,11 +152,30 @@ function checkSearch() {
 function sliderInit() {
 	$('.main-slider').owlCarousel({
 		items: 1,
-		margin: 20,
 		loop: true,
 		center: true,
-		stagePadding: 250,
-		nav: true
+		nav: true,
+		navText: [
+			'<span aria-label="Предыдущий"><i class="fa fa-chevron-left"></i></span>',
+			'<span aria-label="Следующий"><i class="fa fa-chevron-right"></i></span>'
+		],
+		responsive: {
+			0: {
+				mouseDrag: true,
+				margin: 20,
+				stagePadding: 50
+			},
+			768: {
+				mouseDrag: true,
+				margin: 20,
+				stagePadding: 150
+			},
+			1279: {
+				mouseDrag: false,
+				margin: 20,
+				stagePadding: 250
+			}
+		}
 	});
 
 	$('.films-slider').owlCarousel({

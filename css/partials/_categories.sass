@@ -23,10 +23,9 @@
 			margin-right: 0
 			margin-bottom: 25px
 		&:last-child
-			margin-right: 20px
+			margin-right: 0
 			+media($small)
 				flex-basis: 100%
-				margin-right: 0
 
 .category-unit
 	position: relative
@@ -48,7 +47,7 @@
 		width: 100%
 		height: 100%
 		border-radius: 5px
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5))
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8))
 	&__info-wrapper
 		position: absolute
 		bottom: 0
@@ -59,7 +58,7 @@
 		overflow hidden
 		z-index: 15
 	&__title
-		margin: 0
+		margin: 5px 0
 		font-size: 20px
 		font-weight: 800
 		+media($laptop)
@@ -67,5 +66,14 @@
 		+media($medium)
 			font-size: 16px
 	&__caption
-		margin: 5px 0 0 0
+		margin: 0
 		font-size: 13px
+	&__descr
+		max-width: 80%
+		margin: 5px 0 0 0
+		font-size: 14px
+		font-weight: bold
+		+media($laptop)
+			font-size: 12px
+		+media($small)
+			display: none
