@@ -156,8 +156,8 @@ function sliderInit() {
 		center: true,
 		nav: true,
 		navText: [
-			'<span aria-label="Предыдущий"><i class="fa fa-chevron-left"></i></span>',
-			'<span aria-label="Следующий"><i class="fa fa-chevron-right"></i></span>'
+			'<span aria-label="Предыдущий слайд"><i class="fa fa-chevron-left"></i></span>',
+			'<span aria-label="Следующий слайд"><i class="fa fa-chevron-right"></i></span>'
 		],
 		responsive: {
 			0: {

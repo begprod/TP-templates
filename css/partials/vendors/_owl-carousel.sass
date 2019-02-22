@@ -6,7 +6,7 @@
 			left: 0
 			width: 230px
 			height: 100%
-			color: white
+			color: $lightGrayState
 			+media($large)
 				width: 130px
 			+media($laptop)
@@ -14,20 +14,17 @@
 			&:hover, &:focus
 				box-shadow: none
 			&:hover span
-				left: -20px
-				background-color: rgba(110, 110, 110, .95)
+				left: -40px
+				padding-right: 40px
 			span
 				position: absolute
 				left: -25px
 				top: 50%
+				height: 100%
 				display: inline-flex
-				justify-content: center
+				justify-content: flex-start
 				align-items: center
-				width: 50px
-				height: 50px
-				font-size: 14px
-				border-radius: 100%
-				background-color: rgba(110, 110, 110, .7)
+				font-size: 24px
 				transition: .2s ease-in-out
 				transition-property: right background-color
 				transform: translateY(-50%)
@@ -37,7 +34,7 @@
 			right: 0
 			width: 230px
 			height: 100%
-			color: white
+			color: $lightGrayState
 			+media($large)
 				width: 130px
 			+media($laptop)
@@ -45,20 +42,17 @@
 			&:hover, &:focus
 				box-shadow: none
 			&:hover span
-				right: -20px
-				background-color: rgba(110, 110, 110, .95)
+				right: -40px
+				padding-left: 40px
 			span
 				position: absolute
-				right: -25px
+				right: -20px
 				top: 50%
 				display: inline-flex
 				justify-content: center
 				align-items: center
-				width: 50px
-				height: 50px
-				font-size: 14px
+				font-size: 24px
 				border-radius: 100%
-				background-color: rgba(110, 110, 110, .7)
 				transition: .2s ease-in-out
 				transition-property: right background-color
 				transform: translateY(-50%)
