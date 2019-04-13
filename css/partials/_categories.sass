@@ -15,13 +15,17 @@
 		margin-right: 40px
 		height: 380px
 		+media($laptop)
-			height: 240px
+			height: 350px
 			margin-right: 25px
+		+media($medium)
+			height: 400px
 		+media($small)
 			flex-basis: 100%
-			height: 250px
+			height: 350px
 			margin-right: 0
 			margin-bottom: 25px
+		+media($tiny)
+			height: 300px
 		&:last-child
 			margin-right: 0
 			+media($small)
