@@ -15,25 +15,30 @@
 		margin-right: 40px
 		height: 380px
 		+media($laptop)
-			height: 240px
-			margin-right: 25px
+			height: 350px
+
+.main-page-slider
+	margin-right: 25px
+	+media($medium)
+		height: 400px
+	+media($small)
+		flex-basis: 100%
+		height: 350px
+		margin-right: 0
+		margin-bottom: 25px
+	+media($tiny)
+		height: 300px
+	&:last-child
+		margin-right: 0
 		+media($small)
 			flex-basis: 100%
-			height: 250px
-			margin-right: 0
-			margin-bottom: 25px
-		&:last-child
-			margin-right: 20px
-			+media($small)
-				flex-basis: 100%
-				margin-right: 0
 
 .category-unit
 	position: relative
 	color: white
 	text-decoration: none
 	border-radius: 5px
-	overflow hidden
+	overflow: hidden
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
@@ -48,7 +53,7 @@
 		width: 100%
 		height: 100%
 		border-radius: 5px
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5))
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8))
 	&__info-wrapper
 		position: absolute
 		bottom: 0
@@ -56,10 +61,10 @@
 		padding: 15px
 		border-bottom-left-radius: 5px
 		border-bottom-right-radius: 5px
-		overflow hidden
+		overflow: hidden
 		z-index: 15
 	&__title
-		margin: 0
+		margin: 5px 0
 		font-size: 20px
 		font-weight: 800
 		+media($laptop)
@@ -67,5 +72,14 @@
 		+media($medium)
 			font-size: 16px
 	&__caption
-		margin: 5px 0 0 0
+		margin: 0
 		font-size: 13px
+	&__descr
+		max-width: 80%
+		margin: 5px 0 0 0
+		font-size: 14px
+		font-weight: bold
+		+media($laptop)
+			font-size: 12px
+		+media($small)
+			display: none
