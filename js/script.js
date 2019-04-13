@@ -1,4 +1,3 @@
-/* global $ */
 $(document).ready(function() {
 	hidePreloader();
 	mainMenu();
@@ -10,14 +9,11 @@ $(document).ready(function() {
 	sliderInit();
 });
 
-
 // Прелоадер
 function hidePreloader() {
 	var preloader = $('.js-preloader');
-
 	preloader.delay(1000).fadeOut(300);
 }
-
 
 // Главное меню
 function mainMenu() {
@@ -29,7 +25,6 @@ function mainMenu() {
 		menu.slideToggle(300);
 	});
 }
-
 
 // Popup с фильмом или трейлером, проверка для кнопок
 function watchFilm() {
@@ -94,7 +89,6 @@ function randomPhrases() {
 	element.text(randomPhrase);
 }
 
-
 // Кнопка наверх
 function scrollUpBtn() {
 	var trigger = $('.js-scroll-up-btn');
@@ -115,7 +109,6 @@ function scrollUpBtn() {
 	});
 }
 
-
 // Spoiler
 function spoilerContent() {
 	var spoilerContainer = $('.js-spoiler');
@@ -129,7 +122,6 @@ function spoilerContent() {
 		});
 	});
 }
-
 
 // Проверка поля поиска
 function checkSearch() {
@@ -150,39 +142,77 @@ function checkSearch() {
 }
 
 function sliderInit() {
-	$('.main-slider').owlCarousel({
+	$('.js-main-slider').owlCarousel({
 		items: 1,
 		loop: true,
 		center: true,
 		nav: true,
+		mouseDrag: false,
 		navText: [
 			'<span aria-label="Предыдущий слайд"><i class="fa fa-chevron-left"></i></span>',
 			'<span aria-label="Следующий слайд"><i class="fa fa-chevron-right"></i></span>'
 		],
+		lazyLoad:true,
 		responsive: {
 			0: {
-				mouseDrag: true,
 				margin: 20,
 				stagePadding: 50
 			},
 			768: {
-				mouseDrag: true,
 				margin: 20,
 				stagePadding: 150
 			},
 			1279: {
-				mouseDrag: false,
 				margin: 20,
 				stagePadding: 250
 			}
 		}
 	});
 
-	$('.films-slider').owlCarousel({
-		items: 6,
-		slideBy: 6,
-		margin: 20,
+	$('.js-films-slider').owlCarousel({
 		mouseDrag: false,
-		nav: true
+		nav: true,
+		navText: [
+			'<span aria-label="Предыдущий слайд"><i class="fa fa-chevron-left"></i></span>',
+			'<span aria-label="Следующий слайд"><i class="fa fa-chevron-right"></i></span>'
+		],
+		lazyLoad:true,
+		responsive: {
+			0: {
+				items: 1,
+				slideBy: 1,
+				loop: true,
+				margin: 20,
+				stagePadding: 50
+			},
+			500: {
+				items: 2,
+				slideBy: 1,
+				loop: true,
+				margin: 20,
+				stagePadding: 50
+			},
+			768: {
+				items: 2,
+				slideBy: 1,
+				loop: true,
+				margin: 20,
+				stagePadding: 150
+			},
+			1024: {
+				items: 4,
+				slideBy: 2,
+				loop: false,
+				margin: 20,
+				stagePadding: 0
+			},
+			1279: {
+				items: 6,
+				slideBy: 3,
+				loop: false,
+				margin: 20,
+				stagePadding: 0
+			}
+		}
 	});
 }
