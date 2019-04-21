@@ -6,21 +6,32 @@
 	justify-content: flex-start
 	align-items: flex-start
 	padding-top: 40px
-	+media($small)
+	+media($medium)
 		flex-wrap: wrap
 
 .grid-film-item
 	position: relative
-	flex-basis: 270px
-	flex-grow: 1
-	margin-right: 30px
+	width: calc(100% / 5)
+	margin-right: 20px
 	border-radius: 5px
 	&:last-child
 		margin-right: 0
+		+media($laptop)
+			display: none
+	&:nth-child(4)
+		+media($laptop)
+			margin-right: 0
+	&:nth-child(2n)
+		+media($medium)
+			margin-right: 0
 	+media($laptop)
-		margin-right: 25px
-	+media($small)
+		width: calc(100% / 4)
+	+media($medium)
+		width: calc(100%/ 2 - 10px)
+	+media($tiny)
+		width: 100%
 		margin-right: 0
+		margin-bottom: 20px
 	&:hover
 		.grid-film-item__img
 			box-shadow: 0px 5px 15px #8a8a8a
@@ -30,27 +41,31 @@
 	&__img
 		position: relative
 		display: block
-		height: 300px
+		height: 326px
 		overflow: hidden
-		border-radius: 5px
-		background-size: cover
+		border-radius: 6px
+		background-size: 100% 100%
 		background-repeat: no-repeat
 		background-position: center
+		+media($large)
+			height: 260px
 		+media($laptop)
-			height: 330px
+			height: 250px
 		+media($medium)
 			height: 400px
 		+media($small)
-			height: 300px
+			height: 250px
+		+media($tiny)
+			height: 400px
 	&__info
 		padding: 12px 0
 		line-height: 18px
 	&__title
 		margin: 0
-		font-size: 15px
+		font-size: 16px
 		font-weight: 800
 		a
 			text-decoration: none
 	&__caption
-		margin: 5px 0 0 0
-		font-size: 13px
+		margin: 6px 0 0 0
+		font-size: 12px
