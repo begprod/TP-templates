@@ -6,44 +6,35 @@
 	justify-content: flex-start
 	align-items: flex-start
 	padding-top: 40px
-	+media($small)
+	+media($medium)
 		flex-wrap: wrap
 	&__item
-		flex-basis: 33%
+		width: calc(100% / 3)
 		position: relative
 		display: block
 		margin-right: 40px
 		height: 380px
+		&:last-child
+			margin-right: 0
 		+media($laptop)
-			height: 350px
-
-.main-page-slider
-	margin-right: 25px
-	+media($medium)
-		height: 400px
-	+media($small)
-		flex-basis: 100%
-		height: 350px
-		margin-right: 0
-		margin-bottom: 25px
-	+media($tiny)
-		height: 300px
-	&:last-child
-		margin-right: 0
-		+media($small)
-			flex-basis: 100%
+			height: 300px
+			margin-right: 20px
+		+media($medium)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
 
 .category-unit
 	position: relative
 	color: white
 	text-decoration: none
-	border-radius: 5px
+	border-radius: 6px
 	overflow: hidden
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
 	&:hover
-		box-shadow: 0 5px 15px #8a8a8a
+		box-shadow: 0 6px 16px #8a8a8a
 		color: white
 	&::after
 		content: ""
@@ -52,15 +43,13 @@
 		left: 0
 		width: 100%
 		height: 100%
-		border-radius: 5px
+		border-radius: 6px
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8))
 	&__info-wrapper
 		position: absolute
 		bottom: 0
 		width: 100%
-		padding: 15px
-		border-bottom-left-radius: 5px
-		border-bottom-right-radius: 5px
+		padding: 16px
 		overflow: hidden
 		z-index: 15
 	&__title
@@ -73,13 +62,10 @@
 			font-size: 16px
 	&__caption
 		margin: 0
-		font-size: 13px
+		font-size: 12px
 	&__descr
 		max-width: 80%
 		margin: 5px 0 0 0
 		font-size: 14px
-		font-weight: bold
 		+media($laptop)
 			font-size: 12px
-		+media($small)
-			display: none

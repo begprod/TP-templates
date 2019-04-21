@@ -6,7 +6,6 @@ $(document).ready(function() {
 	scrollUpBtn();
 	spoilerContent();
 	checkSearch();
-	sliderInit();
 });
 
 // Прелоадер
