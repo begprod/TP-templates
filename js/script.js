@@ -6,6 +6,7 @@ $(document).ready(function() {
 	scrollUpBtn();
 	spoilerContent();
 	checkSearch();
+	sliderInit();
 });
 
 // Прелоадер
@@ -154,8 +155,8 @@ function sliderInit() {
 		lazyLoad:true,
 		responsive: {
 			0: {
-				margin: 20,
-				stagePadding: 50
+				margin: 10,
+				stagePadding: 30
 			},
 			768: {
 				margin: 20,
@@ -163,7 +164,7 @@ function sliderInit() {
 			},
 			1279: {
 				margin: 20,
-				stagePadding: 250
+				stagePadding: 200
 			}
 		}
 	});
