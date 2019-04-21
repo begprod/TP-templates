@@ -164,7 +164,7 @@ function sliderInit() {
 			},
 			1279: {
 				margin: 20,
-				stagePadding: 200
+				stagePadding: 250
 			}
 		}
 	});
