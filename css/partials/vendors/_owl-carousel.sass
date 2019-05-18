@@ -1,4 +1,8 @@
 .owl-carousel.main-slider
+	&_grid-film
+		.owl-stage
+			+media($laptop)
+				padding-left: 0 !important // отменяем stagePadding с одной стороны
 	.owl-nav
 		position: absolute
 		top: -35px

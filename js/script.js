@@ -170,8 +170,10 @@ function sliderInit() {
 	});
 
 	$('.js-films-slider').owlCarousel({
-		mouseDrag: false,
+		loop: false,
+		center: false,
 		nav: true,
+		mouseDrag: false,
 		navText: [
 			'<span aria-label="Предыдущий слайд"><i class="fa fa-chevron-left"></i></span>',
 			'<span aria-label="Следующий слайд"><i class="fa fa-chevron-right"></i></span>'
@@ -179,39 +181,46 @@ function sliderInit() {
 		lazyLoad:true,
 		responsive: {
 			0: {
-				items: 1,
-				slideBy: 1,
-				loop: true,
-				margin: 20,
-				stagePadding: 50
-			},
-			500: {
 				items: 2,
 				slideBy: 1,
-				loop: true,
+				loop: false,
+				margin: 10,
+				stagePadding: 20
+			},
+			501: {
+				items: 3,
+				slideBy: 1,
+				loop: false,
+				margin: 10,
+				stagePadding: 20
+			},
+			601: {
+				items: 3,
+				slideBy: 1,
+				loop: false,
+				margin: 10,
+				stagePadding: 20
+			},
+			750: {
+				items: 4,
+				slideBy: 1,
+				loop: false,
 				margin: 20,
 				stagePadding: 50
-			},
-			768: {
-				items: 2,
-				slideBy: 1,
-				loop: true,
-				margin: 20,
-				stagePadding: 150
 			},
 			1024: {
-				items: 4,
-				slideBy: 2,
-				loop: false,
+				items: 5,
+				slideBy: 1,
+				loop: true,
 				margin: 20,
-				stagePadding: 0
+				stagePadding: 50
 			},
 			1279: {
-				items: 6,
-				slideBy: 3,
-				loop: false,
+				items: 5,
+				slideBy: 2,
+				loop: true,
 				margin: 20,
-				stagePadding: 0
+				stagePadding: 100
 			}
 		}
 	});

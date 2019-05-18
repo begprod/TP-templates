@@ -1,4 +1,4 @@
-// Сетка из фильмов на главной «Новые бесплатные фильмы»
+// Категории на главной
 // и на странице фильма «Случайные фильмы»
 .grid-film
 	display: flex
@@ -11,23 +11,10 @@
 
 .grid-film-item
 	position: relative
-	width: calc(100% / 5)
 	margin-right: 20px
 	border-radius: 5px
 	&:last-child
 		margin-right: 0
-		+media($laptop)
-			display: none
-	&:nth-child(4)
-		+media($laptop)
-			margin-right: 0
-	&:nth-child(2n)
-		+media($medium)
-			margin-right: 0
-	+media($laptop)
-		width: calc(100% / 4)
-	+media($medium)
-		width: calc(100%/ 2 - 10px)
 	+media($tiny)
 		width: 100%
 		margin-right: 0
@@ -41,22 +28,26 @@
 	&__img
 		position: relative
 		display: block
-		height: 326px
+		height: 300px
 		overflow: hidden
 		border-radius: 6px
-		background-size: 100% 100%
+		background-size: cover
 		background-repeat: no-repeat
 		background-position: center
 		+media($large)
-			height: 260px
+			height: 300px
 		+media($laptop)
+			height: 270px
+		+media($xlaptop)
 			height: 250px
 		+media($medium)
-			height: 400px
+			height: 250px
 		+media($small)
+			height: 200px
+		+media($xsmall)
 			height: 250px
 		+media($tiny)
-			height: 400px
+			height: 180px
 	&__info
 		padding: 12px 0
 		line-height: 18px
@@ -64,6 +55,8 @@
 		margin: 0
 		font-size: 16px
 		font-weight: 800
+		+media($xsmall)
+			font-size: 12px
 		a
 			text-decoration: none
 	&__caption
