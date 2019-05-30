@@ -2,7 +2,6 @@
 	min-width: 100%
 	height: 100%
 	border-bottom: 1px solid #E5E5E5
-
 	&__inner
 		display: flex
 		flex-direction: row
@@ -16,7 +15,6 @@
 			align-items: flex-start
 			height: 150px
 			padding: 0 15px 0 15px
-
 	&__logo
 		font-size: 32px
 		font-family: $rubik
@@ -29,7 +27,6 @@
 			margin-right: 0
 		+media($tiny)
 			font-size: 25px
-
 	&__site-name
 		position: relative
 		display: block
@@ -41,7 +38,6 @@
 		text-decoration: none
 		&:hover
 			color: $mainColor
-
 	&__slogan
 		display: block
 		margin-left: 2px
@@ -51,7 +47,6 @@
 		cursor: default
 		+media($tiny)
 			font-size: 11px
-
 	&__search
 		flex-basis: 50%
 		+media($large)
@@ -63,7 +58,6 @@
 			margin-top: 25px
 			margin-right: auto
 			margin-left: auto
-
 	&__links
 		display: flex
 		flex-direction: row
@@ -72,10 +66,8 @@
 		align-items: center
 		+media($small)
 			order: 2
-
 	&__menu-trigger
 		z-index: 20
-
 	&__login
 		margin-left: 30px
 		text-decoration: none
@@ -95,7 +87,6 @@
 		justify-content: center
 		align-items: center
 		width: 100%
-
 	&__input
 		flex-basis: 75%
 		height: 35px
@@ -115,7 +106,6 @@
 			outline: none
 			border: 1px solid $lightGrayState
 			z-index: 2
-
 	&__search-btn
 		flex-basis: 25%
 		height: 35px
@@ -149,7 +139,6 @@
 	&:focus
 		box-shadow: none
 		border: 1px solid $lightGrayState
-
 	&__icon
 		margin-right: 7px
 		span
@@ -174,7 +163,6 @@
 			width: 13px
 			transition: 0.3s
 			background-color: black
-
 	&--active
 		background-color: #e8e8e8
 
@@ -184,14 +172,13 @@
 	height: 100%
 	z-index: 15
 	background-color: white
-
 	&__inner
 		display: flex
 		flex-direction: row
 		justify-content: center
 		align-items: center
-		height: 100px
-		min-height: 100px
+		height: 50px
+		min-height: 50px
 		margin: 0 auto
 		+media($medium)
 			flex-direction: column
@@ -199,31 +186,18 @@
 			align-items: center
 			height: 100%
 			padding-top: 20px
-
 	&__item
-		flex-basis: 25%
 		display: flex
 		flex-direction: row
 		justify-content: center
 		align-items: center
-		+media($large)
-			justify-content: center
-			align-items: flex-start
-			margin-right: 30px
-			font-size: 14px
-			&:last-child
-				margin-right: 0
+		padding: 0 20px
+		font-weight: 500
+		a
+			color: $gray
 		+media($medium)
-			margin-right: 0
-			margin-bottom: 40px
+			padding: 20px 0
 		&:hover
 			background-color: white
-
 	&__link
 		color: black
-
-	&__icon
-		margin-right: 15px
-		font-size: 18px
-		+media($medium)
-			font-size: 16px

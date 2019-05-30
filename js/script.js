@@ -216,11 +216,11 @@ function sliderInit() {
 				stagePadding: 50
 			},
 			1279: {
-				items: 5,
-				slideBy: 2,
+				items: 6,
+				slideBy: 3,
 				loop: true,
 				margin: 20,
-				stagePadding: 100
+				stagePadding: 0
 			}
 		}
 	});
