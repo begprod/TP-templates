@@ -1,35 +1,71 @@
 <main class="l-section l-section--film-page" itemscope itemtype="http://schema.org/Movie">
-	<section class="film-hero" style="background-image: url('images/green.jpg');">
-		<div class="film-hero__inner">
-			//= ../../blocks/_breadcrumbs.html
-			<div class="film-hero__info">
-				<div class="film-hero__year">Россия, 1999</div>
-				<h1 class="film-hero__head js-film-name" itemprop="name">Зеленый слоник</h1>
-				<h2 class="film-hero__eng-name" itemprop="alternativeHeadline">Green Elephant</h2>
+	<section class="film-page">
+		<div class="film-page__inner wrapper">
+			<div class="film-page__breadcrumbs">
+				//= ../../blocks/_breadcrumbs.html
 			</div>
-			<div class="film-hero__btns">
-				<button class="btn btn--main film-hero__btn js-popup-trigger" type="button" data-frame>
-					Трейлер
-				</button>
-				<button class="btn btn--alt film-hero__btn js-popup-trigger" type="button" data-frame="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">
-					<i class="fa fa-play" aria-hidden="true"></i>Смотреть бесплатно
-				</button>
+			<div class="film-page-header film-page__header">
+				<div class="film-page-header__column">
+					<h1 class="film-page__title  film-page__title_main js-film-name" itemprop="name">Зеленый слоник</h1>
+					<h2 class="film-page__title film-page__title_size_m" itemprop="alternativeHeadline">Green Elephant Green</h2>
+				</div>
+				<div class="film-page-header__column film-page-header__column_align_right">
+					<div class="film-page__title film-page__title_size_s">Россия</div>
+					<div class="film-page__title film-page__title_size_s">1999</div>
+					<div class="film-page__title film-page__title_size_s">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>
+						<span>86 мин</span>
+					</div>
+				</div>
 			</div>
-			<div class="rating-film rating-film--develop">
-				<span>Оцените фильм</span>
+			<div class="film-page-body film-page__body">
+				<div class="film-page-body__column">
+					<div class="film-page__cover">
+						<img src="https://trashopoisk.com/assets/images/covers/absofdeath-cover.jpg" itemprop="image" alt="Зеленый слоник">
+					</div>
+					<div class="rating-film rating-film--develop">
+						<span>Оцените фильм</span>
+					</div>
+					<div class="social-likes social-likes--develop">
+						<span>Поделиться фильмом</span>
+					</div>
+				</div>
+				<div class="film-page-body__column">
+					<div class="film-tabs">
+						<div class="film-tabs__body js-iframe-place">
+							<iframe class="js-trailer" width="560" height="315" src="https://www.youtube.com/embed/2w82_SE5LKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="film-tabs__footer">
+							<div class="film-tabs__nav">
+								<button class="film-tabs__nav-item is-active js-video-switcher" type="button" data-frame="<iframe src='https://www.youtube.com/embed/XdhtPt2yVB4' frameborder='0' allowfullscreen></iframe>">
+									<i class="fa fa-film"></i>
+									<span>Фильм</span>
+								</button>
+								<button class="film-tabs__nav-item js-video-switcher" type="button" data-frame="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">
+									<i class="fa fa-play"></i>
+									<span>Трейлер</span>
+								</button>
+							</div>
+							<div class="film-tabs__link js-film-report-form-trigger">
+								<span>Сообщить о проблеме с видео</span>
+								<i class="fa fa-warning"></i>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="social-likes social-likes--develop">
-				<span>Поделиться фильмом</span>
-				<span>Share btns</span>
-			</div>
+<!--			<button class="btn btn&#45;&#45;main film-page__btn" type="button" data-frame="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>">-->
+<!--				Трейлер-->
+<!--			</button>-->
+<!--			<button class="btn btn&#45;&#45;alt film-page__btn" type="button" data-frame="<iframe src='https://www.youtube.com/embed/HunbC4UEWMg' frameborder='0' allowfullscreen></iframe>" frameborder="0">-->
+<!--				<i class="fa fa-play" aria-hidden="true"></i>Смотреть бесплатно-->
+<!--			</button>-->
 		</div>
+		<div class="film-page__paranja" style="background-image: url('/images/green.jpg');"></div>
 	</section>
 
 	<section class="film-info l-section__inner wrapper">
 		<div class="film-info__left">
-			<div class="film-info__cover">
-				<img src="images/film-cover.jpg" itemprop="image" alt="Зеленый слоник">
-			</div>
 			<div class="film-info__table-wrapper">
 				<table class="table film-info__table">
 					<tbody>
@@ -96,7 +132,7 @@
 					<p>Этот "фильм" крайне не рекомендуется к просмотру. НО! Если вы хотите получить целую гамму отрицательных эмоций и знатный
 						батхерт, то можете полностью вымазаться этим говном.</p>
 					<p>Желаю всем причастным к созданию этого "кино", чтобы их жизнь превратилась в последние 20 минут
-						<a href="/luchshie-iz-xudshix/zelenyij-slonik.html" alt="Зеленый слоник" title="Зеленый слоник">Зеленого слоника.</a>
+						<a href="/luchshie-iz-xudshix/zelenyij-slonik.html" title="Зеленый слоник">Зеленого слоника.</a>
 					</p>
 				</div>
 			</div>
@@ -117,12 +153,6 @@
 </section>
 <!-- ///Случайные фильмы -->
 
-	<div class="modal-body js-popup-wrapper">
-		<div class="modal-body__close-btn js-popup-close">
-			<i class="fa fa-times"></i>
-		</div>
-		<div class="film-report-form-link js-film-report-form-trigger">Сообщить о проблеме с видео</div>
-	</div>
 	<div class="modal-bg-layer js-popup-paranja"></div>
 
 	<div class="report-film-form js-report-form">

@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	hidePreloader();
 	mainMenu();
-	watchFilm();
+	switchVideo();
+	reportPopup();
 	randomPhrases();
 	scrollUpBtn();
 	spoilerContent();
@@ -26,56 +27,58 @@ function mainMenu() {
 	});
 }
 
-// Popup с фильмом или трейлером, проверка для кнопок
-function watchFilm() {
-	var popupTrigger = $('.js-popup-trigger');
+// Переключение фильм/трейлер, проверка для кнопок
+function switchVideo() {
+	var switcherControl = $('.js-video-switcher');
+	var iframePlace = $('.js-iframe-place');
+	var frameDataAttribute = 'data-frame';
+	var activeClass = 'is-active';
+
+	switcherControl.each(function () {
+		if ($(this).attr(frameDataAttribute).length && !$(this).hasClass(activeClass)) {
+			$(this).fadeIn(300);
+		} else {
+			$(this).fadeOut();
+		}
+
+		if ($(this).hasClass(activeClass)) {
+			var popupData = $(this).attr(frameDataAttribute);
+
+			$(this).addClass(activeClass).siblings().removeClass(activeClass);
+			iframePlace.empty().append(popupData);
+		}
+	});
+
+	switcherControl.click(function () {
+		var popupData = $(this).attr(frameDataAttribute);
+
+		$(this).addClass(activeClass).siblings().removeClass(activeClass);
+		iframePlace.empty().append(popupData);
+	});
+}
+
+function reportPopup() {
 	var popupParanja = $('.js-popup-paranja');
-	var popupWrapper = $('.js-popup-wrapper');
-	var popupCloseBtn = $('.js-popup-close');
-	// Report form
 	var reportFormTrigger = $('.js-film-report-form-trigger');
 	var reportForm = $('.js-report-form');
 	var reportFormInput = $('.js-report-form-input');
 	var reportFormClose = $('.js-report-form-close');
 	var filmName = $('.js-film-name').text();
 
-	popupTrigger.each(function () {
-		if ($(this).attr('data-frame').length) {
-			$(this).fadeIn(300);
-		} else {
-			$(this).remove();
-		}
-	});
-
-	popupTrigger.click(function () {
-		var popupData = $(this).attr('data-frame');
-
-		popupParanja.fadeIn(300);
-		popupWrapper.fadeIn(300).append(popupData);
-		$('body').addClass('is-cropped');
-	});
-
-	popupCloseBtn.click(function () {
-		popupParanja.fadeOut(300);
-		popupWrapper.fadeOut(300).find('iframe').remove();
-		reportForm.fadeOut(100);
-		$('body').removeClass('is-cropped');
-	});
-
 	popupParanja.click(function () {
-		popupParanja.fadeOut(300);
-		popupWrapper.fadeOut(300).find('iframe').remove();
-		reportForm.fadeOut(100);
 		$('body').removeClass('is-cropped');
+		reportForm.fadeOut(100);
+		popupParanja.fadeOut(300);
 	});
 
-//Report film form
 	reportFormTrigger.click(function() {
-		reportForm.fadeIn(300);
+		popupParanja.fadeIn(300);
 		reportFormInput.val(filmName);
+		reportForm.fadeIn(300);
 	});
 
 	reportFormClose.click(function() {
+		popupParanja.fadeOut(300);
 		$(this).parent().fadeOut(300);
 	});
 }
@@ -83,8 +86,8 @@ function watchFilm() {
 // Рандомные фразы в хедере
 function randomPhrases() {
 	var phrases = ['Всеж мы люди', 'Чего только не придумают', 'Это классика, это знать надо', 'Проходи, не задерживайся', 'Дешёвая провокация', 'Одиночный пикет', 'Смазка для общества', 'Что ж вы люди делаете?', 'Кетчупа не найдётся?', 'Бесплатные спецэффекты'];
-	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
 	var element = $('.js-phrases');
+	var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
 
 	element.text(randomPhrase);
 }
@@ -132,7 +135,7 @@ function checkSearch() {
 
 	searchInput.keyup(function() {
 
-		if($(this).val().length != 0) {
+		if($(this).val().length !== 0) {
 			searchBtn.removeAttr('disabled');
 		} else {
 			searchBtn.attr('disabled', 'disabled');
@@ -141,8 +144,9 @@ function checkSearch() {
 	});
 }
 
+// Слайдеры на главной
 function sliderInit() {
-	$('.js-main-slider').owlCarousel({
+	$('.js-main-slider').owlCarousel({ // главный слайдер
 		items: 1,
 		loop: true,
 		center: true,
@@ -169,7 +173,7 @@ function sliderInit() {
 		}
 	});
 
-	$('.js-films-slider').owlCarousel({
+	$('.js-films-slider').owlCarousel({ // слайдер с карточками фильмов
 		loop: false,
 		center: false,
 		nav: true,
