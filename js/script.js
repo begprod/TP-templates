@@ -30,7 +30,7 @@ function mainMenu() {
 // Переключение фильм/трейлер, проверка для кнопок
 function switchVideo() {
 	var switcherControl = $('.js-video-switcher');
-	var iframePlace = $('.js-iframe-place');
+	var framePlace = $('.js-frame-place');
 	var frameDataAttribute = 'data-frame';
 	var activeClass = 'is-active';
 
@@ -45,7 +45,7 @@ function switchVideo() {
 			var popupData = $(this).attr(frameDataAttribute);
 
 			$(this).addClass(activeClass).siblings().removeClass(activeClass);
-			iframePlace.empty().append(popupData);
+			framePlace.empty().append(popupData);
 		}
 	});
 
@@ -53,10 +53,11 @@ function switchVideo() {
 		var popupData = $(this).attr(frameDataAttribute);
 
 		$(this).addClass(activeClass).siblings().removeClass(activeClass);
-		iframePlace.empty().append(popupData);
+		framePlace.empty().append(popupData);
 	});
 }
 
+// Попап с формой «Сообщить о проблеме с видео»
 function reportPopup() {
 	var popupParanja = $('.js-popup-paranja');
 	var reportFormTrigger = $('.js-film-report-form-trigger');
