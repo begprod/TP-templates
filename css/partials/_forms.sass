@@ -1,11 +1,9 @@
 //  Общий класс для всех форм
 .b-form
-
 	&__fieldset
 		margin-bottom: 25px
 		padding: 0
 		border: none
-
 	&__check
 		display: flex
 		flex-direction: row
@@ -14,13 +12,11 @@
 		align-items: stretch
 		.b-form__checkbox
 			margin-right: 15px
-
 	&__label
 		display: block
 		margin-bottom: 10px
 		font-size: 13px
 		line-height: 15px
-
 	&__input
 		width: 100%
 		max-width: 100%
@@ -34,20 +30,15 @@
 		text-overflow: ellipsis
 		&:focus
 			border: 1px solid $lightGrayState
-
 	&__textarea
 		padding: 0 10px
 		border: 1px solid $lightGray
 		&:focus
 			border: 1px solid $lightGrayState
-	
 	&__checkbox
 		position: relative
-		// border: 1px solid red
-
 		input[type="checkbox"]
 			display: none
-		
 			&:checked
 				& + label
 					&::before
@@ -63,8 +54,6 @@
 						transform: translateY(-50%) rotate(45deg)
 						border: solid $altColor
 						border-width: 0 2px 2px 0
-
-
 			&:disabled
 				& + label
 					color: lightgray
@@ -73,7 +62,6 @@
 					&::after
 						background-color: lightgray
 						border-color: lightgray
-
 			& + label
 				position: relative
 				padding: 0 10px
@@ -94,7 +82,6 @@
 					transition: all .3s ease-in-out
 					border: 1px solid $lightGray
 					border-radius: 3px
-
 	&__btns
 		margin-top: 40px
 	&__btn
@@ -105,11 +92,9 @@
 		&:hover
 			color: white
 			border: none
-
 	&__hint-text
 		font-size: 13px
 		line-height: 15px
-
 	&__error-text
 		display: inline-block
 		margin-top: 10px

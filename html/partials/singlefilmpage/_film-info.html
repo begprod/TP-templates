@@ -1,4 +1,5 @@
 <main class="l-section l-section--film-page" itemscope itemtype="http://schema.org/Movie">
+<!-- hero screen -->
 	<section class="film-page">
 		<div class="film-page__inner wrapper">
 			<div class="film-page__breadcrumbs">
@@ -47,9 +48,24 @@
 									<span>Трейлер</span>
 								</button>
 							</div>
-							<div class="film-tabs__link js-film-report-form-trigger">
-								<span>Сообщить о проблеме с видео</span>
-								<i class="fa fa-warning"></i>
+							<div class="popover-wrapper" data-trigger-popover="report-form">
+								<div class="film-tabs__link">
+									<span>Сообщить о проблеме с видео</span>
+									<i class="fa fa-warning"></i>
+								</div>
+								<div class="popover" data-popover-name="report-form">
+									<div class="popover__inner">
+										<div class="popover__title">Нажмите отправить, если видео не работает</div>
+										<div class="popover__content">
+											<div class="report-film-form b-form">
+												<form action="">
+													<input class="b-form__input report-film-form__input js-report-form-input" type="text" placeholder="Название фильма">
+													<input type="submit" class="b-form__btn report-film-form__btn" value="Отправить">
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -58,7 +74,9 @@
 		</div>
 		<div class="film-page__paranja" style="background-image: url('/images/green.jpg');"></div>
 	</section>
+<!-- end hero screen -->
 
+<!-- film content -->
 	<section class="film-info l-section__inner wrapper">
 		<div class="film-info__left">
 			<div class="film-info__table-wrapper">
@@ -133,31 +151,21 @@
 			</div>
 		</div>
 	</section>
+<!-- end film content -->
 
+<!-- comments -->
 	<section class="comments wrapper">
 		<div class="disqus-block disqus-block--develop">
 			comments
 		</div>
 	</section>
+<!-- end comments -->
 
-<!-- Случайные фильмы -->
-<section class="l-section">
+<!-- Random films slider -->
+	<section class="l-section">
 	<div class="l-section__inner wrapper">
 		//= ../common/_grid-film.html
 	</div>
 </section>
-<!-- ///Случайные фильмы -->
-
-	<div class="modal-bg-layer js-popup-paranja"></div>
-
-	<div class="report-film-form js-report-form">
-		<div class="report-film-form__close js-report-form-close">
-			<i class="fa fa-times"></i>
-		</div>
-		<p class="report-film-form__head">Нажмите отправить, если видео не работает</p>
-		<form action="">
-			<input class="report-film-form__input js-report-form-input" type="text" placeholder="Название фильма">
-			<input type="submit" class="btn-all btn-all--film-report" value="Отправить">
-		</form>
-	</div>
+<!-- end Random films slider -->
 </main>

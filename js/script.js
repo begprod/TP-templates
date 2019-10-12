@@ -2,7 +2,8 @@ $(document).ready(function() {
 	hidePreloader();
 	mainMenu();
 	switchVideo();
-	reportPopup();
+	popover();
+	reportForm();
 	randomPhrases();
 	scrollUpBtn();
 	spoilerContent();
@@ -57,31 +58,27 @@ function switchVideo() {
 	});
 }
 
-// Попап с формой «Сообщить о проблеме с видео»
-function reportPopup() {
-	var popupParanja = $('.js-popup-paranja');
-	var reportFormTrigger = $('.js-film-report-form-trigger');
-	var reportForm = $('.js-report-form');
+// Popover
+function popover() {
+	var popoverTrigger = $('[data-trigger-popover]');
+
+	popoverTrigger.click(function(event) {
+		event.stopPropagation();
+		var self = $(this);
+		var popoverName = self.attr('data-trigger-popover');
+		var popoverEl = $("[data-popover-name='" + popoverName + "']");
+
+		self.toggleClass('is-active');
+		popoverEl.toggleClass('is-active');
+	});
+}
+
+// Автозапонение инпута в форме «Сообщить о проблеме с видео»
+function reportForm() {
 	var reportFormInput = $('.js-report-form-input');
-	var reportFormClose = $('.js-report-form-close');
 	var filmName = $('.js-film-name').text();
 
-	popupParanja.click(function () {
-		$('body').removeClass('is-cropped');
-		reportForm.fadeOut(100);
-		popupParanja.fadeOut(300);
-	});
-
-	reportFormTrigger.click(function() {
-		popupParanja.fadeIn(300);
-		reportFormInput.val(filmName);
-		reportForm.fadeIn(300);
-	});
-
-	reportFormClose.click(function() {
-		popupParanja.fadeOut(300);
-		$(this).parent().fadeOut(300);
-	});
+	reportFormInput.val(filmName);
 }
 
 // Рандомные фразы в хедере
