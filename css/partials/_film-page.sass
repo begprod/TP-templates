@@ -19,10 +19,16 @@
 		.breadcrumbs__current
 			max-width: 150px
 			color: $altColor
+			+media($medium)
+				max-width: 250px
 			&:hover
 				max-width: 100%
+		.wrapper
+			width: auto
 	&__header
 		margin: 25px 0
+		+media($medium)
+			margin: 0 0 25px 0
 	&__title
 		margin: 0 0 15px 0
 		font-size: 40px
@@ -37,12 +43,13 @@
 			font-size: 14px
 	&__cover
 		position: relative
-		width: 300px
-		max-width: 300px
+		width: 100%
 		height: 0
 		margin-bottom: 50px
 		padding-bottom: 135%
 		background-color: $lightGrayState
+		+media($laptop)
+			display: none
 		img
 			position: absolute
 			display: block
@@ -68,31 +75,51 @@
 .film-page-header
 	display: flex
 	justify-content: space-between
+	+media($medium)
+		flex-direction: column
+		align-items: flex-start
 	&__column
 		min-width: 150px
 		&_align_right
 			text-align: right
+			+media($medium)
+				text-align: left
 
 .film-page-body
 	display: flex
 	justify-content: space-between
 	align-items: stretch
+	+media($laptop)
+		flex-direction: column
 	&__column
 		margin-right: 50px
 		&:last-child
 			margin-right: 0
-	&__frame
-		width: 674px
-		height: 500px
+		+media($laptop)
+			margin-right: 0
+		&_30
+			width: 30%
+			+media($laptop)
+				width: 100%
+		&_70
+			width: 70%
+			+media($laptop)
+				order: -1
+				width: 100%
+				margin-bottom: 50px
 
 .film-tabs
 	&__body
 		position: relative
 	&__inner
 		position: relative
-		width: 674px
+		width: 100%
 		height: 500px
 		z-index: 2
+		+media($laptop)
+			height: 400px
+		+media($medium)
+			height: 300px
 		iframe
 			width: 100%
 			height: 100%
@@ -129,6 +156,10 @@
 	&__nav
 		position: relative
 		display: flex
+		+media($medium)
+			order: 1
+			width: 100%
+			margin-top: 30px
 	&__nav-item
 		left: 0
 		display: flex
@@ -137,6 +168,13 @@
 		&:hover
 			color: $altColor
 			box-shadow: none
+		+media($medium)
+			display: block
+			width: 100%
+			height: 45px
+			text-align: center
+			background-color: $mainColor
+			border-radius: 3px
 		&.is-active
 			display: none
 		.fa
@@ -148,6 +186,10 @@
 		justify-content: space-between
 		margin-top: 25px
 		text-align: right
+		+media($medium)
+			margin-top: 25px
+			flex-direction: column
+			align-items: flex-start
 	&__link
 		color: $mainColor
 		opacity: .5
@@ -233,7 +275,6 @@
 	margin-bottom: 25px
 	overflow: hidden
 	&--develop
-		width: 300px
 		height: 80px
 		line-height: 80px
 		color: black
@@ -244,7 +285,6 @@
 // Share buttons
 .social-likes
 	&--develop
-		width: 300px
 		height: 40px
 		line-height: 40px
 		color: black
@@ -253,6 +293,8 @@
 		opacity: .5
 
 // Disqus
+.comments
+	margin-bottom: 50px
 .disqus-block
 	margin-bottom: 50px
 	+media($laptop)

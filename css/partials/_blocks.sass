@@ -99,6 +99,8 @@ ul.pagination
 	position: relative
 	color: black
 	z-index: 100
+	+media($medium)
+		width: 100%
 
 .popover
 	display: none
@@ -113,7 +115,7 @@ ul.pagination
 	&::after
 		content: ""
 		position: absolute
-		right: -2px
+		right: 0
 		bottom: -9px
 		width: 0
 		height: 0
