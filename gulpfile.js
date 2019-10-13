@@ -24,7 +24,7 @@ const paths = {
 		css: './css/**/*.sass',
 		js: './js/**/*.js'
 	}
-}
+};
 
 const serverConfig = {
 	server: {
@@ -34,7 +34,7 @@ const serverConfig = {
 	hots: 'localhost',
 	port: 9000,
 	logPrefix: 'trashopoisk_project'
-}
+};
 
 //HTML
 gulp.task('html', () => {
