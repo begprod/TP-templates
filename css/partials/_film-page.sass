@@ -129,8 +129,45 @@
 		left: 0
 		width: 100%
 		height: 100%
+		z-index: 5
 		background-size: cover
 		background-position: center
+		cursor: pointer
+		&:hover
+			&::before
+				transform: scale(1.2)
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			opacity: .3
+			background-color: black
+			z-index: 5
+		&::before
+			content: ""
+			position: absolute
+			top: calc(50% - 10px)
+			left: calc(50% - 20px)
+			height: 30px
+			width: 40px
+			border-top: 20px solid transparent
+			border-bottom: 20px solid transparent
+			border-left: 30px solid white
+			transition: transform .2s ease-in-out
+			transform-origin: left
+			z-index: 6
+	&__preloader
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-position: center
+		cursor: default
 		z-index: 0
 		&::after
 			content: ""
@@ -153,6 +190,7 @@
 			border-top: 5px solid $altColor
 			border-radius: 100%
 			animation: rotate 1s infinite linear
+			z-index: 2
 	&__nav
 		position: relative
 		display: flex
@@ -165,7 +203,7 @@
 		display: flex
 		align-items: center
 		transition: color .3s ease-in-out
-		&:hover
+		&:hover, &:focus
 			color: $altColor
 			box-shadow: none
 		+media($medium)

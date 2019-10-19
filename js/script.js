@@ -28,33 +28,37 @@ function mainMenu() {
 	});
 }
 
-// Переключение фильм/трейлер, проверка для кнопок
+// Переключение фильм/трейлер, проверка для кнопок, клик по обложке фильма
 function switchVideo() {
 	var switcherControl = $('.js-video-switcher');
 	var framePlace = $('.js-frame-place');
+	var playCover = $('.js-play-cover');
 	var frameDataAttribute = 'data-frame';
 	var activeClass = 'is-active';
+	var framesData = [];
 
 	switcherControl.each(function () {
 		if ($(this).attr(frameDataAttribute).length && !$(this).hasClass(activeClass)) {
 			$(this).fadeIn(300);
 		} else {
+			var frameAttr = $(this).attr(frameDataAttribute);
+
+			framesData.push(frameAttr);
 			$(this).fadeOut();
-		}
-
-		if ($(this).hasClass(activeClass)) {
-			var popupData = $(this).attr(frameDataAttribute);
-
-			$(this).addClass(activeClass).siblings().removeClass(activeClass);
-			framePlace.empty().append(popupData);
 		}
 	});
 
-	switcherControl.click(function () {
-		var popupData = $(this).attr(frameDataAttribute);
+	playCover.click(function () {
+		framePlace.empty().append(framesData[0]);
+		$(this).remove();
+	});
 
+	switcherControl.click(function () {
+		var frameAttr = $(this).attr(frameDataAttribute);
+
+		playCover.remove();
 		$(this).addClass(activeClass).siblings().removeClass(activeClass);
-		framePlace.empty().append(popupData);
+		framePlace.empty().append(frameAttr);
 	});
 }
 
