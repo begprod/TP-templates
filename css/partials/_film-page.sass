@@ -237,6 +237,7 @@
 		&:hover, &:focus
 			opacity: 1
 			color: $mainColor
+			box-shadow: none
 		.fa
 			margin-left: 10px
 
@@ -310,7 +311,7 @@
 
 // Like & Dislike
 .rating-film
-	margin-bottom: 25px
+	margin-bottom: 50px
 	overflow: hidden
 	&--develop
 		height: 80px
@@ -319,9 +320,16 @@
 		text-align: center
 		background-color: #f8f8f8
 		opacity: .5
+.likedislike
+	margin: 0 auto !important
 
 // Share buttons
 .social-likes
+	display: flex !important
+	align-items: center !important
+	justify-content: center !important
+	height: auto !important
+	min-height: initial !important
 	&--develop
 		height: 40px
 		line-height: 40px

@@ -80,7 +80,7 @@ function popover() {
 // Автозапонение инпута в форме «Сообщить о проблеме с видео»
 function reportForm() {
 	var reportFormInput = $('.js-report-form-input');
-	var filmName = $('.js-film-name').text();
+	var filmName = $('.js-film-name').text().trim();
 
 	reportFormInput.val(filmName);
 }
