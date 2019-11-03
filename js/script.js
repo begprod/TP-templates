@@ -136,13 +136,11 @@ function checkSearch() {
 	searchBtn.attr('disabled', 'disabled');
 
 	searchInput.keyup(function() {
-
 		if($(this).val().length !== 0) {
 			searchBtn.removeAttr('disabled');
 		} else {
 			searchBtn.attr('disabled', 'disabled');
 		}
-
 	});
 }
 
