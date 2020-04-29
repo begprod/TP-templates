@@ -1,7 +1,5 @@
 # trshpsk.templates
 
----
-
 ## install dependencies
 
 ```bash
