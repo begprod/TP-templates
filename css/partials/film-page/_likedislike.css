@@ -1,0 +1,17 @@
+.rating-film {
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.rating-film--develop {
+	height: 80px;
+	line-height: 80px;
+	color: black;
+	text-align: center;
+	background-color: #f8f8f8;
+	opacity: .5;
+}
+
+.likedislike {
+	margin: 0 auto !important;
+}

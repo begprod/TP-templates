@@ -1,0 +1,47 @@
+input {
+	border: 1px solid var(--color-ghost);
+	border-radius: 0;
+	outline: none;
+	transition: all .3s ease-in-out;
+	-webkit-appearance: none;
+}
+
+input:focus {
+	border: 1px solid var(--color-brand-alternate);
+}
+
+input[type="submit"]:focus {
+	border-radius: 3px;
+	border: 1px solid var(--color-ghost-hover);
+}
+
+textarea {
+	border: 1px solid var(--color-ghost);
+	border-radius: 0;
+	outline: none;
+	transition: all .3s ease-in-out;
+	-webkit-appearance: none;
+}
+
+textarea:focus {
+	border: 1px solid var(--color-brand-alternate);
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	transition: all .3s ease-in-out;
+}
+
+button:hover {
+	box-shadow: 0 0 3px #000;
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0 0 3px #000;
+}

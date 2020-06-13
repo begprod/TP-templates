@@ -1,0 +1,4 @@
+.ajax_form .error {
+	border: 2px solid red !important;
+	color: black !important;
+}

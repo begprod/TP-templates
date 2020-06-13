@@ -1,10 +1,18 @@
+// TODO:
+// Починить шрифты, сделать таску которая копирует шрифты
+// Сделвть таску которая копирует вендор js
+// gulp vue
+
 const gulp = require('gulp');
 const watch = require('gulp-watch');
-const sass = require('gulp-sass');
-const prefixer = require('gulp-autoprefixer');
-const csso = require('gulp-csso');
+const postcss = require('gulp-postcss');
+const postcssImport = require('postcss-import');
+const postcssCustomProperties = require('postcss-custom-properties');
+const postCssCustomMedia = require('postcss-custom-media');
+const autoPrefixer = require('autoprefixer');
+const cssNano = require('cssnano');
 const uglify = require('gulp-uglify');
-const rigger = require('gulp-rigger');
+const rigger = require('gulp-rigger'); // заменить на pug
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -16,12 +24,12 @@ const paths = {
 	},
 	src: {
 		html: './html/*.html',
-		css: './css/style.sass',
+		css: './css/style.css',
 		js: './js/script.js'
 	},
 	watch: {
 		html: './html/**/*.html',
-		css: './css/**/*.sass',
+		css: './css/**/*.css',
 		js: './js/**/*.js'
 	}
 };
@@ -36,9 +44,8 @@ const serverConfig = {
 	logPrefix: 'trashopoisk_project'
 };
 
-//HTML
 gulp.task('html', () => {
-	gulp.src(paths.src.html)
+	return gulp.src(paths.src.html)
 		.pipe(rigger())
 		.pipe(gulp.dest(paths.build.html))
 		.pipe(reload({
@@ -46,23 +53,25 @@ gulp.task('html', () => {
 		}));
 });
 
-//SASS
-gulp.task('sass', () => {
-	gulp.src(paths.src.css)
-		.pipe(sass({
-			outputStyle: 'compressed'
-		})).on('error', sass.logError)
-		.pipe(csso())
-		.pipe(prefixer())
+gulp.task('css', () => {
+	const plugins = [
+		postcssImport,
+		postcssCustomProperties,
+		postCssCustomMedia,
+		autoPrefixer(),
+		cssNano
+	];
+
+	return gulp.src(paths.src.css)
+		.pipe(postcss(plugins))
 		.pipe(gulp.dest(paths.build.css))
 		.pipe(reload({
 			stream: true
 		}));
 });
 
-//JS
 gulp.task('js', () => {
-	gulp.src(paths.src.js)
+	return gulp.src(paths.src.js)
 		.pipe(rigger())
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.build.js))
@@ -71,30 +80,24 @@ gulp.task('js', () => {
 		}));
 });
 
-//COMMON TASK
-gulp.task('common', [
-	'html',
-	'sass',
-	'js'
-]);
-
-//WATCH OR DIE
 gulp.task('watch', () => {
-	watch([paths.watch.html], (event, cb) => {
-		gulp.start('html');
-	});
-	watch([paths.watch.css], (event, cb) => {
-		gulp.start('sass');
-	});
-	watch([paths.watch.js], (event, cb) => {
-		gulp.start('js');
-	});
+	gulp.watch(paths.watch.html, gulp.series('html'));
+	gulp.watch(paths.watch.css, gulp.series('css'));
+	gulp.watch(paths.watch.js, gulp.series('js'));
 });
 
-//DEV LOCAL SERVER
 gulp.task('server', () => {
 	browserSync(serverConfig);
 });
 
-//DEFAULT TASK
-gulp.task('default', ['common', 'watch', 'server']);
+gulp.task('default', gulp.series(
+	gulp.series(
+		'html',
+		'css',
+		'js'
+	),
+	gulp.parallel(
+		'server',
+		'watch'
+	)
+));

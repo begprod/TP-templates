@@ -1,0 +1,56 @@
+@import "./vendors/normalaze.css";
+@import "./vendors/font-awesome.css";
+@import "./vendors/owl.carousel.min.css";
+@import "./vendors/owl.theme.default.min.css";
+
+@import "./partials/_vars.css";
+@import "./partials/fonts.css";
+@import "./partials/_helpers.css";
+
+@import "./partials/_global.css";
+@import "./partials/_layouts.css";
+
+@import "./partials/_animations.css";
+@import "./partials/_preloader.css";
+@import "./partials/_spoiler.css";
+
+@import "./partials/_header.css";
+@import "./partials/_footer.css";
+
+@import "./partials/_controls.css";
+@import "./partials/_menu.css";
+@import "./partials/_buttons.css";
+@import "./partials/_breadcrumbs.css";
+@import "./partials/_pagination.css";
+@import "./partials/_popover.css";
+
+
+@import "./partials/forms/_b-form.css";
+@import "./partials/forms/_film-offer-form.css";
+@import "./partials/forms/_search-form.css";
+@import "./partials/forms/_ajax-form.css";
+@import "./partials/forms/_report-film-form.css";
+/* @import "./partials/forms/_reg-form.css"; */
+
+@import "./partials/_film_grid.css";
+@import "./partials/_categories.css";
+@import "./partials/_category-page.css";
+
+@import "./partials/film-page/_film-page.css";
+@import "./partials/film-page/_film-page-header.css";
+@import "./partials/film-page/_film-page-body.css";
+@import "./partials/film-page/_film-tabs.css";
+@import "./partials/film-page/_film-info.css";
+@import "./partials/film-page/_film-table.css";
+@import "./partials/film-page/_likedislike.css";
+@import "./partials/film-page/_social-likes.css";
+@import "./partials/film-page/_disqus.css";
+
+@import "./partials/_owl-carousel.css";
+
+/* @import "./partials/_auth-screen.css"; */
+
+@import "./partials/_404.css";
+
+
+

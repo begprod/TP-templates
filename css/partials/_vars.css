@@ -1,0 +1,20 @@
+:root {
+--color-brand: #ff4e00; /* mainColor */
+--color-brand-alternate: #36bc49; /* altColor */
+--color-ghost: rgba(0,0,0,.2); /* lightGray */
+--color-ghost-hover: rgba(0,0,0,.5);  /* lightGrayState */
+
+--color-typo-ghost: #333333; /* gray */
+
+--font-main: Arial, Helvetica, sans-serif; /* mainFont */
+--font-text: Arial, Helvetica, sans-serif; /* textFont */
+--font-rubik: 'Rubik', Arial, Helvetica sans-serif; /* rubik */
+}
+
+@custom-media --screen-xl (max-width:  1279px); /* $large */
+@custom-media --screen-l (max-width: 1023px); /* $laptop */
+@custom-media --screen-m (max-width: 900px); /* $xlaptop */
+@custom-media --screen-s (max-width: 750px); /* $medium */
+@custom-media --screen-xs (max-width: 600px); /* $small */
+@custom-media --screen-xxs (max-width: 500px); /* $xsmall */
+@custom-media --screen-xxxs (max-width: 400px); /* $tiny */

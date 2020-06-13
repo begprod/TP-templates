@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Rubik';
+	src:
+			url('../fonts/logofont/Rubikbold.woff2') format('woff2'),
+			url('../fonts/logofont/Rubikbold.woff') format('woff'),
+			url('../fonts/logofont/Rubikbold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}

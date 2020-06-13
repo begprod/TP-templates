@@ -1,0 +1,57 @@
+.owl-carousel.main-slider_grid-film .owl-stage {
+
+}
+
+.owl-carousel.main-slider .owl-nav {
+	position: absolute;
+	top: -35px;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 70px;
+	color: $lightGrayState;
+}
+
+.owl-carousel.main-slider .owl-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 32px;
+	border: 1px solid $lightGray;
+}
+
+.owl-carousel.main-slider .owl-nav button.owl-prev:hover, .owl-carousel.main-slider .owl-nav button.owl-next:focus {
+	box-shadow: none;
+	border-color: $lightGrayState;
+}
+
+.owl-carousel.main-slider .owl-nav button.owl-prev span, .owl-carousel.main-slider .owl-nav button.owl-next span {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 16px;
+	transition: .2s ease-in-out;
+	transition-property: left, right;
+}
+
+.owl-carousel.main-slider .owl-nav button.owl-prev, .owl-carousel.main-slider .owl-nav button.owl-next {
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.owl-carousel.main-slider .owl-nav button.owl-prev.disabled, .owl-carousel.main-slider .owl-nav button.owl-next.disabled {
+	opacity: .5;
+	cursor: default;
+}
+
+@media (--screen-l) {
+	.owl-carousel.main-slider_grid-film .owl-stage {
+		padding-left: 0 !important;
+	}
+
+	.owl-carousel.main-slider .owl-nav {
+		display: none;
+	}
+}

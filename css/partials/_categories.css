@@ -1,0 +1,83 @@
+/* Карточки в главном слайдере на главной странице */
+
+.category-grid {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding-top: 40px;
+}
+
+.category-grid__item {
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+
+.category-grid__item:last-child {
+	margin-right: 0;
+}
+
+.category-unit {
+	position: relative;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.category-unit:hover {
+	box-shadow: 0 6px 16px #8a8a8a;
+	color: white
+}
+
+.category-unit::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+}
+
+.category-unit__info-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 16px;
+	overflow: hidden;
+	z-index: 15;
+}
+
+.category-unit__title {
+	margin: 6px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.category-unit__caption {
+	margin: 0;
+	font-size: 12px;
+}
+
+@media (--screen-l) {
+	.category-unit__title {
+		font-size: 18px;
+	}
+}
+
+@media (--screen-s) {
+	.category-grid__item {
+		height: 350px;
+	}
+
+	.category-unit__title {
+		font-size: 16px;
+	}
+}

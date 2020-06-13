@@ -1,0 +1,44 @@
+.pagination {
+	padding: 0;
+}
+
+.pagination.active a,
+.pagination.active a:hover {
+	color: var(--color-brand);
+}
+
+.pagination li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.pagination li:first-child,
+.pagination li:last-child {
+	display: none;
+}
+
+.pagination li:last-child {
+
+}
+
+/* Пагинация, если js не работает */
+.sticky-pagination {
+	height: 100% !important;
+}
+
+/* В поиске */
+.search-pagination {
+	color: black;
+}
+
+.search-pagination--active {
+	color: var(--color-brand);
+}
+
+.search-pagination a {
+	text-decoration: none;
+}
+
+.search-pagination a:hover {
+	color: var(--color-brand);
+}

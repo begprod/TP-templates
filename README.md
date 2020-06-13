@@ -1,6 +1,6 @@
 # trshpsk.templates
 
-## install dependencies
+## Install dependencies
 
 ```bash
 npm install

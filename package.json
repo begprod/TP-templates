@@ -1,15 +1,22 @@
 {
   "name": "trashopoisk",
   "version": "1.7.0",
-  "description": "TrashoPoisk - best movies in the world",
+  "description": "trashopoisk - best movies in the world",
+  "scripts": {
+    "dev": "gulp"
+  },
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
     "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-csso": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^4.3.11"
-  }
+    "gulp-uglify": "3.0.2",
+    "gulp-watch": "^4.3.11",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-import": "^12.0.1"
+  },
+  "dependencies": {}
 }

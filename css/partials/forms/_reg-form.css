@@ -1,0 +1,27 @@
+/* Контейнер для формы регистрации */
+
+.b-regform-wrapper {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0 auto;
+	padding: 40px 60px;
+	width: 500px;
+	height: 100vh;
+	overflow: scroll;
+	z-index: 10;
+	background-color: white;
+}
+
+.b-regform-wrapper__head {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+@media (--screen-xs) {
+	.b-regform-wrapper {
+		width: 90%;
+		padding: 20px 30px;
+	}
+}

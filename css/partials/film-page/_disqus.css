@@ -1,0 +1,21 @@
+.comments {
+	margin-bottom: 50px;
+}
+
+.disqus-block {
+	margin-bottom: 50px;
+}
+
+.disqus-block--develop {
+	min-height: 560px;
+	color: white;
+	text-align: center;
+	background-color: black;
+	opacity: .5;
+}
+
+@media (--screen-l) {
+	.disqus-block {
+		margin-bottom: 0;
+	}
+}

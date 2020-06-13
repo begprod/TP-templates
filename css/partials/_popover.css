@@ -1,0 +1,49 @@
+.popover-wrapper {
+	position: relative;
+	color: black;
+	z-index: 100;
+}
+
+.popover {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: calc(100% + 20px);
+	width: 300px;
+	background-color: white;
+	box-shadow: 0 5px 10px var(--color-typo-ghost);
+}
+
+.popover.is-active {
+	display: block;
+}
+
+.popover__inner {
+	padding: 30px;
+}
+
+.popover__title {
+	margin-bottom: 20px;
+	color: var(--color-typo-ghost);
+	text-align: left;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.popover::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: -9px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid white;
+}
+
+@media (--screen-s) {
+	.popover-wrapper {
+		width: 100%;
+	}
+}
