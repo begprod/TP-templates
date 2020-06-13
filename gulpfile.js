@@ -23,14 +23,14 @@ const paths = {
 		js: './build/js'
 	},
 	src: {
-		html: './html/*.html',
-		css: './css/style.css',
-		js: './js/script.js'
+		html: './src/html/*.html',
+		css: './src/css/style.css',
+		js: './src/js/script.js'
 	},
 	watch: {
-		html: './html/**/*.html',
-		css: './css/**/*.css',
-		js: './js/**/*.js'
+		html: './src/html/**/*.html',
+		css: './src/css/**/*.css',
+		js: './src/js/**/*.js'
 	}
 };
 
