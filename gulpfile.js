@@ -20,17 +20,20 @@ const paths = {
 	build: {
 		html: './build',
 		css: './build/css',
-		js: './build/js'
+		js: './build/js',
+		fonts: './build/fonts'
 	},
 	src: {
 		html: './src/html/*.html',
 		css: './src/css/style.css',
-		js: './src/js/script.js'
+		js: './src/js/script.js',
+		fonts: './src/fonts/**/*.*'
 	},
 	watch: {
 		html: './src/html/**/*.html',
 		css: './src/css/**/*.css',
-		js: './src/js/**/*.js'
+		js: './src/js/**/*.js',
+		fonts: './src/fonts/**/*.*'
 	}
 };
 
@@ -80,10 +83,19 @@ gulp.task('js', () => {
 		}));
 });
 
+gulp.task('fonts', () => {
+	return gulp.src(paths.src.fonts)
+		.pipe(gulp.dest(paths.build.fonts))
+		.pipe(reload({
+			stream: true
+		}));
+})
+
 gulp.task('watch', () => {
 	gulp.watch(paths.watch.html, gulp.series('html'));
 	gulp.watch(paths.watch.css, gulp.series('css'));
 	gulp.watch(paths.watch.js, gulp.series('js'));
+	gulp.watch(paths.watch.fonts, gulp.series('fonts'));
 });
 
 gulp.task('server', () => {
@@ -94,7 +106,8 @@ gulp.task('default', gulp.series(
 	gulp.series(
 		'html',
 		'css',
-		'js'
+		'js',
+		'fonts'
 	),
 	gulp.parallel(
 		'server',

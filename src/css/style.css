@@ -4,7 +4,7 @@
 @import "./vendors/owl.theme.default.min.css";
 
 @import "./partials/_vars.css";
-@import "./partials/fonts.css";
+@import "./partials/_fonts.css";
 @import "./partials/_helpers.css";
 
 @import "./partials/_global.css";
