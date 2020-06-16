@@ -1,6 +1,5 @@
 // TODO:
-// Починить шрифты, сделать таску которая копирует шрифты
-// Сделвть таску которая копирует вендор js
+// Сделать папку с картинками заглушками и таску билда для этой папки
 // gulp vue
 
 const gulp = require('gulp');
@@ -12,7 +11,7 @@ const postCssCustomMedia = require('postcss-custom-media');
 const autoPrefixer = require('autoprefixer');
 const cssNano = require('cssnano');
 const uglify = require('gulp-uglify');
-const rigger = require('gulp-rigger'); // заменить на pug
+const rigger = require('gulp-rigger'); // TODO: ???заменить на vue???
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
@@ -26,7 +25,7 @@ const paths = {
 	src: {
 		html: './src/html/*.html',
 		css: './src/css/style.css',
-		js: './src/js/script.js',
+		js: './src/js/**/*.js',
 		fonts: './src/fonts/**/*.*'
 	},
 	watch: {
