@@ -1,7 +1,3 @@
-.owl-carousel.main-slider_grid-film .owl-stage {
-
-}
-
 .owl-carousel.main-slider .owl-nav {
 	position: absolute;
 	top: -35px;
@@ -10,21 +6,21 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 70px;
-	color: $lightGrayState;
+	color: var(--color-ghost-hover);
 }
 
-.owl-carousel.main-slider .owl-nav {
+.owl-carousel.main-slider .owl-nav button.owl-next, .owl-carousel.main-slider .owl-nav button.owl-prev {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 50%;
 	height: 32px;
-	border: 1px solid $lightGray;
+	border: 1px solid var(--color-ghost);
 }
 
 .owl-carousel.main-slider .owl-nav button.owl-prev:hover, .owl-carousel.main-slider .owl-nav button.owl-next:focus {
 	box-shadow: none;
-	border-color: $lightGrayState;
+	border-color: var(--color-ghost-hover);
 }
 
 .owl-carousel.main-slider .owl-nav button.owl-prev span, .owl-carousel.main-slider .owl-nav button.owl-next span {
@@ -37,9 +33,24 @@
 }
 
 .owl-carousel.main-slider .owl-nav button.owl-prev, .owl-carousel.main-slider .owl-nav button.owl-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 32px;
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+.owl-carousel.main-slider .owl-nav button.owl-prev {
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
 }
+
+.owl-carousel.main-slider .owl-nav button.owl-next {
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
 
 .owl-carousel.main-slider .owl-nav button.owl-prev.disabled, .owl-carousel.main-slider .owl-nav button.owl-next.disabled {
 	opacity: .5;
