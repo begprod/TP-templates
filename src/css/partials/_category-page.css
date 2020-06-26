@@ -105,7 +105,8 @@
 }
 
 .category-item__btn {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	height: 40px;
 	line-height: 40px;
 	margin-top: 30px;
