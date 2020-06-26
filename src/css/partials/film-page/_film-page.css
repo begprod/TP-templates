@@ -95,6 +95,12 @@
 	z-index: 5;
 }
 
+@media (--screen-l) {
+	.film-page__cover {
+		display: none;
+	}
+}
+
 @media (--screen-m) {
 	.film-page__cover {
 		display: none;
