@@ -9,5 +9,5 @@ npm install
 ## Run dev
 
 ```bash
-gulp
+npm run dev || gulp
 ```
