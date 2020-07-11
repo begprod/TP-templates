@@ -1,5 +1,4 @@
 /* Кнопка, используется по всему сайту */
-
 .btn {
 	min-height: 32px;
 	padding: 0 15px;
@@ -39,9 +38,25 @@
 	color: white;
 }
 
+/* Кнопка с иконкой */
+.btn_icon .fa {
+	margin-right: 10px;
+}
+
+/* Кнопка загрузить еще на странице категории */
+.btn_more {
+	width: auto !important;
+	line-height: 40px;
+}
+
+.btn_more .fa {
+	margin-right: -20px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity, margin-right .3s ease-in-out;
+}
 
 /* Кнопка наверх */
-
 .scroll-up {
 	position: fixed;
 	display: none;
