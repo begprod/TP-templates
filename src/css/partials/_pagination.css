@@ -1,27 +1,57 @@
 .pagination {
+	max-width: 750px !important;
 	padding: 0;
 }
 
-.pagination.active a,
-.pagination.active a:hover {
-	color: var(--color-brand);
+ul.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px 0 !important;
 }
 
-.pagination li {
-	display: inline-block;
-	margin-right: 10px;
+ul.pagination li {
+	margin: 0;
+	padding: 0;
+	border: 1px solid var(--color-ghost);
 }
 
-.pagination li:first-child,
-.pagination li:last-child {
-	display: none;
+ul.pagination li:hover {
+	color: black;
+	box-shadow: 0 0 3px black;
 }
 
-.pagination li:last-child {
-
+ul.pagination li.active {
+	background-color: var(--color-brand);
 }
 
-/* Пагинация, если js не работает */
+ul.pagination li.active a {
+	color: white;
+}
+
+ul.pagination li a,
+ul.pagination li span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 32px;
+	padding: 0 15px;
+}
+
+ul.pagination li.disabled {
+	opacity: .3;
+}
+
+ul.pagination li.disabled:hover {
+	color: black;
+	box-shadow: 0 0 0 black;
+}
+
+ul.pagination li.disabled a,
+ul.pagination li.disabled span {
+	cursor: default;
+}
+
 .sticky-pagination {
 	height: 100% !important;
 }
@@ -41,4 +71,18 @@
 
 .search-pagination a:hover {
 	color: var(--color-brand);
+}
+
+@media (--screen-l) {
+	ul.pagination li:first-child,
+	ul.pagination li:last-child {
+		display: none;
+	}
+}
+
+@media (--screen-xxxs) {
+	ul.pagination li a,
+	ul.pagination li span {
+		padding: 0 13px;
+	}
 }
